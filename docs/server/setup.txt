@@ -1,0 +1,38 @@
+https://ianlondon.github.io/blog/deploy-flask-docker-nginx/
+
+## command log:
+
+sudo apt-get install -y build-essential libbz2-dev libssl-dev  libreadline-dev libsqlite3-dev tk-dev
+
+sudo apt-get install -y libpng-dev libfreetype6-dev
+
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+# load pyenv automatically by editting .bash_profile
+emacs ~/.bash_profile
+
+pyenv install 3.6.1
+pyenv virtualenv 3.6.1 general
+pyenv global general
+
+sudo apt install git docker.io
+
+# to get virtualenv (general) thing to go away
+source .bashrc
+which python
+
+# init project
+mkdir leaguedb
+cd leaguedb
+echo "Flask==0.12.2" > requirements.txt
+pip install -r requirements.txt
+
+# build docker
+sudo docker build -t my_flask_app .
+
+# docker and building project
+sudo docker run -d --restart=always -p 80:80 -t my_flask_app
+
+# kill old docker
+sudo docker ps                  # => lists docker containers running
+sudo docker kill <DOCKER NAME>  # <DOCKER NAME> is under NAMES with docker ps
