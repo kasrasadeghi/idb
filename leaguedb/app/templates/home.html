@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  {% if page %}
+    <h1>{{page}}</h1>
+  {% else %}
+    <h1>home</h1>
+  {% endif %}
+</div>
+{% endblock %}
