@@ -1,0 +1,242 @@
+FORMAT: 1A
+HOST: http://leaguedb.me
+
+# League DB
+
+League DB is an API allowing players and fans of League of Legends to view different
+kinds of information. All data will be in the JSON format.
+
+## Champions [/api/champions]
+
+### Get All Champions [GET]
+
+Get information about every champion.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "aatrox",
+                "role": "top",
+                "region": "unknown",
+                "items": [
+                    "bladeoftheruinedking",
+                    "deathsdance",
+                    ...
+                ],
+                "image":"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/Aatrox.png"
+            },
+            {
+                "name": "ahri",
+                "role": "mid",
+                "region": "ionia",
+                "items": [
+                    "morellonomicon",
+                    "ludensecho",
+                    ...
+                ],
+                "image": "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/Ahri.png"
+            },
+            ...
+        ]
+
+### Get A Champion By Name [GET /api/champions/{name}]
+
+Get information about one champion by using a name parameter, which must contain only 
+lowercase letters.
+
++ Parameters
+    + name: draven
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "draven",
+                "role": "bot",
+                "region": "noxus",
+                "items": [
+                    "deathsdance",
+                    "statikkshiv",
+                    ...
+                ],
+                "image": "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/Draven.png"
+            }
+        ]
+
+## Regions [/api/regions]
+
+### Get Regions [GET]
+
+Get information of all of the regions of lore in the League of Legends universe.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "ionia",
+                "champions": "top",
+                "items": "",
+                "lore": "",
+                "image":"/images/ionia"
+            },
+            {
+                "name": "noxus",
+                "champions": "top",
+                "items": "",
+                "lore": "",
+                "image":"/images/noxus"
+            },
+            ...
+        ]
+
+### Get A Region by Name [GET /api/regions/{name}]
+
+Get information about a region with a name parameter, which must contain only 
+lowercase letters.
+
++ Parameters
+    + name: noxus
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "noxus",
+                "champions": [
+                    "cassiopeia",
+                    "draven",
+                ],
+                "image":""
+            }
+        ]
+
+## Items [/api/items]
+
+### Get All Items [GET]
+
+Get information about all the items in the game.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "statikkshiv",
+                "champions": [
+                    "draven",
+                    "vayne",
+                    ...
+                ],
+                "roles": [
+                    "bot"
+                ],
+                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png "
+            },
+            {
+                "name": "phantomdancer",
+                "champions": [
+                    "draven",
+                    "vayne",
+                    ...
+                ],
+                "roles": [
+                    "bot"
+                ],
+                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3046.png "
+            }
+        ]
+
+### Get An Item by Name [GET /api/items/{name}]
+
+Get information about an item by its name, which must contain only lowercase letters.
+
++ Parameters
+    + name: statikkshiv
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "statikkshiv",
+                "champions": [
+                    "draven",
+                    "vayne",
+                    ...
+                ],
+                "roles": [
+                    "bot"
+                ],
+                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png "
+            }
+        ]
+
+## Roles [/api/roles]
+
+### Get Roles [GET]
+
+Get information about all the roles in the game.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "type": "bot",
+                "champions":[
+                    "draven",
+                    "vayne",
+                    ...
+                ],
+                "items": [
+                    "infinityedge",
+                    "phantomdancer",
+                    ...
+                ],
+                "subtype": "marksman",
+                "image": "/images/bot"
+            },
+            {
+                "type": "top",
+                "champions":[
+                    "renekton",
+                    "riven",
+                    ...
+                ],
+                "items": [
+                    "randiunsomen",
+                    "titanichydra",
+                    ...
+                ],
+                "subtype": [
+                    "fighter",
+                    "tank"
+                ],
+                "image": "/images/top"
+            },
+            ...
+        ]
+
+### Get A Role by Type [GET /api/roles/{type}]
+
+Get information about a role by its type, which must contain only lowercase letters.
+
++ Parameters
+    + type: bot
++ Response 200 (application/json)
+
+        [
+            {
+                "type": "bot",
+                "champions":[
+                    "draven",
+                    "vayne",
+                    ...
+                ],
+                "items": [
+                    "infinityedge",
+                    "phantomdancer",
+                    ...
+                ],
+                "subtype": "marksman",
+                "image": "/images/bot"
+            }
+        ]
