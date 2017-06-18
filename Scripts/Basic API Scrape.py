@@ -1,7 +1,7 @@
 import requests
 import json
 
-API_KEY = "RGAPI-596f5f54-6f58-4ba7-889c-8d2133e0cfd1"
+API_KEY = "insert api key here"
 
 def do_the_things(json_path, KEY) :
     HTML_PATH = "champ-htmls/"
