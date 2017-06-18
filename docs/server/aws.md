@@ -122,3 +122,5 @@ $ ssh -i "FILE_NAME.pem" ubuntu@[INSERT IP OR DOMAIN NAME]"
 so for us it's 
 
 $ ssh -i "secret_file_for_leaguedb.pem" ubuntu@leaguedb.me
+
+See [setup.txt](https://github.com/kasrasadeghi/idb/blob/master/docs/server/setup.txt) for server running details.
