@@ -1,0 +1,6 @@
+http://getbootstrap.com/getting-started/#download
+
+Click on the "Get Bootstrap" button from the above page in order to get all the
+files seen in static/.
+
+It contains a bunch of style, JavaScript and image files.
