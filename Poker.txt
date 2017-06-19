@@ -1,0 +1,13 @@
+at least 10 user stories
+user stories must be described in three sentences or less
+estimate them, include assumptions
+track how long each took
+
+1. When a user goes to the website, give them the home page with an attractive
+and relevant picture of what the entire website is about. In addition to that,
+have a small paragraph explaining the website.
+
+  Estimate    : 3 hours
+  Actual      : 4 hours
+
+2.

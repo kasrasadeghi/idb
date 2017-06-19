@@ -1,17 +1,16 @@
-<html>
-	<head>
-		<title>Champions</title>
-	</head>
-	<body>
-		<h1>Champions</h1>
-		<p>
-			<a href="/champions/Jax">Jax</a>
-		</p>
-		<p>
-			<a href="/champions/Caitlyn">Caitlyn</a>
-		</p>
-		<p>
-			<a href="/champions/Kha%27Zix">Kha'Zix</a>
-		</p>
-	</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="/champions/caitlyn">Caitlyn</a>
+      </div>
+      <div class="col">
+        <a href="/champions/jax">Jax</a>
+      </div>
+      <div class="col">
+        <a href="/champions/khazix">Kha'Zix</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

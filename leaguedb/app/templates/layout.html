@@ -3,8 +3,8 @@
 <head>
   {% block head %}
     <title>LeagueDB</title>
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
   {% endblock %}
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -24,17 +24,21 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
-        <li><a href="champions">Champions</a></li>
-        <li><a href="items">Items</a></li>
-        <li><a href="regions">Regions</a></li>
-        <li><a href="roles">Roles</a></li>
-        <li><a href="about">About</a></li>
+        <li><a href="/champions">Champions</a></li>
+        <li><a href="/items">Items</a></li>
+        <li><a href="/classes">Classes</a></li>
+        <li><a href="/roles">Roles</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div id="content">{% block content %}{% endblock %}</div>
+<div id="content">
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</div>
 
 <!-- Some scripts -->
 <script src="static/js/jquery.min.js"></script>
