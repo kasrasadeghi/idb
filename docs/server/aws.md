@@ -110,7 +110,7 @@ Basically they should not have dots at the end of them.
 
 ## Wrap up
 
-It will at most a day or two for the domain name to work, but you can
+It will take at most a day or two for the domain name to work, but you can
 SSH in regularly using the Elastic IP.
 
 The SSH format is kind of strange; you need that .pem file from the security step during **EC2 setup**.

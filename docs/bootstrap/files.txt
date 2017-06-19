@@ -1,6 +1,46 @@
+# Bootstrap (GUI setup)
+
+## Installation
+
 http://getbootstrap.com/getting-started/#download
 
 Click on the "Get Bootstrap" button from the above page in order to get all the
 files seen in static/.
 
 It contains a bunch of style, JavaScript and image files.
+
+## Home page
+
+For the home page of our website, we have a big splash image of the iconic
+League of Legends' Summoner Rift. The image is centered and responsive thanks to
+the class `img-responsive` provided by Bootstrap. Whenever the window in which
+leaguedb.me is open changes shape, the image will stay centered and respond to
+the external changes. On top of the image, we have a small title and short
+description of what our website is about. We do not need to include too much
+here because the about page of the website should complete whatever information
+the user desires about us, the makers.
+
+## Page with many models
+
+https://www.w3schools.com/tags/tag_figure.asp
+https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp
+
+The model page contains a grid of information. For example, we have a page
+dedicated to champions. We decided to divide the pages into three columns and
+the clickable icons posted in the middle of one of the columns. This is made
+easy with the grid system that Bootstrap gives us. In addition to that,
+Bootstrap gives us a `figure` tag that allows for an image and text to be placed
+neatly next to each other. We decided to put the name of the champion above its
+picture by putting, inside the `figure` tag, the caption before the picture. In
+order to give the user a convenient experience, instead of only making the text
+clickable, we make the entire `figure` clickable. The user can click on either
+the name or the icon in order to go to the model page containing information
+about that champion. This routing is done in Python through Flask, explained in
+another section.
+
+## Model page
+
+For each model, there is an instance, which has its own page of information.
+This page contains text and an image. For example, we have the champion pages.
+We leverage the Bootstrap grid system again in order to divide the page into
+two. We put the image on the left and the text to right.
