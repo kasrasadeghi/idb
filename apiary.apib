@@ -64,53 +64,6 @@ lowercase letters.
             }
         ]
 
-## Regions [/api/regions]
-
-### Get Regions [GET]
-
-Get information of all of the regions of lore in the League of Legends universe.
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "name": "ionia",
-                "champions": "top",
-                "items": "",
-                "lore": "",
-                "image":"/images/ionia"
-            },
-            {
-                "name": "noxus",
-                "champions": "top",
-                "items": "",
-                "lore": "",
-                "image":"/images/noxus"
-            },
-            ...
-        ]
-
-### Get A Region by Name [GET /api/regions/{name}]
-
-Get information about a region with a name parameter, which must contain only 
-lowercase letters.
-
-+ Parameters
-    + name: noxus
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "name": "noxus",
-                "champions": [
-                    "cassiopeia",
-                    "draven",
-                ],
-                "image":""
-            }
-        ]
-
 ## Items [/api/items]
 
 ### Get All Items [GET]
@@ -130,7 +83,7 @@ Get information about all the items in the game.
                 "roles": [
                     "bot"
                 ],
-                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png "
+                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png"
             },
             {
                 "name": "phantomdancer",
@@ -142,7 +95,7 @@ Get information about all the items in the game.
                 "roles": [
                     "bot"
                 ],
-                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3046.png "
+                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3046.png"
             }
         ]
 
@@ -166,7 +119,76 @@ Get information about an item by its name, which must contain only lowercase let
                 "roles": [
                     "bot"
                 ],
-                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png "
+                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png"
+            }
+        ]
+        
+## Classes [/api/regions]
+
+### Get Classes [GET]
+
+Get information of all of the classes in League of Legends.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "marksman",
+                "description": "Marksmen are ranged champions whose power revolves mostly around their basic attaks."
+                "champions": [
+                    "caitlyn",
+                    "draven",
+                    ...
+                ],
+                "items": [
+                    "infinityedge",
+                    "phantomdancer",
+                    ...
+                ],
+                "image":"/images/marksman"
+            },
+            {
+                "name": "Controller",
+                "description": "Controllers are selfless champions who lack in personal power but have strong abilities that assist their teammates."
+                "champions": [
+                    "blitzcrank",
+                    "thresh",
+                    ...
+                ],
+                "items": [
+                    "bannerofcommand",
+                    "locketoftheironsolari",
+                    ...
+                ],
+                "image":"/images/controller"
+            },
+            ...
+        ]
+
+### Get A Class by Name [GET /api/regions/{name}]
+
+Get information about a class with a name parameter, which must contain only 
+lowercase letters.
+
++ Parameters
+    + name: noxus
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "marksman",
+                "description": "Marksmen are ranged champions whose power revolves mostly around their basic attacks."
+                "champions": [
+                    "caitlyn",
+                    "draven",
+                ],
+                "items": [
+                    "infinityedge",
+                    "phantomdancer",
+                    ...
+                ],
+                "image":"/images/marksman"
             }
         ]
 
