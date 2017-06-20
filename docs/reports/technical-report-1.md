@@ -78,23 +78,20 @@ for future use:
 
 There are several accounts you need to get before you actually start setting anything up.
 
-First you need an AWS account. In order to set that up, get a regular AWS account. It will ask you for your 
+First you need an AWS account. In order to set that up, first get a regular AWS account. The login page will be called
+"Log in to the Amazon Web Services Console" or something similar on anything you look up for AWS.
+It will ask you for your 
 credit card number, don't worry. Even if you don't have a student account, it won't charge you for a year. Afterwords,
 go on GitHub and locate your student pack page. On the page, it'll have something like "Unique Link" under Amazon Web 
 Services. Clicking that unique link will bring you to the Amazon account creation page where you will go through the setup process for 
 creating an education account. 
 
 At one point, it'll prompt you with a radio button that gives you two different amounts of credit
-for the AWS Billing Process. One of the radio buttons will tell you to put in an Account ID.
-
-   - get the education AWS account
-   - on the AWS education account, it tells you to find account ID
-   - this can be found on account security or something (google it)
- - get a namecheap account
-   - go on to the namecheap *student* website
-   - find a .me domain you like
-   - go through the process of setting it up
-   
+for the AWS Billing Process. One of the radio buttons will tell you to put in an Account ID. 
+The Account ID is bound to the real Amazon Web Services account you made in the previous step.
+ 
+Next, you need to make a NameCheap account. Go on the [NameCheap student website](https://nc.me/).
+First, find a domain you like, and if you use a '.me' domain it'll be free.
    
 ## EC2 setup
 
@@ -102,71 +99,70 @@ There will be something that tells you to download a pem file. **It's
 very very important.** That's how you will actually ssh into it and do
 the [setup.txt](https://github.com/kasrasadeghi/idb/blob/master/docs/server/setup.txt) stuff.
 
- - get on amazon web service (it'll say something about console log in)
- - find EC2 under services
- - click launch instance
- - click the server you like (recommended: ubuntu server)
- - choose the high free instance type (mine is t2.micro)
- - configure instance
-   - don't assign public IP
-     - the public IP goes away when the instance shuts down
-   - don't change anything except 
-   - using a working VPC
-   - choose a subnet close to you, probably the default
- - add storage
-   - at the time of writing you can get 30 gigs for free, I chose 24Gi
- - go to Configure Security Group
-   - radio button: Create a *new* security group
-   - name it whatever you like
-   - add a rule for HTTP
-   - don't touch it. it's fine if it's warning you
- - click review and launch
- - then launch it
-   - there will be something around here that tells you to download a
-     .pem file
- - on the dashboard, click "Elastic IPs"
-   - make a new Elastic IP
-   - right-click and say "assocaite address"
-   - click the instance you want in the drop down
+Go back to the Amazon Web Services Console, which is the page you see after you log in. 
+To log in from [aws.amazon.com](https://aws.amazon.com/), click my account in the top-right drop-down, and click
+AWS Management Console underneath 'My Account'.
 
-Now you have an Elastic IP. Everyone else calls these Static
-IPs. We're going to use this in the next step.
+Under 'All Services', under 'Compute', it'll show EC2. In the documentation for EC2 it'll try to convince you to try 
+out other things. In my experience they are much more complicated. Click EC2.
 
+Click the blue 'Launch Instance' button. There are several options for servers. If you're not doing anything too fancy
+or you're not managing much of the server yourself, you can choose from one of the many Fedora-based operating systems.
+Personally, I chose the Ubuntu server because of its massive user base and the massive amount of packages it has, but also because
+usually everyone is familiar with Ubuntu and has some amount of knowledge in how to set it up. Ubuntu Desktop and other
+Debian-based desktops are also fairly popular so most people have some exposure to them. Choose the highest free instance type. Currently that is t2.micro.
+
+Now we'll move onto configuring the instance. Don't assign a public IP to it, and it goes away immediately after it shuts down.
+The only things you're going to want to look at in this first section are making sure you're using a working VPC, which is
+probably the default one that Amazon Web services set up for you. It'll also probably default to the subnet closest to you.
+If you client base is somewhere other than your current place of development, then choose a subnet to your preference.
+
+AWS offers 30 gigabytes of free memory for the computer, and it defaults to 8. I chose 24 as a good in-between. It gives the instance
+some room to grow, so you don't have to be scared of hosting databases or other things on it, but once it definitely won't 
+run over the memory limit.
+
+Next we're going to Configure Security Group. Make sure you're making a new security group in the radio buttons. Name it whatever you like
+and be sure to add another rule below the SSH Rule for HTTP. It should be open to the world, 0.0.0.0, ::0 or something, and that just means that
+all IPs can send HTTP requests. It'll warn you that you don't have security and that your computer is open to the whole world,
+don't worry about it. It's just available for HTTP requests. Click review and launch and make sure the instance is running. It'll
+take a couple minutes to spin up. If you've messed something up, terminate the instance. It won't delete immediate, but bits and pieces
+of it will be reclaimed by the cloud as it goes away, and it should disappear eventually.
+
+Somewhere in the configuration on the EC2 instance, probably around the creation of the security group, it'll tell you to make a .pem file
+to log into your instance. I don't remember where in the workflow this happened, but make sure you download that and keep it somewhere safe.
+That's going to be how you access the instance. If you've lost the file, you have to spin up an entirely new instance. Thankfully, 
+AWS has an option to make instances like other instances.
+
+Next we need to associate the EC2 instance with an Elastic IP, which is the publicly available non-changing IP. We need this
+for routing. On the EC2 Dashboard, click Elastic IPs under the Resources header in the middle. Make a new one, and right click
+it to associate the address. Click the instance you want to associate the address with. You can use this IP to ssh into the 
+instance and set it up, especially while waiting for the name servers to propagate. You also want to jot down the static IP for the next step.
+
+Most other services call Elastic IPs "Static IPs". The non-standardization of computer science naming conditions is
+pervasive.
 
 ## AWS Route 53 setup
 
- - get to route 53 under AWS services
- - on the dashboard for route 53 go to hosted zones
- - create a hosted zone
- - type in the Domain Name you chose from NameCheap
-   - mine is leaguedb.me
-   - every else default
-   - click create
- - go to the record set if you're not brought there automatically
- - there should be 2 records automatically named
-   - a record with type NS -> THIS ONE IS IMPORTANT LATER
-   - a record with type SOA
- - make two more records, both of type A
-   - the first one leave everything default
-     - for us it points to leaguedb.me
-     - it's called "leaguedb.me." on amazon
-   - the second one add a "www" to the name
-     - so then www.leaguedb.me for us
-   - **Both** should have the value = Elastic IP you got in **EC2 Setup**
+Now we're going to set up AWS Route 53 which is how our domain from NameCheap is going to be directed to the processes running on our EC2
+instance. By the way, it might cost like 50 cents per month or something for this hosted zone, but with the education account,
+it won't chip into real money for a while.
 
+Back on the AWS Console, under "Networking & Content Delivery", click Route 53. On the Route 53 Dashboard, click Hosted Zones.
+Create a new Hosted Zone. Type in the domain from NameCheap. For this project, it's "leaguedb.me". Leave everything else default.
+There should be two record by default in the Record Set under the domain you just made. One of them should be of type NS, the other
+of type SOA. The NS one is important for NameCheap later on.
+
+Make two more records, both of type A. The first one leave everything default, and the second add a www to the name
+so the full domain, in our case, is www.leaguedb.me. Then go to both and change the value to the Elastic IP we got in the EC2 Setup.
+
+That finishes routing.
 
 ## NameCheap setup
 
- - get onto namecheap.com
- - log in
- - on dashboard
-   - click the far-right "Manage" button for your domain
- - make sure nothing is auto-renew
-   - check under products and domain
- - under domain, find the NAMESERVERS tag
- - choose Custom DNS
-   - put in the things from the amazon NS record from the last step
-   
+Log back onto NameCheap. On the Dashboard, click Manage on the far-right for the domain you made.
+Make sure nothing is set to auto-renew, under Products, and Domain. Under the first Domain tab, under the 
+NAMESERVERS tag, choose Custom DNS. Put the things from the Route 53 NS record from the last step.
+
 On amazon they have a dot at the end so they look like
 "ns-1107.awsdns-10.org**.**". Delete the dot so
 "ns-1107.awsnds-10.org".
