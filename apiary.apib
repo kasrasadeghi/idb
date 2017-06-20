@@ -18,7 +18,7 @@ Get information about every champion.
             {
                 "name": "aatrox",
                 "role": "top",
-                "region": "unknown",
+                "class": "skirmishers",
                 "items": [
                     "bladeoftheruinedking",
                     "deathsdance",
@@ -29,7 +29,7 @@ Get information about every champion.
             {
                 "name": "ahri",
                 "role": "mid",
-                "region": "ionia",
+                "class": "mages",
                 "items": [
                     "morellonomicon",
                     "ludensecho",
@@ -54,7 +54,7 @@ lowercase letters.
             {
                 "name": "draven",
                 "role": "bot",
-                "region": "noxus",
+                "class": "marksmen",
                 "items": [
                     "deathsdance",
                     "statikkshiv",
@@ -83,6 +83,11 @@ Get information about all the items in the game.
                 "roles": [
                     "bot"
                 ],
+                "category": [
+                    "attack_speed",
+                    "nonboots_movement",
+                    ...
+                ],
                 "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png"
             },
             {
@@ -90,6 +95,11 @@ Get information about all the items in the game.
                 "champions": [
                     "draven",
                     "vayne",
+                    ...
+                ],
+                "category": [
+                    "attack_speed",
+                    "nonboots_movement",
                     ...
                 ],
                 "roles": [
@@ -114,6 +124,11 @@ Get information about an item by its name, which must contain only lowercase let
                 "champions": [
                     "draven",
                     "vayne",
+                    ...
+                ],
+                "category": [
+                    "attack_speed",
+                    "nonboots_movement",
                     ...
                 ],
                 "roles": [
@@ -213,8 +228,8 @@ Get information about all the roles in the game.
                     "phantomdancer",
                     ...
                 ],
-                "subtype": "marksman",
-                "image": "/images/bot"
+                "class": "marksman",
+                "image": "/static/images/bot"
             },
             {
                 "type": "top",
@@ -228,7 +243,7 @@ Get information about all the roles in the game.
                     "titanichydra",
                     ...
                 ],
-                "subtype": [
+                "class": [
                     "fighter",
                     "tank"
                 ],
@@ -258,7 +273,7 @@ Get information about a role by its type, which must contain only lowercase lett
                     "phantomdancer",
                     ...
                 ],
-                "subtype": "marksman",
+                "class": "marksman",
                 "image": "/images/bot"
             }
         ]
