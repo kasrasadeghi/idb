@@ -1,53 +1,72 @@
 # Technical Report
 Kasra Sadeghi, Ben Yang
 
-##  Bootstrap (GUI setup)
- - by Ben Yang
+## Front End
 
 ### Installation
 
-http://getbootstrap.com/getting-started/#download
+The first thing to do, in order to get started with building the front end, is
+getting the required software. In Phase 1 of the project, we relied heavily on
+Flask for routing and the corresponding templating engine, Jinja, for writing
+the actual pages to be displayed on the website. You can get both of these
+things by running the command `pip install flask`.
 
-Click on the "Get Bootstrap" button from the above page in order to get all the
-files seen in static/.
+### Flask Routing
 
-It contains a bunch of style, JavaScript and image files.
+The file `main.py` contains all the code for routing. It makes sure that when a
+user clicks on a link to some page, the website responds correctly. Flask gives
+us a very simple framework for routing because all we had to do is create a
+Flask object and write in the address that we wanted to route to whichever HTML
+template. For example, we have our homepage which connects to the home.html
+template.
 
-### Home page
+Inside of `main.py`, we can use a part of the address to connect to a desired
+template. For example, if we have the decorator
+`@app.route('/champions/<name>')`, `name` is actually a variable that we can use
+in the python code. If the user were to go to `/champions/draven`, then the
+Python code will know that `name` is a variable bound to the string `draven`,
+and we can use that to refer to a template, such as `name + ".html"`.
 
-For the home page of our website, we have a big splash image of the iconic
-League of Legends' Summoner Rift. The image is centered and responsive thanks to
-the class `img-responsive` provided by Bootstrap. Whenever the window in which
-leaguedb.me is open changes shape, the image will stay centered and respond to
-the external changes. On top of the image, we have a small title and short
-description of what our website is about. We do not need to include too much
-here because the about page of the website should complete whatever information
-the user desires about us, the makers.
+### Jinja Templates
 
-### Page with many models
+Templates are HTML files, in essence. With the Jinja templating engine, we are
+given the power analogous to that of object oriented programming. Flask and
+Jinja will look in a specific folder for these templates. This folder is called
+*templates*. Inside of this folder lies a directory tree that contains a ton of
+templates that are displayed on the website or not. The ones not displayed on
+the website are base or layout templates, which are analogous to the parent
+class in object oriented programming.
 
-https://www.w3schools.com/tags/tag_figure.asp
-https://www.w3schools.com/bootstrap/bootstrap_grid_system.asp
+The first template we created under the *templates* directory is named
+`layout.html`. This template is the base for every other template on our
+website. It itself is not displayed on our website. What it contains is whatever
+we as a team deemed necessary to be on every single page. The first thing that
+came to mind was the navigation bar at the top of the page. We knew that if it
+were not at the top of the page, the user would have a hard time looking through
+the entirety of our website. The navigation bar is the main part of layout.
 
-The model page contains a grid of information. For example, we have a page
-dedicated to champions. We decided to divide the pages into three columns and
-the clickable icons posted in the middle of one of the columns. This is made
-easy with the grid system that Bootstrap gives us. In addition to that,
-Bootstrap gives us a `figure` tag that allows for an image and text to be placed
-neatly next to each other. We decided to put the name of the champion above its
-picture by putting, inside the `figure` tag, the caption before the picture. In
-order to give the user a convenient experience, instead of only making the text
-clickable, we make the entire `figure` clickable. The user can click on either
-the name or the icon in order to go to the model page containing information
-about that champion. This routing is done in Python through Flask, explained in
-another section.
+On top of the navigation bar, we also include the main Bootstrap style and
+JavaScript files that came with the Bootstrap installation. These are necessary
+in order for a majority of the functionality of the user interface to work (e.g.
+navigation bars, fonts, colors).
 
-### Model page
+Inside of `layout.html`, you will see one other component that is not in the
+mundane HTML file. This is a piece of code that looks like `{% block head %}`.
+`block` is the keyword, while `head` is just a variable name that refers to a
+html tag or ID. This piece of code tells the Jinja templating engine to
+acknowledge that this part of the code may be referred to later on by child
+templates.
 
-For each model, there is an instance, which has its own page of information.
-This page contains text and an image. For example, we have the champion pages.
-We leverage the Bootstrap grid system again in order to divide the page into
-two. We put the image on the left and the text to right.
+For example, if `layout.html` is a parent template, one of its child templates
+is `home.html`, the home page of our website. In order to be a child of
+`layout.html` it must have a piece of code recognizable to the Jinja templating
+engine at the top of the page: `{% extends "layout.html" %}`. Once the child
+template, `home.html`, has this line, it inherits all of the HTML from
+`layout.html`. In order to add items of its own, `home.html` can use normal HTML
+or it use a line of code: `{% block head %}`. This was specified in the parent
+template. What it does in the child template is allow it to put whatever HTML
+code in the exact spot where `{% block head %}` was declared in the parent
+template.
 
 ## AWS Setup
  - by Kasra Sadeghi
