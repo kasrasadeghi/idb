@@ -22,7 +22,7 @@ def item_route(name: str) -> str:
     return render_template("items/" + name + ".html", name=name)
 
 
-@app.route("/class/<name>")
+@app.route("/classes/<name>")
 def class_route(name: str) -> str:
     return render_template("classes/" + name + ".html", name=name)
 
