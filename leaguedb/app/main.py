@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from typing import Dict
 
-app: Flask = Flask(__name__)
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -29,7 +29,7 @@ def class_route(name: str) -> str:
 
 @app.route("/roles/<name>")
 def role_route(name: str) -> str:
-    return render_template("roles" + name + ".html", name=name)
+    return render_template("roles/" + name + ".html", name=name)
 
 
 if __name__ == "__main__":
