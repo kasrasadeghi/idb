@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>{{ class.name }}</h1>
+  <h2>{{ class.title }}</h2>
+  <h3>Class: {{ class.class }}</h3>
+  <h4>Subclass: {{ class.subclass }}</h4>
+  <div class="modal-body row">
+    <div class="col-md-6">
+      <p>{{ class.lore }}</p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from typing import Dict
 
 app: Flask = Flask(__name__)
 
@@ -13,22 +14,22 @@ def home(page: str = None) -> str:
 
 @app.route("/champions/<name>")
 def champion_route(name: str) -> str:
-    return render_template(name + ".html", name=name)
+    return render_template("champions/" + name + ".html", name=name)
 
 
 @app.route("/items/<name>")
 def item_route(name: str) -> str:
-    return render_template("item.html", name=name)
+    return render_template("items/" + name + ".html", name=name)
 
 
 @app.route("/class/<name>")
 def class_route(name: str) -> str:
-    return render_template("class.html", name=name)
+    return render_template("classes/" + name + ".html", name=name)
 
 
 @app.route("/roles/<name>")
 def role_route(name: str) -> str:
-    return render_template("role.html", name=name)
+    return render_template("roles" + name + ".html", name=name)
 
 
 if __name__ == "__main__":

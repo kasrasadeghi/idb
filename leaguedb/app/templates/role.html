@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>{{ item.name }}</h1>
+  <h2>{{ item.title }}</h2>
+  <h3>Class: {{ item.class }}</h3>
+  <h4>Subclass: {{ item.subclass }}</h4>
+  <div class="modal-body row">
+    <div class="col-md-6">
+      <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{ item.file_name }}_0.jpg">
+    </div>
+    <div class="col-md-6">
+      <p>{{ item.lore }}</p>
+    </div>
+  </div>
+{% endblock %}
