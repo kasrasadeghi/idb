@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-from typing import Dict
 
 app = Flask(__name__)
 
