@@ -1,5 +1,5 @@
 # Technical Report
-Kasra Sadeghi, Ben Yang
+Kasra Sadeghi, Ben Yang, Todd Schriber, Avilash Rath
 
 ## Bootstrap (GUI setup)
 
