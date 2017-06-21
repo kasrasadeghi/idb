@@ -1,0 +1,152 @@
+1. Implement RESTful API
+ -> Server-GUI Integration
+ -> Server-Database Integration
+ -> Cache-Database Integration
+ - [] have "many instances" of each model from API sources
+ - [] have model pages link automatically
+
+ estimate:
+ actual:
+
+2. Server-GUI Integration
+ - Have the GUI use API calls from the website to load information
+ - Will help with integration with external APIs in Phase 4
+
+ estimate:
+ actual:
+
+
+3. Server-Database Integration
+ - Have the server pull data from the database to serve with the API
+
+ estimate:
+ actual:
+
+
+4. Cache-Database Integration
+ - Have some way of querying Riot API and the Wikia to get images and data
+ - Used to automatically fill the database
+ - The database should be used to memoize these responses
+
+ estimate:
+ actual:
+
+
+5. Server setup with Python 3.6 and Docker
+ - Release dependencies on external Docker build systems
+ - Allows typing in the Server source code
+ - [] clean up cdn-based dependencies
+ - [] document npm setup process
+
+ estimate:
+ actual:
+
+
+6. Finish About Page
+ - general description
+   - purpose
+   - intended users
+ - group name
+ - group members, for each
+   - name
+   - photo
+   - bio
+   - major responsibilities
+   - # of commits
+   - # of issues
+   - # of unit tests
+ - stats
+   - total # of commits
+   - total # of issues
+   - total # of unit tests
+   - link to Apiary
+   - link to GitHub
+   - link to Trello
+ - data
+   - links to the data sources
+   - description of how each was scraped
+ - tools
+   - technologies used
+   - describe their use
+   - special focus on tools that were not required
+ - link to Report.pdf
+
+ estimate:
+ actual:
+
+
+7. React JS - Champions Home Page
+ - have a reactive home page for champions
+ - filtering
+ - pagination
+ - sorting
+
+ estimate:
+ actual:
+
+
+8. React JS - Items Home Page
+ - have a reactive home page for items
+ - filtering
+ - pagination
+ - sorting
+
+ estimate:
+ actual:
+
+
+9. React JS - Classes Home Page
+ - have a reactive home page for classes
+ - filtering
+ - pagination
+ - sorting
+
+ estimate:
+ actual:
+
+
+10. React JS - Roles Home Page
+ - have a reactive home page for roles
+ - filtering
+ - pagination
+ - sorting
+
+ estimate:
+ actual:
+
+
+11. Technical Report 2
+ - [] motivation
+ - [] use cases
+ - [] RESTful API
+ - [] models
+ - [] tools (update)
+ - [] database
+
+ estimate:
+ actual:
+
+
+12. Update Splash
+ - [] carousel
+ - styling
+ - [] links to home pages
+
+ estimate:
+ actual:
+
+
+13. Embedded Media
+ - [] champion spotlights
+ - [] class updates
+
+ estimate:
+ actual:
+
+
+14. Testing and Continuous Integration
+ - [] Travis CI
+ - Python unittest
+
+ estimate:
+ actual:
