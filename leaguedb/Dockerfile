@@ -1,4 +1,7 @@
-FROM tiangolo/uwsgi-nginx-flask:flask
+FROM tiangolo/uwsgi-nginx:python2.7
+
+RUN pip install flask
+COPY nginx.conf /etc/nginx/conf.d/
 
 COPY requirements.txt /tmp/
 
