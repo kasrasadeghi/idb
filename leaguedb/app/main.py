@@ -30,6 +30,10 @@ def class_route(name):
 def role_route(name):
     return render_template("roles/" + name + ".html", name=name)
 
+@app.route("/api/champions")
+def get_champions():
+    return "unfinished"
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=5000)
