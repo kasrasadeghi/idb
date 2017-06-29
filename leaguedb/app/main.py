@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-# TODO: PostgreSQL data base configuration
+# TODO: PostgreSQL data base configuration/connection
 db  = SQLAlchemy(app)
 
 
