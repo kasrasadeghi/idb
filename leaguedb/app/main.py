@@ -2,7 +2,14 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-# TODO: PostgreSQL data base configuration/connection
+
+# TODO: Remote PostgreSQL data base configuration/connection
+user = 'swe'
+pwd  = 'abc'
+host = 'localhost'
+db   = 'test'
+uri  = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db) 
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
 db  = SQLAlchemy(app)
 
 
@@ -33,10 +40,15 @@ def class_route(name):
 def role_route(name):
     return render_template("roles/" + name + ".html", name=name)
 
-@app.route("/api/champions")
-def get_champions():
-    return "unfinished"
+#####
+# API
+#####
 
+@app.route("/api/champion_names")
+def get_champion_names():
+    with open("static/champion_names.json") as names:
+        data = names.read().replace('\n', ' ')
+    return data
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=5000)
