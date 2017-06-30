@@ -103,7 +103,7 @@ Sona: Sup
 Soraka: Sup
 Swain: Top, Mid
 Syndra: Mid
-Tahm Kench" Sup
+Tahm Kench: Sup
 Taliyah: Mid
 Talon: Mid
 Taric: Sup
