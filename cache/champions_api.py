@@ -3,8 +3,10 @@ import json
 from pprint import pprint
 from collections import OrderedDict
 
-def print_json():
-    image_url = "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/"
+import re
+
+def print_champions_full():
+    # image_url = "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/"
 
     with open("champions.json") as champions:
         data = json.load(champions)
@@ -18,7 +20,7 @@ def print_json():
         input_data = data['data'][champion]
         model.append(('name',input_data['name']))
         # TODO: manually input role by our pro game knowledge
-        model.append(('role', "bot/top/sup/jg/mid"))
+        model.append(('role', ""))
         model.append(('class',input_data['tags']))
         for index in range(7):
             if input_data['recommended'][index]['map'] in ('SR', 'CLASSIC'):
@@ -40,11 +42,44 @@ def print_json():
                 model.append(('items', all_item_names))
                 break
         model.append(('lore',input_data['lore']))
-        model.append(('image',image_url + input_data['image']['full']))
+        model.append(('image', input_data['image']['full']))
 
         all_champion_data.append(OrderedDict(model))
 
     print(json.dumps(all_champion_data, indent=4, separators=(',',': ')))
 
+def print_champion_names():
+    with open("champions.json") as champions:
+        data = json.load(champions)
+
+    all_champion_names = []
+    for champion in data['data'].keys(): 
+        name = data['data'][champion]['name']
+        all_champion_names.append(name)
+    print(json.dumps(all_champion_names, indent=4, separators=(',',': ')))
+
+def find_longest_lore():
+    with open("api_champions.json") as champs:
+        data = json.load(champs)
+    max_len = 0
+    for champ in data:
+        l = len(champ['lore'])
+        if l > max_len:
+            max_len = l
+    print(max_len)
+
+def find_longest_name():
+    with open("api_champions.json") as champs:
+        data = json.load(champs)
+    max_len = 0
+    for champ in data:
+        l = len(champ['image'])
+        if l > max_len:
+            max_len = l
+    print(max_len)
+
 if __name__ == "__main__":
-    print_json()
+    # print_champions_full()
+    # print_champion_names()
+    # find_longest_lore()
+    find_longest_name()
