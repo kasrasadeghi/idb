@@ -1,0 +1,138 @@
+Champion: Role
+
+Aatrox: Top, Jg
+Ahri: Mid
+Akali: Top, Mid
+Alistar: Sup
+Amumu: Jg
+Anivia: Mid
+Annie: Mid, Sup
+Ashe: Bot
+Aurelion Sol: Mid
+Azir: Mid
+Bard: Sup
+Blitzcrank: Sup
+Brand: Mid, Sup
+Braum: Sup
+Caitlyn: Bot
+Camille: Top
+Cassiopeia: Mid
+Cho'Gath: Top, Mid
+Corki: Mid, Bot
+Darius: Top
+Diana: Top, Jg, Mid
+Dr. Mundo: Top
+Draven: Bot
+Ekko: Top, Bot
+Elise: Jg
+Evelynn: Jg
+Ezreal: Bot
+Fiddlesticks: Jg
+Fiora: Top
+Fizz: Top, Mid
+Galio: Top, Mid
+Gangplank: Top, Mid
+Garen: Top
+Gnar: Top
+Gragas: Top, Jg
+Graves: Top, Jg, Bot
+Hecarim: Jg
+Heimerdinger: Top, Mid
+Illaoi: Top
+Irelia: Top
+Ivern: Jg
+Janna: Sup
+Jarvan IV: Top, Jg
+Jax: Top, Jg
+Jayce: Top, Mid
+Jhin: Bot
+Jinx: Bot
+Kalista: Bot
+Karma: Mid, Sup
+Karthus: Mid
+Kassadin: Mid
+Katarina: Mid
+Kayle: Top
+Kennen: Top, Bot
+Kha'Zix: Jg
+Kindred: Jg
+Kled: Top
+Kog'Maw: Bot
+LeBlanc: Mid
+Lee Sin: Jg
+Leona: Sup
+Lissandra: Mid
+Lucian: Mid, Bot
+Lulu: Mid, Sup
+Lux: Mid, Sup
+Malphite: Top
+Malzahar: Mid, Sup
+Maokai: Top
+Master Yi: Jg
+Miss Fortune: Bot, Sup
+Mordekaiser: Top, Bot
+Morgana: Mid, Sup
+Nami: Sup
+Nasus: Top
+Nautilus: Top, Sup
+Nidalee: Jg
+Nocturne: Jg
+Nunu: Jg, Sup
+Olaf: Top, Jg
+Orianna: Mid
+Pantheon: Top, Jg
+Poppy: Top
+Quinn: Top, Mid
+Rakan: Sup
+Rammus: Jg
+Rek'Sai: Jg
+Renekton: Top
+Rengar: Jg
+Riven: Top, Mid
+Rumble: Top
+Ryze: Mid
+Sejuani: Jg
+Shaco: Jg
+Shen: Top
+Shyvana: Jg
+Singed: Top
+Sion: Top, Sup
+Sivir: Bot
+Skarner: Jg
+Sona: Sup
+Soraka: Sup
+Swain: Top, Mid
+Syndra: Mid
+Tahm Kench" Sup
+Taliyah: Mid
+Talon: Mid
+Taric: Sup
+Teemo: Top
+Thresh: Sup
+Tristana: Bot
+Trundle: Top
+Tryndamere: Top
+Twisted Fate: Mid
+Twitch: Jg, Bot
+Udyr: Jg
+Urgot: Top, Bot
+Varus: Bot
+Vayne: Top, Bot
+Veigar: Mid, Sup
+Vel'Koz: Mid, Sup
+Vi: Jg
+Viktor: Mid
+Vladimir: Top, Mid
+Volibear: Jg
+Warwick: Jg
+Wukong: Top, Jg
+Xayah: Bot
+Xerath: Mid
+Xin Zhao: Jg
+Yasuo: Top, Mid
+Yorick: Top
+Zac: Jg
+Zed: Mid
+Ziggs: Mid
+Zilean: Mid, Sup
+Zyra: Mid, Sup
