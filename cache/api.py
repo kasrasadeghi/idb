@@ -5,9 +5,21 @@ from collections import OrderedDict
 
 import champion_roles_parser
 
-#############
-# Champions #
-#############
+############
+# Champion #
+############
+
+def create_champion_items_dict():
+    with open("api_champions.json") as c:
+        champs = json.load(c)
+
+    champion_items = {}
+    for champ in champs:
+        items = champ['items']
+        chame = champ['name']
+        champion_items[chame] = items
+
+    return champion_items
 
 def print_champions_full():
     # image_url = "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/"
@@ -83,26 +95,9 @@ def find_longest_name():
             max_len = l
     print(max_len)
 
-#########
-# Items #
-#########
-
-def create_item_champions_dict():
-    with open("api_champions.json") as c:
-        champs = json.load(c)
-
-    item_champions = {}
-    for champ in champs:
-        chame = champ['name']
-        items = champ['items']
-
-        for item in items:
-            if item not in item_champions:
-                item_champions[item] = [chame]
-            else:
-                item_champions[item].append(chame)
-    # print(json.dumps(item_champions, indent=4, separators=(',',': ')))
-    return item_champions
+########
+# Item #
+########
 
 def create_item_roles_dict():
     with open("api_champions.json") as c:
@@ -122,7 +117,6 @@ def create_item_roles_dict():
         result = {}
         for k,v in item_roles.items():
             result[k] = list(v)
-    # print(json.dumps(result, indent=4, separators=(',',': ')))
     return result
 
 def print_items_full():
@@ -146,18 +140,94 @@ def print_items_full():
             model.append(('roles', item_roles[name]))
         except Exception as e:
             pass
-            # print(json.dumps(input_data, indent=4, separators=(',',': ')))
         else:
             all_items_data.append(OrderedDict(model))
     print(json.dumps(all_items_data, indent=4, separators=(',',': ')))
 
+#########
+# Class #
+#########
+
+def create_class_champions_dict():
+    with open("api_champions.json") as c:
+        champs = json.load(c)
+
+    tag_champions = {}
+    for champ in champs:
+        chame = champ['name']
+        tags = champ['classes']
+
+        for tag in tags:
+            if tag == 'Tank,melee':
+                tag = 'Tank'
+            if tag not in tag_champions:
+                tag_champions[tag] = [chame]
+            else:
+                tag_champions[tag].append(chame)
+    return tag_champions
+
+def create_class_descriptions_dict():
+    with open("class_descriptions.txt") as cd:
+        data = json.load(cd)
+    return data
+
+def print_classes_full():
+    # img_url = 'leaguedb.me/static/images/'
+    class_champions = create_class_champions_dict()
+    class_descriptions = create_class_descriptions_dict()
+    champion_items = create_champion_items_dict()
+    all_class_data = []
+    for cl, champs in class_champions.items():
+        model = []
+        try:
+            model.append(('name', cl))
+            model.append(('img_url', cl + '.png'))
+            model.append(('description', class_descriptions[cl]))
+            model.append(('champions', champs))
+
+            all_items = set()
+            for champ in class_champions[cl]:
+                items = set(champion_items[champ])
+                all_items |= items
+
+            model.append(('items', list(all_items)))
+        except Exception as e:
+            print("bad")
+        else:
+            all_class_data.append(OrderedDict(model))
+    print(json.dumps(all_class_data, indent=4, separators=(',',': ')))
+
+########
+# Role #
+########
+
+def create_role_champions_dict():
+    with open("api_champions.json") as c:
+        champs = json.load(c)
+
+    item_champions = {}
+    for champ in champs:
+        chame = champ['name']
+        items = champ['items']
+
+        for item in items:
+            if item not in item_champions:
+                item_champions[item] = [chame]
+            else:
+                item_champions[item].append(chame)
+    return item_champions
 
 
 if __name__ == "__main__":
+    pass
     # print_champions_full()
     # print_champion_names()
     # find_longest_lore()
     # find_longest_name()
     # ic = create_item_champions_dict()
     # create_item_roles_dict()
-    print_items_full()
+    # print_items_full()
+    # create_class_descriptions_dict()
+    print_classes_full()
+    # create_champion_items_dict()
+

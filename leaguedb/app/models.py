@@ -15,13 +15,11 @@ role_item_table = db.Table('role_item',
 # models
 
 class Champion (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-
-    name = db.Column(db.String(20), unique=True)
+    name = db.Column(db.String(20), primary_key=True)
     lore = db.Column(db.String(4400))
     img_url = db.Column(db.String(20))
 
-    role = db.Column(db.Integer, db.ForeignKey('role.id'))
+    roles = db.Column(db.Integer, db.ForeignKey('role.id'))
     classes = db.Column(db.Integer, db.ForeignKey('class.id')) # csv
     items = db.relationship(
         'Item',
@@ -29,21 +27,20 @@ class Champion (db.Model):
         backref='champions'
     )
 
-    def __init__(self, name, role, classes, items, lore, img_url):
+    def __init__(self, name, roles, classes, items, lore, img_url):
         self.name = name
-        self.role = role
-        self.classes = sub_classes
+        self.roles = roles
+        self.classes = classes
         self.items = items
         self.lore = lore
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Champion' + self.name + '>'
+        return '<Champion %s>' % self.name
 
 class Item (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(30), unique=True)
-    categories = db.Column(db.String(20)) # tags
+    name = db.Column(db.String(30), primary_key=True)
+    categories = db.Column(db.String(100))
     img_url = db.Column(db.String(40))
 
     # champions: refer to backref
@@ -61,11 +58,10 @@ class Item (db.Model):
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Item' + self.name + '>'
+        return '<Item %s>' % self.name
 
 class Class (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(40), unique=True)
+    name = db.Column(db.String(40), primary_key=True)
     img_url = db.Column(db.String(20))
     description = db.Column(db.String(100))
 
@@ -84,11 +80,10 @@ class Class (db.Model):
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Class' + self.name + '>'
+        return '<Class %s>' % self.name
 
 class Role (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True)
+    name = db.Column(db.String(20), primary_key=True)
     img_url = db.Column(db.String(10))
 
     classes = db.Column(db.String(100))
@@ -103,7 +98,7 @@ class Role (db.Model):
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Role' + self.name + '>'
+        return '<Role %s>' % self.name
 
 def db_create_tables():
     db.create_all()
