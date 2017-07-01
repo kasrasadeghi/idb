@@ -18,36 +18,36 @@ db = SQLAlchemy(app)
 
 
 @app.route("/favicon.ico")
-def favicon():
+def favicon() -> str:
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route("/")
 @app.route("/<page>")
-def home(page=None):
+def home(page: str = None) -> str:
     if page:
         return render_template(page + ".html")
     return render_template("home.html", page=page)
 
 
 @app.route("/champions/<name>")
-def champion_route(name):
+def champion_route(name: str) -> str:
     return render_template("champions/" + name + ".html", name=name)
 
 
 @app.route("/items/<name>")
-def item_route(name):
+def item_route(name: str) -> str:
     return render_template("items/" + name + ".html", name=name)
 
 
 @app.route("/classes/<name>")
-def class_route(name):
+def class_route(name: str) -> str:
     return render_template("classes/" + name + ".html", name=name)
 
 
 @app.route("/roles/<name>")
-def role_route(name):
+def role_route(name: str) -> str:
     return render_template("roles/" + name + ".html", name=name)
 
 
@@ -57,7 +57,7 @@ def role_route(name):
 
 
 @app.route("/api/champion_names")
-def get_champion_names():
+def get_champion_names() -> str:
     file = open("static/champion_names.json", "r")
     loaded = json.load(file)
     loaded: List[str] = list(loaded)
