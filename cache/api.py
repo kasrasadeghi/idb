@@ -3,7 +3,11 @@ import json
 from pprint import pprint
 from collections import OrderedDict
 
-import re
+import champion_roles_parser
+
+#############
+# Champions #
+#############
 
 def print_champions_full():
     # image_url = "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/"
@@ -14,14 +18,15 @@ def print_champions_full():
     with open("items.json") as items:
         item_data = json.load(items)
 
+    name_roles = champion_roles_parser.parse("champion-roles.txt")
+
     all_champion_data = []
     for champion in data['data'].keys(): 
         model = []
         input_data = data['data'][champion]
         model.append(('name',input_data['name']))
-        # TODO: manually input role by our pro game knowledge
-        model.append(('role', ""))
-        model.append(('class',input_data['tags']))
+        model.append(('roles', name_roles[input_data['name']]))
+        model.append(('classes',input_data['tags']))
         for index in range(7):
             if input_data['recommended'][index]['map'] in ('SR', 'CLASSIC'):
                 all_items_and_counts = []
@@ -78,8 +83,81 @@ def find_longest_name():
             max_len = l
     print(max_len)
 
+#########
+# Items #
+#########
+
+def create_item_champions_dict():
+    with open("api_champions.json") as c:
+        champs = json.load(c)
+
+    item_champions = {}
+    for champ in champs:
+        chame = champ['name']
+        items = champ['items']
+
+        for item in items:
+            if item not in item_champions:
+                item_champions[item] = [chame]
+            else:
+                item_champions[item].append(chame)
+    # print(json.dumps(item_champions, indent=4, separators=(',',': ')))
+    return item_champions
+
+def create_item_roles_dict():
+    with open("api_champions.json") as c:
+        champs = json.load(c)
+
+    item_roles = {}
+    for champ in champs:
+        roles = set(champ['roles'])
+        items = champ['items']
+
+        for item in items:
+            if item not in item_roles:
+                item_roles[item] = roles
+            else:
+                item_roles[item] |= roles
+        
+        result = {}
+        for k,v in item_roles.items():
+            result[k] = list(v)
+    # print(json.dumps(result, indent=4, separators=(',',': ')))
+    return result
+
+def print_items_full():
+    # image_url = "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/"
+    with open("items.json") as items:
+        data = json.load(items)
+
+    item_roles = create_item_roles_dict()
+
+    all_items_data = []
+    for item in data['data'].keys(): 
+        model = []
+        input_data = data['data'][item]
+        try:
+            name = input_data['name']
+            cate = input_data['tags']
+            imag = input_data['image']['full']
+            model.append(('name',name))
+            model.append(('categories', cate))
+            model.append(('image', imag))
+            model.append(('roles', item_roles[name]))
+        except Exception as e:
+            pass
+            # print(json.dumps(input_data, indent=4, separators=(',',': ')))
+        else:
+            all_items_data.append(OrderedDict(model))
+    print(json.dumps(all_items_data, indent=4, separators=(',',': ')))
+
+
+
 if __name__ == "__main__":
     # print_champions_full()
     # print_champion_names()
     # find_longest_lore()
-    find_longest_name()
+    # find_longest_name()
+    # ic = create_item_champions_dict()
+    # create_item_roles_dict()
+    print_items_full()
