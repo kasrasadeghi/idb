@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 import json
+import os
 from typing import List
 
 app = Flask(__name__)
@@ -12,7 +13,14 @@ host = 'localhost'
 db = 'test'
 uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route("/")
@@ -60,6 +68,4 @@ def get_champion_names():
 
 
 if __name__ == "__main__":
-    parsed = json.loads(str(app.config))
-    print(json.dumps(parsed, indent=4))
     app.run(host='0.0.0.0', debug=True, port=5000)
