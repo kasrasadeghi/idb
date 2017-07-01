@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Sup",
+        "img_url": "sup.png",
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Fighter",
+            "Mage",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Top",
+        "img_url": "top.png",
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Fighter",
+            "Mage",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Jg",
+        "img_url": "jg.png",
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Fighter",
+            "Mage",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Mid",
+        "img_url": "mid.png",
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Fighter",
+            "Mage",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Bot",
+        "img_url": "bot.png",
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Fighter",
+            "Mage",
+            "Support"
+        ]
+    }
+]
