@@ -72,6 +72,7 @@ def api_get_champion_names() -> str:
 # champions
 #
 
+
 @app.route("/api/champions")
 def api_champions() -> str:
     pass
