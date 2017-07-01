@@ -1,8 +1,12 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
+import json
+
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 # TODO: Remote PostgreSQL data base configuration/connection
 user = 'swe'
@@ -56,13 +60,13 @@ def role_route(name: str) -> str:
 
 @app.route("/api/champion_names")
 def get_champion_names() -> str:
-    contents = open("static/champion_names.json", "r").read()
-    result = """
-        HTTP/1.1 200 OK
-        Content-Type: application/json
-        
-    """
-    return result + contents
+    f = open("static/champion_names.json", "r")
+    contents = json.load(f)
+    print(type(contents))
+    json_resp = contents
+    resp = jsonify(json_resp)
+    print(json_resp)
+    return resp
 
 
 if __name__ == "__main__":
