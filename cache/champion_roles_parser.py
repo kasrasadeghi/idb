@@ -1,6 +1,5 @@
-
+#!/usr/bin/env python3
 from typing import Dict, List
-
 
 def parse(filename: str) -> Dict[str, List[str]]:
     file = open(filename, "r")

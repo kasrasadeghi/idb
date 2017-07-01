@@ -15,46 +15,42 @@ role_item_table = db.Table('role_item',
 # models
 
 class Champion (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True)
-    role = db.Column(db.String(10))
-    clazz = db.Column(db.String(20))
-    lore = db.Column(db.String(1000)) #TODO: find out longest lore description
-    img_url = db.Column(db.String(100))
+    name = db.Column(db.String(20), primary_key=True)
+    lore = db.Column(db.String(4400))
+    img_url = db.Column(db.String(20))
 
+    roles = db.Column(db.Integer, db.ForeignKey('role.id'))
+    classes = db.Column(db.Integer, db.ForeignKey('class.id')) # csv
     items = db.relationship(
         'Item',
         secondary=champion_item_table,
         backref='champions'
     )
 
-    def __init__(self, id, name, role, clazz, items, lore, img_url):
-        self.id = id
+    def __init__(self, name, roles, classes, items, lore, img_url):
         self.name = name
-        self.role = role
-        self.clazz = clazz
+        self.roles = roles
+        self.classes = classes
         self.items = items
         self.lore = lore
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Champion' + self.name + '>'
+        return '<Champion %s>' % self.name
 
 class Item (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(30), unique=True)
-    # champions: refer to backref
-    categories = db.Column(db.String(20))
-    img_url = db.Column(db.String(100))
+    name = db.Column(db.String(30), primary_key=True)
+    categories = db.Column(db.String(100))
+    img_url = db.Column(db.String(40))
 
+    # champions: refer to backref
     roles = db.relationship(
         'Role',
         secondary=role_item_table,
         backref='items'
     )
 
-    def __init__(self, id, name, champions, categories, roles, img_url):
-        self.id = id
+    def __init__(self, name, categories, roles, img_url):
         self.name = name
         self.champions = champions
         self.categories = categories
@@ -62,15 +58,19 @@ class Item (db.Model):
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Item' + self.name + '>'
+        return '<Item %s>' % self.name
 
 class Class (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True)
-    champions = db.Column(db.String(100))
+    name = db.Column(db.String(40), primary_key=True)
+    img_url = db.Column(db.String(20))
     description = db.Column(db.String(100))
-    items = db.Column(db.String(100))
-    img_url = db.Column(db.String(100))
+
+    champions = db.relationship('Champion', backref='class')
+    items = db.relationship(
+        'Item',
+        secondary=champion_item_table,
+        backref='classes'
+    )
 
     def __init__(self, name, champions, description, items, img_url):
         self.name = name
@@ -80,22 +80,26 @@ class Class (db.Model):
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Class' + self.name + '>'
+        return '<Class %s>' % self.name
 
 class Role (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True)
-    champions = db.Column(db.String(100))
-    # items: refer to backref
-    classes = db.Column(db.String(100))
-    img_url = db.Column(db.String(100))
+    name = db.Column(db.String(20), primary_key=True)
+    img_url = db.Column(db.String(10))
 
-    def __init__(self, name, champions, items, classes, img_url):
+    classes = db.Column(db.String(100))
+    # items: refer to backref
+    champions = db.relationship('Champion', backref='role')
+
+
+    def __init__(self, name, champions, classes, img_url):
         self.name = name
         self.champions = champions
-        self.items = items
         self.classes = classes
         self.img_url = img_url
 
     def __repr__(self):
-        return '<Role' + self.name + '>'
+        return '<Role %s>' % self.name
+
+def db_create_tables():
+    db.create_all()
+    print("Created tables")
