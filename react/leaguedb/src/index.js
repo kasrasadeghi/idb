@@ -10,8 +10,8 @@ var request = new Request('https://www.google.com/', {
     }) 
 });
 
-fetch('https://www.google.com/').then(function(response) {
-	  console.log("hallo");
+fetch('https://leaguedb.me/api/champion_names').then(function(response) {
+	  console.log(response);
 }).catch(function(err) {
 	  console.log("sad");
 });
