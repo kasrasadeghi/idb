@@ -1,8 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
-import json
 import os
-from typing import List
 
 app = Flask(__name__)
 
@@ -58,13 +56,13 @@ def role_route(name: str) -> str:
 
 @app.route("/api/champion_names")
 def get_champion_names() -> str:
-    file = open("static/champion_names.json", "r")
-    loaded = json.load(file)
-    loaded: List[str] = list(loaded)
-    result = ""
-    for champ in sorted(loaded):
-        result += champ + "\n"
-    return result
+    contents = open("static/champion_names.json", "r").read()
+    result = """
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        
+    """
+    return result + contents
 
 
 if __name__ == "__main__":
