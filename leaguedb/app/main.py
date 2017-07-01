@@ -1,46 +1,53 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
-import json
-from typing import List
+import os
 
 app = Flask(__name__)
 
 # TODO: Remote PostgreSQL data base configuration/connection
 user = 'swe'
-pwd  = 'abc'
+pwd = 'abc'
 host = 'localhost'
-db   = 'test'
-uri  = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db) 
+db = 'test'
+uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
-db  = SQLAlchemy(app)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+
+@app.route("/favicon.ico")
+def favicon() -> str:
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route("/")
 @app.route("/<page>")
-def home(page = None):
+def home(page: str = None) -> str:
     if page:
-        return render_template(page+".html")
+        return render_template(page + ".html")
     return render_template("home.html", page=page)
 
 
 @app.route("/champions/<name>")
-def champion_route(name):
+def champion_route(name: str) -> str:
     return render_template("champions/" + name + ".html", name=name)
 
 
 @app.route("/items/<name>")
-def item_route(name):
+def item_route(name: str) -> str:
     return render_template("items/" + name + ".html", name=name)
 
 
 @app.route("/classes/<name>")
-def class_route(name):
+def class_route(name: str) -> str:
     return render_template("classes/" + name + ".html", name=name)
 
 
 @app.route("/roles/<name>")
-def role_route(name):
+def role_route(name: str) -> str:
     return render_template("roles/" + name + ".html", name=name)
+
 
 #####
 # API
@@ -48,14 +55,14 @@ def role_route(name):
 
 
 @app.route("/api/champion_names")
-def get_champion_names():
-    file = open("static/champion_names.json", "r")
-    loaded = json.load(file)
-    loaded: List[str] = list(loaded)
-    result = ""
-    for champ in sorted(loaded):
-        result += champ + "\n"
-    return result
+def get_champion_names() -> str:
+    contents = open("static/champion_names.json", "r").read()
+    result = """
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        
+    """
+    return result + contents
 
 
 if __name__ == "__main__":
