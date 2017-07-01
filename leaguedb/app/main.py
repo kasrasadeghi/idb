@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+import json
+from typing import List
 
 app = Flask(__name__)
 
@@ -44,11 +46,17 @@ def role_route(name):
 # API
 #####
 
+
 @app.route("/api/champion_names")
 def get_champion_names():
-    with open("static/champion_names.json") as names:
-        data = names.read().replace('\n', ' ')
-    return data
+    file = open("static/champion_names.json", "r")
+    loaded = json.load(file)
+    loaded: List[str] = list(loaded)
+    result = ""
+    for champ in sorted(loaded):
+        result += champ + "\n"
+    return result
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=5000)
