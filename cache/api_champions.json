@@ -1816,7 +1816,7 @@
             "Top"
         ],
         "classes": [
-            "Tank,melee"
+            "Tank"
         ],
         "items": [
             "Ruby Crystal",
