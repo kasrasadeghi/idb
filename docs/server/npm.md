@@ -15,14 +15,14 @@ To install a package called *the_package* locally:
 $ npm install *the_package*
 
 To install a package globally:
-$ npm install *the_package* -g
+$ npm install -g *the_package*
 
 local vs global:
  - local is a project dependency
  - global is a global utility or commandline helper.
    - usually actual programs instead of libraries/dependencies
 
-some options, from [this link](https://docs.npmjs.com/cli/install)
+some local options, from [this link](https://docs.npmjs.com/cli/install)
 
 $ npm install -E
 $ npm install --save-exact
