@@ -59,7 +59,7 @@ def role_route(name: str) -> str:
 
 
 @app.route("/api/champion_names")
-def get_champion_names() -> str:
+def api_get_champion_names() -> str:
     f = open("static/champion_names.json", "r")
     contents = json.load(f)
     print(type(contents))
@@ -67,6 +67,62 @@ def get_champion_names() -> str:
     resp = jsonify(json_resp)
     print(json_resp)
     return resp
+
+#
+# champions
+#
+
+@app.route("/api/champions")
+def api_champions() -> str:
+    pass
+
+
+@app.route("/api/champion/<name>")
+def api_champion(name: str) -> str:
+    pass
+
+#
+# classes
+#
+
+
+@app.route("/api/classes")
+def api_classes() -> str:
+    pass
+
+
+@app.route("/api/class/<name>")
+def api_class(name: str) -> str:
+    pass
+
+
+#
+# items
+#
+
+
+@app.route("/api/items")
+def api_items() -> str:
+    pass
+
+
+@app.route("/api/item/<name>")
+def api_item(name: str) -> str:
+    pass
+
+#
+# roles
+#
+
+
+@app.route("/api/roles")
+def api_roles() -> str:
+    pass
+
+
+@app.route("/api/role/<name>")
+def api_role(name: str) -> str:
+    pass
 
 
 if __name__ == "__main__":
