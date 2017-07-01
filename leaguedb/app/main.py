@@ -7,19 +7,19 @@ app = Flask(__name__)
 
 # TODO: Remote PostgreSQL data base configuration/connection
 user = 'swe'
-pwd  = 'abc'
+pwd = 'abc'
 host = 'localhost'
-db   = 'test'
-uri  = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db) 
+db = 'test'
+uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
-db  = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 
 @app.route("/")
 @app.route("/<page>")
-def home(page = None):
+def home(page=None):
     if page:
-        return render_template(page+".html")
+        return render_template(page + ".html")
     return render_template("home.html", page=page)
 
 
@@ -42,6 +42,7 @@ def class_route(name):
 def role_route(name):
     return render_template("roles/" + name + ".html", name=name)
 
+
 #####
 # API
 #####
@@ -59,4 +60,6 @@ def get_champion_names():
 
 
 if __name__ == "__main__":
+    parsed = json.loads(str(app.config))
+    print(json.dumps(parsed, indent=4))
     app.run(host='0.0.0.0', debug=True, port=5000)
