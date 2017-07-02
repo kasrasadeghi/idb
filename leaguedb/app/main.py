@@ -1,12 +1,24 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, jsonify, Response
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
+import json
 import os
 
+from password import secret_database_password
+"""
+make a file in this directory called password.py
+
+it should have one line:
+secret_database_password = "INSERT PASSWORD HERE"
+"""
+
+
 app = Flask(__name__)
+CORS(app) # may be able remove this
 
 # TODO: Remote PostgreSQL data base configuration/connection
 user = 'adben'
-pwd = '!sAo}f;vhpvMSuG'
+pwd = secret_database_password
 host = 'swe.ccju5j8yyny7.us-east-2.rds.amazonaws.com'
 db = 'postgres'
 uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
@@ -51,15 +63,220 @@ def role_route(name: str) -> str:
 # API
 #####
 
+def json_response(filename: str) -> Response:
+    f = open("static/json/" + filename, "r")
+    contents = json.load(f)
+    response = jsonify(contents)
+    return response
+
+
+#
+# region champions
+#
+
+
 @app.route("/api/champion_names")
-def get_champion_names() -> str:
-    contents = open("static/champion_names.json", "r").read()
-    result = """
-        HTTP/1.1 200 OK
-        Content-Type: application/json
-        
+def api_champion_names() -> Response:
     """
-    return result + contents
+    gets a list of champion names in a json
+
+    :return: a list of champion names
+
+    { "Thresh", "Viktor", "Hecarim", ... }
+    """
+    return json_response("champion_names.json")
+
+
+@app.route("/api/champions")
+def api_champions() -> Response:
+    """
+    gets a json with all champion information
+
+    :return: the response
+
+    [
+        {
+            "name": "Quinn",
+            "roles": [ ... ],
+            "classes": [ ... ],
+            "items": [ ... ],
+            "lore": "Quinn and ...
+            "icon": "Quinn.png"
+        },
+        ...
+    ]
+    """
+    return json_response("api_champions.json")
+
+
+@app.route("/api/champion/<name>")
+def api_champion(name: str) -> Response:
+    """
+    gets a single champion by name
+
+    :param name: the name of the champion
+    :return: the response
+
+    {
+        "name": "Quinn",
+        "roles": [ ... ],
+        "classes": [ ... ],
+        "items": [ ... ],
+        "lore": "Quinn and ...
+        "icon": "Quinn.png"
+    }
+    """
+    raise NotImplemented("cannot get champion by name yet")
+
+
+# endregion
+#
+
+
+#
+# region classes
+#
+
+
+@app.route("/api/classes")
+def api_classes() -> Response:
+    """
+    gets all class in a json
+
+    :return: the response
+
+    [
+        {
+            "name": "Marksman",
+            "icon": "Marksman.png",
+            "description": "Marksman are ranged ...
+            "champions": [ ...],
+            "items": [ ... ]
+        },
+        ...
+    ]
+    """
+    return json_response("api_classes.json")
+
+
+@app.route("/api/class/<name>")
+def api_class(name: str) -> Response:
+    """
+    gets a single class's json
+
+    :param name: the name of a specific class
+    :return: the response
+
+    {
+        "name": "Marksman",
+        "icon": "Marksman.png",
+        "description": "Marksman are ranged ...
+        "champions": [ ...],
+        "items": [ ... ]
+    }
+    """
+    raise NotImplemented("cannot get classes by name yet")
+
+
+# endregion
+#
+
+
+#
+# region items
+#
+
+
+@app.route("/api/items")
+def api_items() -> Response:
+    """
+    gets all item data in a json
+
+    :return: the response
+    [
+        {
+            "name": "B. F. Sword",
+            "roles": [ ... ],
+            "champions": [ ... ],
+            "categories": [ ... ],
+            "image": "1038.png"
+        },
+        ...
+    ]
+    """
+    return json_response("api_items.json")
+
+
+@app.route("/api/item/<name>")
+def api_item(name: str) -> Response:
+    """
+    gets a single item's information
+
+    :param name: the specific item's name
+    :return: the response
+
+    {
+        "name": "B. F. Sword",
+        "roles": [ ... ],
+        "champions": [ ... ],
+        "categories": [ ... ],
+        "image": "1038.png"
+    }
+    """
+    raise NotImplemented("cannot get items by name yet")
+
+
+# endregion
+#
+
+
+#
+# region roles
+#
+
+
+@app.route("/api/roles")
+def api_roles() -> Response:
+    """
+    gets all of the roles
+
+    :return: the response
+
+    [
+        {
+            "name": "Sup",
+            "icon": "sup.png",
+            "classes": [ ... ],
+            "items": [ ... ],
+            "champions" : [ ... ]
+        },
+        ...
+    ]
+    """
+    return json_response("api_roles.json")
+
+
+@app.route("/api/role/<name>")
+def api_role(name: str) -> Response:
+    """
+    gets a single role by name
+
+    :param name: the role's name
+    :return: the response
+
+    {
+        "name": "Sup",
+        "icon": "sup.png",
+        "classes": [ ... ],
+        "items": [ ... ],
+        "champions" : [ ... ]
+    }
+    """
+    raise NotImplemented("cannot get role by name yet")
+
+
+# endregion
+#
 
 
 if __name__ == "__main__":
