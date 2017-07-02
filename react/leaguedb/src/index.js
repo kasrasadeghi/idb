@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-fetch('http://localhost:5000/api/champion_names', {
+fetch('http://localhost:5000/api/roles', {
   method: 'GET',
   dataType: 'json'
 })

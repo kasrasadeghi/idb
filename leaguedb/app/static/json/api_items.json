@@ -1,0 +1,1756 @@
+[
+    {
+        "name": "B. F. Sword",
+        "categories": [
+            "Damage"
+        ],
+        "image": "1038.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Last Whisper",
+        "categories": [
+            "ArmorPenetration",
+            "Damage"
+        ],
+        "image": "3035.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Chain Vest",
+        "categories": [
+            "Armor"
+        ],
+        "image": "1031.png",
+        "roles": [
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Randuin's Omen",
+        "categories": [
+            "Active",
+            "Armor",
+            "Health",
+            "Slow"
+        ],
+        "image": "3143.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Archangel's Staff (Quick Charge)",
+        "categories": [
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "image": "3007.png",
+        "roles": [
+            "Mid"
+        ]
+    },
+    {
+        "name": "Luden's Echo",
+        "categories": [
+            "NonbootsMovement",
+            "OnHit",
+            "SpellDamage"
+        ],
+        "image": "3285.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Rabadon's Deathcap",
+        "categories": [
+            "SpellDamage"
+        ],
+        "image": "3089.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Tear of the Goddess",
+        "categories": [
+            "Mana",
+            "ManaRegen"
+        ],
+        "image": "3070.png",
+        "roles": [
+            "Mid"
+        ]
+    },
+    {
+        "name": "Catalyst of Aeons",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Mana",
+            "ManaRegen"
+        ],
+        "image": "3010.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Archangel's Staff",
+        "categories": [
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "image": "3003.png",
+        "roles": [
+            "Mid",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Health Potion",
+        "categories": [
+            "Consumable",
+            "Jungle",
+            "Lane"
+        ],
+        "image": "2003.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Kindlegem",
+        "categories": [
+            "CooldownReduction",
+            "Health"
+        ],
+        "image": "3067.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Brawler's Gloves",
+        "categories": [
+            "CriticalStrike"
+        ],
+        "image": "1051.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Death's Dance",
+        "categories": [
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction"
+        ],
+        "image": "3812.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Cloth Armor",
+        "categories": [
+            "Armor"
+        ],
+        "image": "1029.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Boots of Mobility",
+        "categories": [
+            "Boots"
+        ],
+        "image": "3117.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Righteous Glory",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Armor",
+            "Mana",
+            "Active",
+            "CooldownReduction",
+            "Slow",
+            "NonbootsMovement"
+        ],
+        "image": "3800.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Rapid Firecannon",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "image": "3094.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Spirit Visage",
+        "categories": [
+            "CooldownReduction",
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "image": "3065.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Trinity Force",
+        "categories": [
+            "Health",
+            "Damage",
+            "AttackSpeed",
+            "Mana",
+            "CooldownReduction",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "image": "3078.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Recurve Bow",
+        "categories": [
+            "AttackSpeed",
+            "OnHit"
+        ],
+        "image": "1043.png",
+        "roles": [
+            "Bot",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Doran's Blade",
+        "categories": [
+            "Damage",
+            "Health",
+            "Lane",
+            "LifeSteal"
+        ],
+        "image": "1055.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Glacial Shroud",
+        "categories": [
+            "Armor",
+            "CooldownReduction",
+            "Mana"
+        ],
+        "image": "3024.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Mikael's Crucible",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "ManaRegen",
+            "Active",
+            "CooldownReduction"
+        ],
+        "image": "3222.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Ruby Crystal",
+        "categories": [
+            "Health"
+        ],
+        "image": "1028.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Hextech Gunblade",
+        "categories": [
+            "Active",
+            "Damage",
+            "LifeSteal",
+            "Slow",
+            "SpellDamage",
+            "SpellVamp"
+        ],
+        "image": "3146.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Runaan's Hurricane",
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "image": "3085.png",
+        "roles": [
+            "Bot",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Hextech Protobelt-01",
+        "categories": [
+            "Health",
+            "SpellDamage",
+            "Active",
+            "CooldownReduction"
+        ],
+        "image": "3152.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Long Sword",
+        "categories": [
+            "Damage",
+            "Lane"
+        ],
+        "image": "1036.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Iceborn Gauntlet",
+        "categories": [
+            "Armor",
+            "Mana",
+            "CooldownReduction",
+            "Slow"
+        ],
+        "image": "3025.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Needlessly Large Rod",
+        "categories": [
+            "SpellDamage"
+        ],
+        "image": "1058.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Ninja Tabi",
+        "categories": [
+            "Armor",
+            "Boots"
+        ],
+        "image": "3047.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Void Staff",
+        "categories": [
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "image": "3135.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Doran's Ring",
+        "categories": [
+            "Health",
+            "Lane",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "image": "1056.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Banshee's Veil",
+        "categories": [
+            "SpellBlock",
+            "SpellDamage",
+            "CooldownReduction"
+        ],
+        "image": "3102.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Wit's End",
+        "categories": [
+            "AttackSpeed",
+            "OnHit",
+            "SpellBlock"
+        ],
+        "image": "3091.png",
+        "roles": [
+            "Top"
+        ]
+    },
+    {
+        "name": "Lich Bane",
+        "categories": [
+            "SpellDamage",
+            "Mana",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "image": "3100.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Liandry's Torment",
+        "categories": [
+            "Health",
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "image": "3151.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Mercurial Scimitar",
+        "categories": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "Active",
+            "NonbootsMovement"
+        ],
+        "image": "3139.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Sorcerer's Shoes",
+        "categories": [
+            "Boots",
+            "MagicPenetration"
+        ],
+        "image": "3020.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Aether Wisp",
+        "categories": [
+            "NonbootsMovement",
+            "SpellDamage"
+        ],
+        "image": "3113.png",
+        "roles": [
+            "Mid"
+        ]
+    },
+    {
+        "name": "Boots of Speed",
+        "categories": [
+            "Boots"
+        ],
+        "image": "1001.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Sapphire Crystal",
+        "categories": [
+            "Mana"
+        ],
+        "image": "1027.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Haunting Guise",
+        "categories": [
+            "Health",
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "image": "3136.png",
+        "roles": [
+            "Mid",
+            "Top"
+        ]
+    },
+    {
+        "name": "Essence Reaver",
+        "categories": [
+            "Damage",
+            "CriticalStrike",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "image": "3508.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Lord Dominik's Regards",
+        "categories": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "image": "3036.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Guinsoo's Rageblade",
+        "categories": [
+            "Damage",
+            "AttackSpeed",
+            "SpellDamage",
+            "OnHit"
+        ],
+        "image": "3124.png",
+        "roles": [
+            "Mid",
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "The Black Cleaver",
+        "categories": [
+            "ArmorPenetration",
+            "CooldownReduction",
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "image": "3071.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Bilgewater Cutlass",
+        "categories": [
+            "Active",
+            "Damage",
+            "LifeSteal",
+            "Slow"
+        ],
+        "image": "3144.png",
+        "roles": [
+            "Bot",
+            "Jg"
+        ]
+    },
+    {
+        "name": "The Bloodthirster",
+        "categories": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "image": "3072.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Amplifying Tome",
+        "categories": [
+            "SpellDamage"
+        ],
+        "image": "1052.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Zhonya's Hourglass",
+        "categories": [
+            "Armor",
+            "SpellDamage",
+            "Active",
+            "CooldownReduction"
+        ],
+        "image": "3157.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Rod of Ages",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "image": "3027.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Hextech GLP-800",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "SpellDamage",
+            "Mana",
+            "ManaRegen",
+            "Active"
+        ],
+        "image": "3030.png",
+        "roles": [
+            "Mid"
+        ]
+    },
+    {
+        "name": "Athene's Unholy Grail",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "image": "3174.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Phage",
+        "categories": [
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "image": "3044.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Mercury's Treads",
+        "categories": [
+            "Boots",
+            "SpellBlock",
+            "Tenacity"
+        ],
+        "image": "3111.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Warden's Mail",
+        "categories": [
+            "Armor",
+            "Slow"
+        ],
+        "image": "3082.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Nashor's Tooth",
+        "categories": [
+            "AttackSpeed",
+            "CooldownReduction",
+            "OnHit",
+            "SpellDamage"
+        ],
+        "image": "3115.png",
+        "roles": [
+            "Mid",
+            "Top"
+        ]
+    },
+    {
+        "name": "Kircheis Shard",
+        "categories": [
+            "AttackSpeed",
+            "OnHit"
+        ],
+        "image": "2015.png",
+        "roles": [
+            "Mid",
+            "Top",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Sterak's Gage",
+        "categories": [
+            "Health",
+            "Damage"
+        ],
+        "image": "3053.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Rod of Ages (Quick Charge)",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "image": "3029.png",
+        "roles": [
+            "Mid",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Bami's Cinder",
+        "categories": [
+            "Health"
+        ],
+        "image": "3751.png",
+        "roles": [
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Maw of Malmortius",
+        "categories": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction",
+            "SpellVamp"
+        ],
+        "image": "3156.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Banner of Command",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "Armor",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "image": "3060.png",
+        "roles": [
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Talisman of Ascension",
+        "categories": [
+            "HealthRegen",
+            "Armor",
+            "ManaRegen",
+            "Active",
+            "GoldPer",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "image": "3069.png",
+        "roles": [
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Zeal",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement"
+        ],
+        "image": "3086.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Morellonomicon",
+        "categories": [
+            "SpellDamage",
+            "Mana",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "image": "3165.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Knight's Vow",
+        "categories": [
+            "Health",
+            "Armor",
+            "Aura",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "image": "3109.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Giant's Belt",
+        "categories": [
+            "Health"
+        ],
+        "image": "1011.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Frost Queen's Claim",
+        "categories": [
+            "Active",
+            "CooldownReduction",
+            "GoldPer",
+            "ManaRegen",
+            "Slow",
+            "SpellDamage"
+        ],
+        "image": "3092.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Rylai's Crystal Scepter",
+        "categories": [
+            "Health",
+            "SpellDamage",
+            "Slow"
+        ],
+        "image": "3116.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Zeke's Convergence",
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "Mana",
+            "Aura",
+            "Active",
+            "CooldownReduction"
+        ],
+        "image": "3050.png",
+        "roles": [
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Fiendish Codex",
+        "categories": [
+            "CooldownReduction",
+            "SpellDamage"
+        ],
+        "image": "3108.png",
+        "roles": [
+            "Mid",
+            "Top",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Ionian Boots of Lucidity",
+        "categories": [
+            "Boots",
+            "CooldownReduction"
+        ],
+        "image": "3158.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Pickaxe",
+        "categories": [
+            "Damage"
+        ],
+        "image": "1037.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Doran's Shield",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Lane"
+        ],
+        "image": "1054.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Manamune",
+        "categories": [
+            "Damage",
+            "Mana",
+            "ManaRegen",
+            "OnHit"
+        ],
+        "image": "3004.png",
+        "roles": [
+            "Jg"
+        ]
+    },
+    {
+        "name": "Infinity Edge",
+        "categories": [
+            "CriticalStrike",
+            "Damage"
+        ],
+        "image": "3031.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Phantom Dancer",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement"
+        ],
+        "image": "3046.png",
+        "roles": [
+            "Bot",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Titanic Hydra",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Damage",
+            "Active",
+            "OnHit"
+        ],
+        "image": "3748.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Warding Totem (Trinket)",
+        "categories": [
+            "Active",
+            "Jungle",
+            "Lane",
+            "Trinket",
+            "Vision"
+        ],
+        "image": "3340.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Ruby Sightstone",
+        "categories": [
+            "Active",
+            "Health",
+            "Vision"
+        ],
+        "image": "2045.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Spectre's Cowl",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "image": "3211.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Warmog's Armor",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "CooldownReduction"
+        ],
+        "image": "3083.png",
+        "roles": [
+            "Mid",
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Blasting Wand",
+        "categories": [
+            "SpellDamage"
+        ],
+        "image": "1026.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Boots of Swiftness",
+        "categories": [
+            "Boots"
+        ],
+        "image": "3009.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Adaptive Helm",
+        "categories": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen",
+            "CooldownReduction"
+        ],
+        "image": "3194.png",
+        "roles": [
+            "Top"
+        ]
+    },
+    {
+        "name": "Lost Chapter",
+        "categories": [
+            "SpellDamage",
+            "Mana",
+            "ManaRegen"
+        ],
+        "image": "3802.png",
+        "roles": [
+            "Mid",
+            "Top",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Dagger",
+        "categories": [
+            "AttackSpeed"
+        ],
+        "image": "1042.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Blade of the Ruined King",
+        "categories": [
+            "Active",
+            "AttackSpeed",
+            "Damage",
+            "LifeSteal",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "image": "3153.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Frozen Heart",
+        "categories": [
+            "Armor",
+            "Aura",
+            "CooldownReduction",
+            "Mana"
+        ],
+        "image": "3110.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Tiamat",
+        "categories": [
+            "HealthRegen",
+            "Damage",
+            "Active"
+        ],
+        "image": "3077.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Guardian Angel",
+        "categories": [
+            "Armor",
+            "Damage"
+        ],
+        "image": "3026.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Vampiric Scepter",
+        "categories": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "image": "1053.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Sheen",
+        "categories": [
+            "Mana",
+            "CooldownReduction"
+        ],
+        "image": "3057.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Sweeping Lens (Trinket)",
+        "categories": [
+            "Active",
+            "Jungle",
+            "Trinket",
+            "Vision"
+        ],
+        "image": "3341.png",
+        "roles": [
+            "Sup"
+        ]
+    },
+    {
+        "name": "Berserker's Greaves",
+        "categories": [
+            "AttackSpeed",
+            "Boots"
+        ],
+        "image": "3006.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Youmuu's Ghostblade",
+        "categories": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "image": "3142.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Dead Man's Plate",
+        "categories": [
+            "Health",
+            "Armor",
+            "OnHit",
+            "NonbootsMovement",
+            "Bilgewater"
+        ],
+        "image": "3742.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Statikk Shiv",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "image": "3087.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Null-Magic Mantle",
+        "categories": [
+            "SpellBlock"
+        ],
+        "image": "1033.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Relic Shield",
+        "categories": [
+            "Aura",
+            "GoldPer",
+            "Health",
+            "Lane"
+        ],
+        "image": "3302.png",
+        "roles": [
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Sunfire Cape",
+        "categories": [
+            "Armor",
+            "Health"
+        ],
+        "image": "3068.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Frozen Mallet",
+        "categories": [
+            "Damage",
+            "Health",
+            "OnHit",
+            "Slow"
+        ],
+        "image": "3022.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Ardent Censer",
+        "categories": [
+            "CooldownReduction",
+            "ManaRegen",
+            "NonbootsMovement",
+            "SpellDamage"
+        ],
+        "image": "3504.png",
+        "roles": [
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Stinger",
+        "categories": [
+            "AttackSpeed",
+            "CooldownReduction"
+        ],
+        "image": "3101.png",
+        "roles": [
+            "Top"
+        ]
+    },
+    {
+        "name": "Caulfield's Warhammer",
+        "categories": [
+            "Damage",
+            "CooldownReduction"
+        ],
+        "image": "3133.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Locket of the Iron Solari",
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "Active"
+        ],
+        "image": "3190.png",
+        "roles": [
+            "Jg",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Redemption",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "image": "3107.png",
+        "roles": [
+            "Sup"
+        ]
+    },
+    {
+        "name": "Abyssal Mask",
+        "categories": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen",
+            "Aura",
+            "CooldownReduction",
+            "MagicPenetration"
+        ],
+        "image": "3001.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Thornmail",
+        "categories": [
+            "Armor"
+        ],
+        "image": "3075.png",
+        "roles": [
+            "Top",
+            "Jg",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Aegis of the Legion",
+        "categories": [
+            "SpellBlock",
+            "Armor"
+        ],
+        "image": "3105.png",
+        "roles": [
+            "Jg",
+            "Bot",
+            "Mid",
+            "Top",
+            "Sup"
+        ]
+    },
+    {
+        "name": "Ravenous Hydra",
+        "categories": [
+            "Active",
+            "Damage",
+            "HealthRegen",
+            "LifeSteal",
+            "OnHit"
+        ],
+        "image": "3074.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg"
+        ]
+    },
+    {
+        "name": "Chalice of Harmony",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "ManaRegen"
+        ],
+        "image": "3028.png",
+        "roles": [
+            "Jg"
+        ]
+    },
+    {
+        "name": "Zz'Rot Portal",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "Armor",
+            "Active",
+            "NonbootsMovement"
+        ],
+        "image": "3512.png",
+        "roles": [
+            "Top",
+            "Sup"
+        ]
+    }
+]

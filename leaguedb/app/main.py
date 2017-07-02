@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory, jsonify
+from flask import Flask, render_template, send_from_directory, jsonify, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
 import json
@@ -57,6 +57,12 @@ def role_route(name: str) -> str:
 # API
 #####
 
+def json_response(filename: str) -> Response:
+    f = open("static/json/" + filename, "r")
+    contents = json.load(f)
+    response = jsonify(contents)
+    return response
+
 
 #
 # region champions
@@ -64,7 +70,7 @@ def role_route(name: str) -> str:
 
 
 @app.route("/api/champion_names")
-def api_get_champion_names() -> str:
+def api_champion_names() -> Response:
     """
     gets a list of champion names in a json
 
@@ -72,15 +78,11 @@ def api_get_champion_names() -> str:
 
     { "Thresh", "Viktor", "Hecarim", ... }
     """
-    f = open("static/champion_names.json", "r")
-    contents = json.load(f)
-    json_resp = contents
-    resp = jsonify(json_resp)  # this is a response object
-    return resp
+    return json_response("champion_names.json")
 
 
 @app.route("/api/champions")
-def api_champions() -> str:
+def api_champions() -> Response:
     """
     gets a json with all champion information
 
@@ -98,11 +100,11 @@ def api_champions() -> str:
         ...
     ]
     """
-    pass
+    return json_response("api_champions.json")
 
 
 @app.route("/api/champion/<name>")
-def api_champion(name: str) -> str:
+def api_champion(name: str) -> Response:
     """
     gets a single champion by name
 
@@ -118,7 +120,8 @@ def api_champion(name: str) -> str:
         "icon": "Quinn.png"
     }
     """
-    pass
+    raise NotImplemented("cannot get champion by name yet")
+
 
 # endregion
 #
@@ -130,7 +133,7 @@ def api_champion(name: str) -> str:
 
 
 @app.route("/api/classes")
-def api_classes() -> str:
+def api_classes() -> Response:
     """
     gets all class in a json
 
@@ -147,11 +150,11 @@ def api_classes() -> str:
         ...
     ]
     """
-    pass
+    return json_response("api_classes.json")
 
 
 @app.route("/api/class/<name>")
-def api_class(name: str) -> str:
+def api_class(name: str) -> Response:
     """
     gets a single class's json
 
@@ -166,7 +169,8 @@ def api_class(name: str) -> str:
         "items": [ ... ]
     }
     """
-    pass
+    raise NotImplemented("cannot get classes by name yet")
+
 
 # endregion
 #
@@ -178,7 +182,7 @@ def api_class(name: str) -> str:
 
 
 @app.route("/api/items")
-def api_items() -> str:
+def api_items() -> Response:
     """
     gets all item data in a json
 
@@ -194,11 +198,11 @@ def api_items() -> str:
         ...
     ]
     """
-    pass
+    return json_response("api_items.json")
 
 
 @app.route("/api/item/<name>")
-def api_item(name: str) -> str:
+def api_item(name: str) -> Response:
     """
     gets a single item's information
 
@@ -213,7 +217,8 @@ def api_item(name: str) -> str:
         "image": "1038.png"
     }
     """
-    pass
+    raise NotImplemented("cannot get items by name yet")
+
 
 # endregion
 #
@@ -225,7 +230,7 @@ def api_item(name: str) -> str:
 
 
 @app.route("/api/roles")
-def api_roles() -> str:
+def api_roles() -> Response:
     """
     gets all of the roles
 
@@ -242,11 +247,11 @@ def api_roles() -> str:
         ...
     ]
     """
-    pass
+    return json_response("api_roles.json")
 
 
 @app.route("/api/role/<name>")
-def api_role(name: str) -> str:
+def api_role(name: str) -> Response:
     """
     gets a single role by name
 
@@ -261,7 +266,8 @@ def api_role(name: str) -> str:
         "champions" : [ ... ]
     }
     """
-    pass
+    raise NotImplemented("cannot get role by name yet")
+
 
 # endregion
 #
