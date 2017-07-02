@@ -1,35 +1,43 @@
 [
     {
-        "name": "Wit's End",
+        "name": "Warmog's Armor",
         "categories": [
-            "AttackSpeed",
-            "OnHit",
-            "SpellBlock"
+            "Health",
+            "HealthRegen",
+            "CooldownReduction"
         ],
-        "icon": "3091.png",
+        "icon": "3083.png",
         "roles": [
-            "Top"
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
         ],
         "classes": [
-            "Tank",
+            "Mage",
             "Fighter",
-            "Tank"
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
-        "name": "Archangel's Staff (Quick Charge)",
+        "name": "Chain Vest",
         "categories": [
-            "Mana",
-            "ManaRegen",
-            "SpellDamage"
+            "Armor"
         ],
-        "icon": "3007.png",
+        "icon": "1031.png",
         "roles": [
-            "Mid"
+            "Sup",
+            "Jg"
         ],
         "classes": [
+            "Mage",
+            "Fighter",
             "Support",
-            "Mage"
+            "Tank"
         ]
     },
     {
@@ -41,16 +49,169 @@
         "icon": "2015.png",
         "roles": [
             "Mid",
+            "Sup",
             "Top",
-            "Bot",
             "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Iceborn Gauntlet",
+        "categories": [
+            "Armor",
+            "Mana",
+            "CooldownReduction",
+            "Slow"
+        ],
+        "icon": "3025.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Phantom Dancer",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement"
+        ],
+        "icon": "3046.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Righteous Glory",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Armor",
+            "Mana",
+            "Active",
+            "CooldownReduction",
+            "Slow",
+            "NonbootsMovement"
+        ],
+        "icon": "3800.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Lich Bane",
+        "categories": [
+            "SpellDamage",
+            "Mana",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "icon": "3100.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Assassin",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Last Whisper",
+        "categories": [
+            "ArmorPenetration",
+            "Damage"
+        ],
+        "icon": "3035.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg",
+            "Mid"
         ],
         "classes": [
             "Fighter",
             "Support",
-            "Assassin",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Ruby Sightstone",
+        "categories": [
+            "Active",
+            "Health",
+            "Vision"
+        ],
+        "icon": "2045.png",
+        "roles": [
+            "Sup"
+        ],
+        "classes": [
             "Mage",
-            "Marksman"
+            "Support"
+        ]
+    },
+    {
+        "name": "Berserker's Greaves",
+        "categories": [
+            "AttackSpeed",
+            "Boots"
+        ],
+        "icon": "3006.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
@@ -65,521 +226,33 @@
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Sorcerer's Shoes",
-        "categories": [
-            "Boots",
-            "MagicPenetration"
-        ],
-        "icon": "3020.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
             "Assassin",
-            "Marksman"
+            "Fighter"
         ]
     },
     {
-        "name": "Ninja Tabi",
-        "categories": [
-            "Armor",
-            "Boots"
-        ],
-        "icon": "3047.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Zz'Rot Portal",
-        "categories": [
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Active",
-            "NonbootsMovement"
-        ],
-        "icon": "3512.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Death's Dance",
+        "name": "Guinsoo's Rageblade",
         "categories": [
             "Damage",
-            "LifeSteal",
-            "CooldownReduction"
-        ],
-        "icon": "3812.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Ionian Boots of Lucidity",
-        "categories": [
-            "Boots",
-            "CooldownReduction"
-        ],
-        "icon": "3158.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Sheen",
-        "categories": [
-            "Mana",
-            "CooldownReduction"
-        ],
-        "icon": "3057.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Spectre's Cowl",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "SpellBlock"
-        ],
-        "icon": "3211.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Top",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support"
-        ]
-    },
-    {
-        "name": "Cloth Armor",
-        "categories": [
-            "Armor"
-        ],
-        "icon": "1029.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Locket of the Iron Solari",
-        "categories": [
-            "SpellBlock",
-            "Armor",
-            "Active"
-        ],
-        "icon": "3190.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Rabadon's Deathcap",
-        "categories": [
-            "SpellDamage"
-        ],
-        "icon": "3089.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Archangel's Staff",
-        "categories": [
-            "Mana",
-            "ManaRegen",
-            "SpellDamage"
-        ],
-        "icon": "3003.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Caulfield's Warhammer",
-        "categories": [
-            "Damage",
-            "CooldownReduction"
-        ],
-        "icon": "3133.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Bot",
-            "Top"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Frozen Mallet",
-        "categories": [
-            "Damage",
-            "Health",
-            "OnHit",
-            "Slow"
-        ],
-        "icon": "3022.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Rod of Ages (Quick Charge)",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "Mana",
-            "ManaRegen",
-            "SpellDamage"
-        ],
-        "icon": "3029.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Doran's Ring",
-        "categories": [
-            "Health",
-            "Lane",
-            "ManaRegen",
-            "SpellDamage"
-        ],
-        "icon": "1056.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Rod of Ages",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "Mana",
-            "ManaRegen",
-            "SpellDamage"
-        ],
-        "icon": "3027.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Tear of the Goddess",
-        "categories": [
-            "Mana",
-            "ManaRegen"
-        ],
-        "icon": "3070.png",
-        "roles": [
-            "Mid"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage"
-        ]
-    },
-    {
-        "name": "Dead Man's Plate",
-        "categories": [
-            "Health",
-            "Armor",
-            "OnHit",
-            "NonbootsMovement",
-            "Bilgewater"
-        ],
-        "icon": "3742.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Nashor's Tooth",
-        "categories": [
             "AttackSpeed",
-            "CooldownReduction",
-            "OnHit",
-            "SpellDamage"
+            "SpellDamage",
+            "OnHit"
         ],
-        "icon": "3115.png",
+        "icon": "3124.png",
         "roles": [
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Fighter",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Long Sword",
-        "categories": [
-            "Damage",
-            "Lane"
-        ],
-        "icon": "1036.png",
-        "roles": [
-            "Top",
-            "Mid",
             "Bot",
+            "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
             "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "The Bloodthirster",
-        "categories": [
-            "Damage",
-            "LifeSteal"
-        ],
-        "icon": "3072.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
             "Fighter",
-            "Tank",
             "Support",
-            "Mage",
-            "Assassin",
+            "Marksman",
             "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Essence Reaver",
-        "categories": [
-            "Damage",
-            "CriticalStrike",
-            "ManaRegen",
-            "CooldownReduction"
-        ],
-        "icon": "3508.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
+            "Assassin"
         ]
     },
     {
@@ -597,31 +270,125 @@
         ],
         "classes": [
             "Marksman",
+            "Assassin",
+            "Support"
+        ]
+    },
+    {
+        "name": "Boots of Speed",
+        "categories": [
+            "Boots"
+        ],
+        "icon": "1001.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
             "Support",
+            "Marksman",
+            "Tank",
             "Assassin"
         ]
     },
     {
-        "name": "B. F. Sword",
+        "name": "Archangel's Staff",
         "categories": [
-            "Damage"
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
         ],
-        "icon": "1038.png",
+        "icon": "3003.png",
         "roles": [
-            "Top",
-            "Mid",
             "Bot",
+            "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
+            "Mage",
             "Fighter",
+            "Support",
+            "Marksman",
             "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Randuin's Omen",
+        "categories": [
+            "Active",
+            "Armor",
+            "Health",
+            "Slow"
+        ],
+        "icon": "3143.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Athene's Unholy Grail",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "SpellDamage",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "icon": "3174.png",
+        "roles": [
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
             "Mage",
             "Assassin",
+            "Fighter",
+            "Support"
+        ]
+    },
+    {
+        "name": "Sunfire Cape",
+        "categories": [
+            "Armor",
+            "Health"
+        ],
+        "icon": "3068.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
             "Support",
+            "Marksman",
             "Tank",
-            "Marksman"
+            "Assassin"
         ]
     },
     {
@@ -636,25 +403,283 @@
             "Jg"
         ],
         "classes": [
+            "Tank",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Health Potion",
+        "categories": [
+            "Consumable",
+            "Jungle",
+            "Lane"
+        ],
+        "icon": "2003.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
             "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Warding Totem (Trinket)",
+        "categories": [
+            "Active",
+            "Jungle",
+            "Lane",
+            "Trinket",
+            "Vision"
+        ],
+        "icon": "3340.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Talisman of Ascension",
+        "categories": [
+            "HealthRegen",
+            "Armor",
+            "ManaRegen",
+            "Active",
+            "GoldPer",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "icon": "3069.png",
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Support"
+        ]
+    },
+    {
+        "name": "Kindlegem",
+        "categories": [
+            "CooldownReduction",
+            "Health"
+        ],
+        "icon": "3067.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
             "Tank"
         ]
     },
     {
-        "name": "Adaptive Helm",
+        "name": "Sapphire Crystal",
         "categories": [
-            "Health",
-            "SpellBlock",
-            "HealthRegen",
-            "CooldownReduction"
+            "Mana"
         ],
-        "icon": "3194.png",
+        "icon": "1027.png",
         "roles": [
-            "Top"
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
         ],
         "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
             "Tank",
-            "Mage"
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Rabadon's Deathcap",
+        "categories": [
+            "SpellDamage"
+        ],
+        "icon": "3089.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Brawler's Gloves",
+        "categories": [
+            "CriticalStrike"
+        ],
+        "icon": "1051.png",
+        "roles": [
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Youmuu's Ghostblade",
+        "categories": [
+            "Damage",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement",
+            "ArmorPenetration"
+        ],
+        "icon": "3142.png",
+        "roles": [
+            "Bot"
+        ],
+        "classes": [
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Frozen Heart",
+        "categories": [
+            "Armor",
+            "Aura",
+            "CooldownReduction",
+            "Mana"
+        ],
+        "icon": "3110.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Mikael's Crucible",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "ManaRegen",
+            "Active",
+            "CooldownReduction"
+        ],
+        "icon": "3222.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Glacial Shroud",
+        "categories": [
+            "Armor",
+            "CooldownReduction",
+            "Mana"
+        ],
+        "icon": "3024.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Boots of Mobility",
+        "categories": [
+            "Boots"
+        ],
+        "icon": "3117.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Manamune",
+        "categories": [
+            "Damage",
+            "Mana",
+            "ManaRegen",
+            "OnHit"
+        ],
+        "icon": "3004.png",
+        "roles": [
+            "Jg"
+        ],
+        "classes": [
+            "Assassin",
+            "Fighter"
         ]
     },
     {
@@ -677,6 +702,30 @@
         ]
     },
     {
+        "name": "Nashor's Tooth",
+        "categories": [
+            "AttackSpeed",
+            "CooldownReduction",
+            "OnHit",
+            "SpellDamage"
+        ],
+        "icon": "3115.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
         "name": "Zeal",
         "categories": [
             "AttackSpeed",
@@ -685,683 +734,19 @@
         ],
         "icon": "3086.png",
         "roles": [
-            "Top",
-            "Mid",
             "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Sterak's Gage",
-        "categories": [
-            "Health",
-            "Damage"
-        ],
-        "icon": "3053.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Randuin's Omen",
-        "categories": [
-            "Active",
-            "Armor",
-            "Health",
-            "Slow"
-        ],
-        "icon": "3143.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Relic Shield",
-        "categories": [
-            "Aura",
-            "GoldPer",
-            "Health",
-            "Lane"
-        ],
-        "icon": "3302.png",
-        "roles": [
-            "Top",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank"
-        ]
-    },
-    {
-        "name": "Tiamat",
-        "categories": [
-            "HealthRegen",
-            "Damage",
-            "Active"
-        ],
-        "icon": "3077.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage"
-        ]
-    },
-    {
-        "name": "Rylai's Crystal Scepter",
-        "categories": [
-            "Health",
-            "SpellDamage",
-            "Slow"
-        ],
-        "icon": "3116.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Ravenous Hydra",
-        "categories": [
-            "Active",
-            "Damage",
-            "HealthRegen",
-            "LifeSteal",
-            "OnHit"
-        ],
-        "icon": "3074.png",
-        "roles": [
-            "Jg",
-            "Top"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Maw of Malmortius",
-        "categories": [
-            "SpellBlock",
-            "Damage",
-            "LifeSteal",
-            "CooldownReduction",
-            "SpellVamp"
-        ],
-        "icon": "3156.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Frozen Heart",
-        "categories": [
-            "Armor",
-            "Aura",
-            "CooldownReduction",
-            "Mana"
-        ],
-        "icon": "3110.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Talisman of Ascension",
-        "categories": [
-            "HealthRegen",
-            "Armor",
-            "ManaRegen",
-            "Active",
-            "GoldPer",
-            "CooldownReduction",
-            "NonbootsMovement"
-        ],
-        "icon": "3069.png",
-        "roles": [
-            "Jg",
-            "Sup"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support"
-        ]
-    },
-    {
-        "name": "Phage",
-        "categories": [
-            "Damage",
-            "Health",
-            "NonbootsMovement",
-            "OnHit"
-        ],
-        "icon": "3044.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Aether Wisp",
-        "categories": [
-            "NonbootsMovement",
-            "SpellDamage"
-        ],
-        "icon": "3113.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Redemption",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "ManaRegen",
-            "CooldownReduction"
-        ],
-        "icon": "3107.png",
-        "roles": [
-            "Jg",
-            "Sup"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support"
-        ]
-    },
-    {
-        "name": "Berserker's Greaves",
-        "categories": [
-            "AttackSpeed",
-            "Boots"
-        ],
-        "icon": "3006.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Sunfire Cape",
-        "categories": [
-            "Armor",
-            "Health"
-        ],
-        "icon": "3068.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Void Staff",
-        "categories": [
-            "MagicPenetration",
-            "SpellDamage"
-        ],
-        "icon": "3135.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Dagger",
-        "categories": [
-            "AttackSpeed"
-        ],
-        "icon": "1042.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Chain Vest",
-        "categories": [
-            "Armor"
-        ],
-        "icon": "1031.png",
-        "roles": [
-            "Jg",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support"
-        ]
-    },
-    {
-        "name": "Glacial Shroud",
-        "categories": [
-            "Armor",
-            "CooldownReduction",
-            "Mana"
-        ],
-        "icon": "3024.png",
-        "roles": [
-            "Top",
             "Mid",
             "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Morellonomicon",
-        "categories": [
-            "SpellDamage",
-            "Mana",
-            "ManaRegen",
-            "CooldownReduction"
-        ],
-        "icon": "3165.png",
-        "roles": [
-            "Mid",
             "Top",
-            "Bot",
-            "Sup",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
+            "Fighter",
             "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Giant's Belt",
-        "categories": [
-            "Health"
-        ],
-        "icon": "1011.png",
-        "roles": [
-            "Top",
-            "Bot",
-            "Jg"
-        ],
-        "classes": [
             "Marksman",
-            "Fighter",
             "Tank",
-            "Mage"
-        ]
-    },
-    {
-        "name": "Kindlegem",
-        "categories": [
-            "CooldownReduction",
-            "Health"
-        ],
-        "icon": "3067.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Bami's Cinder",
-        "categories": [
-            "Health"
-        ],
-        "icon": "3751.png",
-        "roles": [
-            "Jg",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support"
-        ]
-    },
-    {
-        "name": "Ardent Censer",
-        "categories": [
-            "CooldownReduction",
-            "ManaRegen",
-            "NonbootsMovement",
-            "SpellDamage"
-        ],
-        "icon": "3504.png",
-        "roles": [
-            "Jg",
-            "Sup"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support"
-        ]
-    },
-    {
-        "name": "Lost Chapter",
-        "categories": [
-            "SpellDamage",
-            "Mana",
-            "ManaRegen"
-        ],
-        "icon": "3802.png",
-        "roles": [
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Support",
-            "Mage"
-        ]
-    },
-    {
-        "name": "Health Potion",
-        "categories": [
-            "Consumable",
-            "Jungle",
-            "Lane"
-        ],
-        "icon": "2003.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Fiendish Codex",
-        "categories": [
-            "CooldownReduction",
-            "SpellDamage"
-        ],
-        "icon": "3108.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Guinsoo's Rageblade",
-        "categories": [
-            "Damage",
-            "AttackSpeed",
-            "SpellDamage",
-            "OnHit"
-        ],
-        "icon": "3124.png",
-        "roles": [
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Support",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Righteous Glory",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "Armor",
-            "Mana",
-            "Active",
-            "CooldownReduction",
-            "Slow",
-            "NonbootsMovement"
-        ],
-        "icon": "3800.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage"
-        ]
-    },
-    {
-        "name": "Phantom Dancer",
-        "categories": [
-            "AttackSpeed",
-            "CriticalStrike",
-            "NonbootsMovement"
-        ],
-        "icon": "3046.png",
-        "roles": [
-            "Jg",
-            "Bot"
-        ],
-        "classes": [
-            "Marksman",
-            "Support",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Knight's Vow",
-        "categories": [
-            "Health",
-            "Armor",
-            "Aura",
-            "CooldownReduction",
-            "NonbootsMovement"
-        ],
-        "icon": "3109.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Boots of Speed",
-        "categories": [
-            "Boots"
-        ],
-        "icon": "1001.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
         ]
     },
     {
@@ -1378,63 +763,30 @@
             "Jg"
         ],
         "classes": [
-            "Fighter",
             "Tank",
+            "Fighter",
             "Mage"
         ]
     },
     {
-        "name": "Brawler's Gloves",
+        "name": "Cloth Armor",
         "categories": [
-            "CriticalStrike"
+            "Armor"
         ],
-        "icon": "1051.png",
+        "icon": "1029.png",
         "roles": [
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Marksman",
-            "Fighter",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Boots of Mobility",
-        "categories": [
-            "Boots"
-        ],
-        "icon": "3117.png",
-        "roles": [
-            "Jg",
+            "Bot",
             "Mid",
-            "Sup"
+            "Sup",
+            "Top",
+            "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
+            "Fighter",
             "Support",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Lich Bane",
-        "categories": [
-            "SpellDamage",
-            "Mana",
-            "CooldownReduction",
-            "NonbootsMovement"
-        ],
-        "icon": "3100.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
+            "Marksman",
+            "Tank",
             "Assassin"
         ]
     },
@@ -1451,422 +803,38 @@
         ],
         "icon": "3078.png",
         "roles": [
-            "Top",
-            "Mid",
             "Bot",
+            "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
+            "Mage",
             "Fighter",
-            "Tank",
             "Support",
-            "Mage",
-            "Assassin",
+            "Marksman",
             "Tank",
-            "Marksman"
+            "Assassin"
         ]
     },
     {
-        "name": "Sweeping Lens (Trinket)",
-        "categories": [
-            "Active",
-            "Jungle",
-            "Trinket",
-            "Vision"
-        ],
-        "icon": "3341.png",
-        "roles": [
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Support"
-        ]
-    },
-    {
-        "name": "Bilgewater Cutlass",
-        "categories": [
-            "Active",
-            "Damage",
-            "LifeSteal",
-            "Slow"
-        ],
-        "icon": "3144.png",
-        "roles": [
-            "Jg",
-            "Bot",
-            "Top"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Needlessly Large Rod",
-        "categories": [
-            "SpellDamage"
-        ],
-        "icon": "1058.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Hextech GLP-800",
+        "name": "Rod of Ages (Quick Charge)",
         "categories": [
             "Health",
             "HealthRegen",
-            "SpellDamage",
             "Mana",
             "ManaRegen",
-            "Active"
+            "SpellDamage"
         ],
-        "icon": "3030.png",
+        "icon": "3029.png",
         "roles": [
+            "Sup",
             "Mid"
         ],
         "classes": [
-            "Support",
-            "Mage"
-        ]
-    },
-    {
-        "name": "Hextech Protobelt-01",
-        "categories": [
-            "Health",
-            "SpellDamage",
-            "Active",
-            "CooldownReduction"
-        ],
-        "icon": "3152.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Bot",
-            "Top"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
-            "Support",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Blasting Wand",
-        "categories": [
-            "SpellDamage"
-        ],
-        "icon": "1026.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Youmuu's Ghostblade",
-        "categories": [
-            "Damage",
-            "Active",
-            "CooldownReduction",
-            "NonbootsMovement",
-            "ArmorPenetration"
-        ],
-        "icon": "3142.png",
-        "roles": [
-            "Bot"
-        ],
-        "classes": [
-            "Marksman",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Luden's Echo",
-        "categories": [
-            "NonbootsMovement",
-            "OnHit",
-            "SpellDamage"
-        ],
-        "icon": "3285.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Statikk Shiv",
-        "categories": [
-            "AttackSpeed",
-            "CriticalStrike",
-            "NonbootsMovement",
-            "OnHit"
-        ],
-        "icon": "3087.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Doran's Blade",
-        "categories": [
-            "Damage",
-            "Health",
-            "Lane",
-            "LifeSteal"
-        ],
-        "icon": "1055.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Catalyst of Aeons",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "Mana",
-            "ManaRegen"
-        ],
-        "icon": "3010.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Spirit Visage",
-        "categories": [
-            "CooldownReduction",
-            "Health",
-            "HealthRegen",
-            "SpellBlock"
-        ],
-        "icon": "3065.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Null-Magic Mantle",
-        "categories": [
-            "SpellBlock"
-        ],
-        "icon": "1033.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Mercury's Treads",
-        "categories": [
-            "Boots",
-            "SpellBlock",
-            "Tenacity"
-        ],
-        "icon": "3111.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Runaan's Hurricane",
-        "categories": [
-            "CriticalStrike",
-            "AttackSpeed",
-            "OnHit",
-            "NonbootsMovement"
-        ],
-        "icon": "3085.png",
-        "roles": [
-            "Jg",
-            "Bot",
-            "Top"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Zhonya's Hourglass",
-        "categories": [
-            "Armor",
-            "SpellDamage",
-            "Active",
-            "CooldownReduction"
-        ],
-        "icon": "3157.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Ruby Crystal",
-        "categories": [
-            "Health"
-        ],
-        "icon": "1028.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Rapid Firecannon",
-        "categories": [
-            "AttackSpeed",
-            "CriticalStrike",
-            "NonbootsMovement",
-            "OnHit"
-        ],
-        "icon": "3094.png",
-        "roles": [
-            "Jg",
-            "Bot"
-        ],
-        "classes": [
-            "Marksman",
-            "Support",
-            "Assassin"
+            "Support"
         ]
     },
     {
@@ -1881,19 +849,80 @@
         ],
         "icon": "3001.png",
         "roles": [
-            "Mid",
-            "Top",
             "Bot",
+            "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
-            "Assassin",
+            "Fighter",
             "Support",
-            "Marksman"
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "The Black Cleaver",
+        "categories": [
+            "ArmorPenetration",
+            "CooldownReduction",
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "icon": "3071.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Wit's End",
+        "categories": [
+            "AttackSpeed",
+            "OnHit",
+            "SpellBlock"
+        ],
+        "icon": "3091.png",
+        "roles": [
+            "Top"
+        ],
+        "classes": [
+            "Tank",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Relic Shield",
+        "categories": [
+            "Aura",
+            "GoldPer",
+            "Health",
+            "Lane"
+        ],
+        "icon": "3302.png",
+        "roles": [
+            "Sup",
+            "Top"
+        ],
+        "classes": [
+            "Tank",
+            "Fighter"
         ]
     },
     {
@@ -1904,294 +933,107 @@
         ],
         "icon": "3031.png",
         "roles": [
-            "Top",
-            "Mid",
             "Bot",
+            "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
             "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Mikael's Crucible",
-        "categories": [
-            "SpellBlock",
-            "HealthRegen",
-            "ManaRegen",
-            "Active",
-            "CooldownReduction"
-        ],
-        "icon": "3222.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Sup"
-        ],
-        "classes": [
             "Fighter",
-            "Tank",
-            "Mage",
             "Support",
+            "Marksman",
+            "Tank",
             "Assassin"
         ]
     },
     {
-        "name": "Warmog's Armor",
+        "name": "Ionian Boots of Lucidity",
         "categories": [
-            "Health",
-            "HealthRegen",
+            "Boots",
             "CooldownReduction"
         ],
-        "icon": "3083.png",
+        "icon": "3158.png",
         "roles": [
-            "Top",
-            "Mid",
             "Bot",
+            "Mid",
             "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Pickaxe",
-        "categories": [
-            "Damage"
-        ],
-        "icon": "1037.png",
-        "roles": [
             "Top",
-            "Mid",
-            "Bot",
             "Jg"
         ],
         "classes": [
+            "Mage",
             "Fighter",
+            "Marksman",
             "Tank",
-            "Assassin",
-            "Marksman"
+            "Assassin"
         ]
     },
     {
-        "name": "Liandry's Torment",
+        "name": "Void Staff",
         "categories": [
-            "Health",
             "MagicPenetration",
             "SpellDamage"
         ],
-        "icon": "3151.png",
+        "icon": "3135.png",
         "roles": [
-            "Mid",
-            "Top",
             "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Lord Dominik's Regards",
-        "categories": [
-            "Damage",
-            "ArmorPenetration"
-        ],
-        "icon": "3036.png",
-        "roles": [
-            "Mid",
-            "Bot",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Sapphire Crystal",
-        "categories": [
-            "Mana"
-        ],
-        "icon": "1027.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Support",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Aegis of the Legion",
-        "categories": [
-            "SpellBlock",
-            "Armor"
-        ],
-        "icon": "3105.png",
-        "roles": [
-            "Top",
             "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
             "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
             "Assassin"
         ]
     },
     {
-        "name": "Warding Totem (Trinket)",
+        "name": "Null-Magic Mantle",
         "categories": [
-            "Active",
-            "Jungle",
-            "Lane",
-            "Trinket",
-            "Vision"
+            "SpellBlock"
         ],
-        "icon": "3340.png",
+        "icon": "1033.png",
         "roles": [
-            "Top",
             "Mid",
-            "Bot",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
             "Mage",
-            "Assassin",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Banner of Command",
-        "categories": [
-            "SpellBlock",
-            "HealthRegen",
-            "Armor",
-            "Active",
-            "CooldownReduction",
-            "NonbootsMovement"
-        ],
-        "icon": "3060.png",
-        "roles": [
-            "Jg",
-            "Mid",
-            "Sup"
-        ],
-        "classes": [
             "Fighter",
-            "Tank",
-            "Mage",
             "Support",
+            "Tank",
             "Assassin"
         ]
     },
     {
-        "name": "Blade of the Ruined King",
+        "name": "Luden's Echo",
         "categories": [
-            "Active",
-            "AttackSpeed",
-            "Damage",
-            "LifeSteal",
             "NonbootsMovement",
-            "OnHit"
+            "OnHit",
+            "SpellDamage"
         ],
-        "icon": "3153.png",
+        "icon": "3285.png",
         "roles": [
-            "Jg",
             "Bot",
+            "Mid",
+            "Sup",
             "Top"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
-            "Assassin",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Doran's Shield",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "Lane"
-        ],
-        "icon": "1054.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Guardian Angel",
-        "categories": [
-            "Armor",
-            "Damage"
-        ],
-        "icon": "3026.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Jg"
-        ],
-        "classes": [
             "Fighter",
             "Support",
-            "Assassin",
-            "Mage",
-            "Marksman"
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
@@ -2214,47 +1056,1056 @@
         ]
     },
     {
-        "name": "Recurve Bow",
+        "name": "Archangel's Staff (Quick Charge)",
         "categories": [
-            "AttackSpeed",
-            "OnHit"
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
         ],
-        "icon": "1043.png",
+        "icon": "3007.png",
         "roles": [
-            "Jg",
-            "Bot",
-            "Top"
+            "Mid"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
-            "Assassin",
-            "Marksman"
+            "Support"
         ]
     },
     {
-        "name": "Last Whisper",
+        "name": "Ninja Tabi",
         "categories": [
-            "ArmorPenetration",
+            "Armor",
+            "Boots"
+        ],
+        "icon": "3047.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Spectre's Cowl",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "icon": "3211.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Guardian Angel",
+        "categories": [
+            "Armor",
             "Damage"
         ],
-        "icon": "3035.png",
+        "icon": "3026.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Giant's Belt",
+        "categories": [
+            "Health"
+        ],
+        "icon": "1011.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Marksman",
+            "Tank",
+            "Fighter",
+            "Mage"
+        ]
+    },
+    {
+        "name": "Lord Dominik's Regards",
+        "categories": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "icon": "3036.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Haunting Guise",
+        "categories": [
+            "Health",
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "icon": "3136.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Sterak's Gage",
+        "categories": [
+            "Health",
+            "Damage"
+        ],
+        "icon": "3053.png",
         "roles": [
             "Top",
-            "Mid",
+            "Jg"
+        ],
+        "classes": [
+            "Tank",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Doran's Blade",
+        "categories": [
+            "Damage",
+            "Health",
+            "Lane",
+            "LifeSteal"
+        ],
+        "icon": "1055.png",
+        "roles": [
             "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Stinger",
+        "categories": [
+            "AttackSpeed",
+            "CooldownReduction"
+        ],
+        "icon": "3101.png",
+        "roles": [
+            "Top"
+        ],
+        "classes": [
+            "Tank",
+            "Fighter",
+            "Support"
+        ]
+    },
+    {
+        "name": "Blade of the Ruined King",
+        "categories": [
+            "Active",
+            "AttackSpeed",
+            "Damage",
+            "LifeSteal",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "icon": "3153.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Doran's Shield",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Lane"
+        ],
+        "icon": "1054.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Bilgewater Cutlass",
+        "categories": [
+            "Active",
+            "Damage",
+            "LifeSteal",
+            "Slow"
+        ],
+        "icon": "3144.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Death's Dance",
+        "categories": [
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction"
+        ],
+        "icon": "3812.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Sheen",
+        "categories": [
+            "Mana",
+            "CooldownReduction"
+        ],
+        "icon": "3057.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Frozen Mallet",
+        "categories": [
+            "Damage",
+            "Health",
+            "OnHit",
+            "Slow"
+        ],
+        "icon": "3022.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Caulfield's Warhammer",
+        "categories": [
+            "Damage",
+            "CooldownReduction"
+        ],
+        "icon": "3133.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Vampiric Scepter",
+        "categories": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "icon": "1053.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Dead Man's Plate",
+        "categories": [
+            "Health",
+            "Armor",
+            "OnHit",
+            "NonbootsMovement",
+            "Bilgewater"
+        ],
+        "icon": "3742.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Sweeping Lens (Trinket)",
+        "categories": [
+            "Active",
+            "Jungle",
+            "Trinket",
+            "Vision"
+        ],
+        "icon": "3341.png",
+        "roles": [
+            "Sup"
+        ],
+        "classes": [
+            "Fighter",
+            "Support"
+        ]
+    },
+    {
+        "name": "Spirit Visage",
+        "categories": [
+            "CooldownReduction",
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "icon": "3065.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Ravenous Hydra",
+        "categories": [
+            "Active",
+            "Damage",
+            "HealthRegen",
+            "LifeSteal",
+            "OnHit"
+        ],
+        "icon": "3074.png",
+        "roles": [
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Tank",
+            "Assassin",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Adaptive Helm",
+        "categories": [
+            "Health",
+            "SpellBlock",
+            "HealthRegen",
+            "CooldownReduction"
+        ],
+        "icon": "3194.png",
+        "roles": [
+            "Top"
+        ],
+        "classes": [
+            "Tank",
+            "Mage"
+        ]
+    },
+    {
+        "name": "Locket of the Iron Solari",
+        "categories": [
+            "SpellBlock",
+            "Armor",
+            "Active"
+        ],
+        "icon": "3190.png",
+        "roles": [
             "Sup",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
-            "Assassin",
+            "Fighter",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Pickaxe",
+        "categories": [
+            "Damage"
+        ],
+        "icon": "1037.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Boots of Swiftness",
+        "categories": [
+            "Boots"
+        ],
+        "icon": "3009.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Zz'Rot Portal",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "Armor",
+            "Active",
+            "NonbootsMovement"
+        ],
+        "icon": "3512.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
             "Support",
             "Tank",
-            "Marksman"
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Amplifying Tome",
+        "categories": [
+            "SpellDamage"
+        ],
+        "icon": "1052.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Doran's Ring",
+        "categories": [
+            "Health",
+            "Lane",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "icon": "1056.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Hextech Protobelt-01",
+        "categories": [
+            "Health",
+            "SpellDamage",
+            "Active",
+            "CooldownReduction"
+        ],
+        "icon": "3152.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Dagger",
+        "categories": [
+            "AttackSpeed"
+        ],
+        "icon": "1042.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Statikk Shiv",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "icon": "3087.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Banshee's Veil",
+        "categories": [
+            "SpellBlock",
+            "SpellDamage",
+            "CooldownReduction"
+        ],
+        "icon": "3102.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Knight's Vow",
+        "categories": [
+            "Health",
+            "Armor",
+            "Aura",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "icon": "3109.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Zhonya's Hourglass",
+        "categories": [
+            "Armor",
+            "SpellDamage",
+            "Active",
+            "CooldownReduction"
+        ],
+        "icon": "3157.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Long Sword",
+        "categories": [
+            "Damage",
+            "Lane"
+        ],
+        "icon": "1036.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Ruby Crystal",
+        "categories": [
+            "Health"
+        ],
+        "icon": "1028.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Essence Reaver",
+        "categories": [
+            "Damage",
+            "CriticalStrike",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "icon": "3508.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Tear of the Goddess",
+        "categories": [
+            "Mana",
+            "ManaRegen"
+        ],
+        "icon": "3070.png",
+        "roles": [
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Rylai's Crystal Scepter",
+        "categories": [
+            "Health",
+            "SpellDamage",
+            "Slow"
+        ],
+        "icon": "3116.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "B. F. Sword",
+        "categories": [
+            "Damage"
+        ],
+        "icon": "1038.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Blasting Wand",
+        "categories": [
+            "SpellDamage"
+        ],
+        "icon": "1026.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Catalyst of Aeons",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Mana",
+            "ManaRegen"
+        ],
+        "icon": "3010.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Banner of Command",
+        "categories": [
+            "SpellBlock",
+            "HealthRegen",
+            "Armor",
+            "Active",
+            "CooldownReduction",
+            "NonbootsMovement"
+        ],
+        "icon": "3060.png",
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Fiendish Codex",
+        "categories": [
+            "CooldownReduction",
+            "SpellDamage"
+        ],
+        "icon": "3108.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Aether Wisp",
+        "categories": [
+            "NonbootsMovement",
+            "SpellDamage"
+        ],
+        "icon": "3113.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "The Bloodthirster",
+        "categories": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "icon": "3072.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Liandry's Torment",
+        "categories": [
+            "Health",
+            "MagicPenetration",
+            "SpellDamage"
+        ],
+        "icon": "3151.png",
+        "roles": [
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
@@ -2269,251 +2120,35 @@
         ],
         "icon": "3050.png",
         "roles": [
-            "Jg",
-            "Sup"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support"
-        ]
-    },
-    {
-        "name": "Haunting Guise",
-        "categories": [
-            "Health",
-            "MagicPenetration",
-            "SpellDamage"
-        ],
-        "icon": "3136.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Vampiric Scepter",
-        "categories": [
-            "Damage",
-            "LifeSteal"
-        ],
-        "icon": "1053.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
             "Sup",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
             "Mage",
-            "Assassin",
+            "Fighter",
             "Support",
-            "Tank",
-            "Marksman"
+            "Tank"
         ]
     },
     {
-        "name": "Banshee's Veil",
+        "name": "Mercury's Treads",
         "categories": [
+            "Boots",
             "SpellBlock",
-            "SpellDamage",
-            "CooldownReduction"
+            "Tenacity"
         ],
-        "icon": "3102.png",
+        "icon": "3111.png",
         "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Amplifying Tome",
-        "categories": [
-            "SpellDamage"
-        ],
-        "icon": "1052.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "The Black Cleaver",
-        "categories": [
-            "ArmorPenetration",
-            "CooldownReduction",
-            "Damage",
-            "Health",
-            "NonbootsMovement",
-            "OnHit"
-        ],
-        "icon": "3071.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Stinger",
-        "categories": [
-            "AttackSpeed",
-            "CooldownReduction"
-        ],
-        "icon": "3101.png",
-        "roles": [
-            "Top"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support"
-        ]
-    },
-    {
-        "name": "Manamune",
-        "categories": [
-            "Damage",
-            "Mana",
-            "ManaRegen",
-            "OnHit"
-        ],
-        "icon": "3004.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Assassin"
-        ]
-    },
-    {
-        "name": "Boots of Swiftness",
-        "categories": [
-            "Boots"
-        ],
-        "icon": "3009.png",
-        "roles": [
-            "Mid",
-            "Top",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Mage",
-            "Assassin",
-            "Support",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Ruby Sightstone",
-        "categories": [
-            "Active",
-            "Health",
-            "Vision"
-        ],
-        "icon": "2045.png",
-        "roles": [
-            "Sup"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
-    },
-    {
-        "name": "Iceborn Gauntlet",
-        "categories": [
-            "Armor",
-            "Mana",
-            "CooldownReduction",
-            "Slow"
-        ],
-        "icon": "3025.png",
-        "roles": [
-            "Top",
-            "Mid",
-            "Bot",
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
-            "Mage",
-            "Tank",
-            "Marksman"
-        ]
-    },
-    {
-        "name": "Athene's Unholy Grail",
-        "categories": [
-            "SpellBlock",
-            "HealthRegen",
-            "SpellDamage",
-            "ManaRegen",
-            "CooldownReduction"
-        ],
-        "icon": "3174.png",
-        "roles": [
-            "Top",
             "Mid",
             "Sup",
+            "Top",
             "Jg"
         ],
         "classes": [
+            "Mage",
             "Fighter",
             "Support",
-            "Mage",
+            "Tank",
             "Assassin"
         ]
     },
@@ -2524,20 +2159,359 @@
         ],
         "icon": "3075.png",
         "roles": [
-            "Top",
-            "Mid",
             "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Rapid Firecannon",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "icon": "3094.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Maw of Malmortius",
+        "categories": [
+            "SpellBlock",
+            "Damage",
+            "LifeSteal",
+            "CooldownReduction",
+            "SpellVamp"
+        ],
+        "icon": "3156.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Rod of Ages",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Mana",
+            "ManaRegen",
+            "SpellDamage"
+        ],
+        "icon": "3027.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Redemption",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "icon": "3107.png",
+        "roles": [
             "Sup",
             "Jg"
         ],
         "classes": [
-            "Fighter",
-            "Tank",
-            "Support",
-            "Assassin",
             "Mage",
+            "Support"
+        ]
+    },
+    {
+        "name": "Morellonomicon",
+        "categories": [
+            "SpellDamage",
+            "Mana",
+            "ManaRegen",
+            "CooldownReduction"
+        ],
+        "icon": "3165.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
             "Tank",
-            "Marksman"
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Recurve Bow",
+        "categories": [
+            "AttackSpeed",
+            "OnHit"
+        ],
+        "icon": "1043.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Tiamat",
+        "categories": [
+            "HealthRegen",
+            "Damage",
+            "Active"
+        ],
+        "icon": "3077.png",
+        "roles": [
+            "Jg"
+        ],
+        "classes": [
+            "Tank",
+            "Fighter"
+        ]
+    },
+    {
+        "name": "Aegis of the Legion",
+        "categories": [
+            "SpellBlock",
+            "Armor"
+        ],
+        "icon": "3105.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Needlessly Large Rod",
+        "categories": [
+            "SpellDamage"
+        ],
+        "icon": "1058.png",
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Sorcerer's Shoes",
+        "categories": [
+            "Boots",
+            "MagicPenetration"
+        ],
+        "icon": "3020.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Ardent Censer",
+        "categories": [
+            "CooldownReduction",
+            "ManaRegen",
+            "NonbootsMovement",
+            "SpellDamage"
+        ],
+        "icon": "3504.png",
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Support"
+        ]
+    },
+    {
+        "name": "Bami's Cinder",
+        "categories": [
+            "Health"
+        ],
+        "icon": "3751.png",
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ]
+    },
+    {
+        "name": "Hextech GLP-800",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "SpellDamage",
+            "Mana",
+            "ManaRegen",
+            "Active"
+        ],
+        "icon": "3030.png",
+        "roles": [
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Support"
+        ]
+    },
+    {
+        "name": "Lost Chapter",
+        "categories": [
+            "SpellDamage",
+            "Mana",
+            "ManaRegen"
+        ],
+        "icon": "3802.png",
+        "roles": [
+            "Top",
+            "Mid"
+        ],
+        "classes": [
+            "Mage",
+            "Support"
+        ]
+    },
+    {
+        "name": "Runaan's Hurricane",
+        "categories": [
+            "CriticalStrike",
+            "AttackSpeed",
+            "OnHit",
+            "NonbootsMovement"
+        ],
+        "icon": "3085.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Phage",
+        "categories": [
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "icon": "3044.png",
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     }
 ]

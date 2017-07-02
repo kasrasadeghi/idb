@@ -1,61 +1,61 @@
 [
     {
+        "name": "Bot",
+        "icon": "bot.png",
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
         "name": "Sup",
         "icon": "sup.png",
         "classes": [
-            "Marksman",
-            "Assassin",
-            "Fighter",
             "Mage",
+            "Fighter",
             "Support",
-            "Tank"
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
         "name": "Top",
         "icon": "top.png",
         "classes": [
-            "Marksman",
-            "Assassin",
-            "Fighter",
             "Mage",
+            "Fighter",
             "Support",
-            "Tank"
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
         "name": "Jg",
         "icon": "jg.png",
         "classes": [
-            "Marksman",
-            "Assassin",
-            "Fighter",
             "Mage",
+            "Fighter",
             "Support",
-            "Tank"
+            "Marksman",
+            "Tank",
+            "Assassin"
         ]
     },
     {
         "name": "Mid",
         "icon": "mid.png",
         "classes": [
-            "Marksman",
-            "Assassin",
-            "Fighter",
             "Mage",
+            "Fighter",
             "Support",
-            "Tank"
-        ]
-    },
-    {
-        "name": "Bot",
-        "icon": "bot.png",
-        "classes": [
             "Marksman",
-            "Assassin",
-            "Fighter",
-            "Mage",
-            "Support"
+            "Tank",
+            "Assassin"
         ]
     }
 ]

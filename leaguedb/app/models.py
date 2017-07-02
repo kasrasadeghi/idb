@@ -132,6 +132,7 @@ def add_roles_data():
                      )
         db.session.add(db_obj)
     db.session.commit()
+    print("Added roles data.")
 
 def add_classes_data():
     with open('../../cache/api_classes.json') as f:
@@ -143,6 +144,7 @@ def add_classes_data():
                       )
         db.session.add(db_obj)
     db.session.commit()
+    print("Added classes data.")
     
 def add_items_data():
     with open('../../cache/api_items.json') as f:
@@ -160,6 +162,7 @@ def add_items_data():
             item_db_obj.classes.append(cl_db_obj)
         db.session.add(item_db_obj)
     db.session.commit()
+    print("Added items data.")
 
 def add_champions_data():
     with open('../../cache/api_champions.json') as f:
@@ -184,10 +187,12 @@ def add_champions_data():
 
         db.session.add(c_db_obj)
     db.session.commit()
+    print("Added champions data.")
 
 if __name__ == "__main__":
-    # create_tables()
-    # add_roles_data()
-    # add_classes_data()
-    # add_items_data()
+    print("Populating database.")
+    create_tables()
+    add_roles_data()
+    add_classes_data()
+    add_items_data()
     add_champions_data()
