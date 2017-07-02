@@ -1,3 +1,5 @@
 *.pyc
 .idea/
 ache/api_key.py
+leaguedb/app/__pycache__/
+leaguedb/app/password.py

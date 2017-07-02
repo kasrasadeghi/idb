@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-fetch('http://localhost:5000/api/roles', {
+fetch('http://leaguedb.me/api/roles', {
   method: 'GET',
   dataType: 'json'
 })

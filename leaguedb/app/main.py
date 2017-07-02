@@ -2,15 +2,23 @@ from flask import Flask, render_template, send_from_directory, jsonify, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
 import json
-
 import os
+
+from password import secret_database_password
+"""
+make a file in this directory called password.py
+
+it should have one line:
+secret_database_password = "INSERT PASSWORD HERE"
+"""
+
 
 app = Flask(__name__)
 CORS(app)
 
 # TODO: Remote PostgreSQL data base configuration/connection
 user = 'swe'
-pwd = 'abc'
+pwd = secret_database_password
 host = 'localhost'
 db = 'test'
 uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
