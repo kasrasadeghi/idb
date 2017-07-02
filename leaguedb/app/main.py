@@ -5,10 +5,10 @@ import os
 app = Flask(__name__)
 
 # TODO: Remote PostgreSQL data base configuration/connection
-user = 'swe'
-pwd = 'abc'
-host = 'localhost'
-db = 'test'
+user = 'adben'
+pwd = '!sAo}f;vhpvMSuG'
+host = 'swe.ccju5j8yyny7.us-east-2.rds.amazonaws.com'
+db = 'postgres'
 uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -19,7 +19,6 @@ db = SQLAlchemy(app)
 def favicon() -> str:
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
 
 @app.route("/")
 @app.route("/<page>")
@@ -48,11 +47,9 @@ def class_route(name: str) -> str:
 def role_route(name: str) -> str:
     return render_template("roles/" + name + ".html", name=name)
 
-
 #####
 # API
 #####
-
 
 @app.route("/api/champion_names")
 def get_champion_names() -> str:

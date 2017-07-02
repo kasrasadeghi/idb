@@ -1,7 +1,7 @@
 [
     {
         "name": "Sup",
-        "img_url": "sup.png",
+        "icon": "sup.png",
         "classes": [
             "Marksman",
             "Assassin",
@@ -13,7 +13,7 @@
     },
     {
         "name": "Top",
-        "img_url": "top.png",
+        "icon": "top.png",
         "classes": [
             "Marksman",
             "Assassin",
@@ -25,7 +25,7 @@
     },
     {
         "name": "Jg",
-        "img_url": "jg.png",
+        "icon": "jg.png",
         "classes": [
             "Marksman",
             "Assassin",
@@ -37,7 +37,7 @@
     },
     {
         "name": "Mid",
-        "img_url": "mid.png",
+        "icon": "mid.png",
         "classes": [
             "Marksman",
             "Assassin",
@@ -49,7 +49,7 @@
     },
     {
         "name": "Bot",
-        "img_url": "bot.png",
+        "icon": "bot.png",
         "classes": [
             "Marksman",
             "Assassin",

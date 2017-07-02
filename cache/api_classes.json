@@ -1,7 +1,7 @@
 [
     {
         "name": "Marksman",
-        "img_url": "Marksman.png",
+        "icon": "Marksman.png",
         "description": "Marksman are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as turrets, Dragon and Baron Nashor.  However, they are also tremendously vulnerable to burst damage due to their squishiness, and tend to be exceptionally weak early in the game, requiring high amounts of gold, mostly via minion kills (or CS: Creep Score) to acquire powerful, but expensive, damage-focused items. Due to their potent reach and DPS, marksmen are particularly strong against more durable opponents, namely fighters and tanks, but fall quickly to the burst damage of assassins and mages.",
         "champions": [
             "Quinn",
@@ -103,7 +103,7 @@
     },
     {
         "name": "Mage",
-        "img_url": "Mage.png",
+        "icon": "Mage.png",
         "description": "Mages are champions who typically possess great reach, ability-based area of effect damage and crowd control, and who use all of these strengths in tandem with each other to trap and destroy enemies from a distance. Specializing in magic damage, often burst damage, and therefore investing heavily in items that allow them to cast stronger and faster spells, mages excel at chaining their abilities together in powerful comboes in order to win fights, though their abilities also tend to be difficult to land and can be mitigated, if not avoided completely, by their targets if they react in time. Though mages tend to focus on killing prime targets in combat, they can also fall back to their innate crowd control and utility to manipulate key opponents, protecting their team from them or setting them up for a takedown, and in the right circumstances can damage and control multiple enemies at a time. In spite of the influence they exert, mages tend to be innately fragile, and fall quickly to direct strikes. In general, mages are capable of dealing well with marksmen, as their burst can kill them before they can return the same amount of damage, and fighters, as their crowd control tends to make them excellent kiters. However, they are easily shut down by assassins who can often bypass their reach and spells completely, and tanks, who can lock them down and soak up their abilities better than other classes.",
         "champions": [
             "Xerath",
@@ -259,7 +259,7 @@
     },
     {
         "name": "Assassin",
-        "img_url": "Assassin.png",
+        "icon": "Assassin.png",
         "description": "Slayers are highly mobile champions specializing in single-target burst damage.  What they generally lack in resilience, they more than make up for in their potential to cover large distances, quickly kill priority targets and retreat just as fast. Epitomizing a high-risk, high-reward playstyle, assassins are natural opportunists, and prefer to strike when their targets are alone and vulnerable, rather than engage them in a direct assault, favoring damage-oriented item builds to capitalize the most on their offensive capabilities. While particularly effective against softer (or squishy) targets, especially mages and marksmen, slayers often struggle against the heightened defenses of fighters and tanks.",
         "champions": [
             "Jhin",
@@ -388,7 +388,7 @@
     },
     {
         "name": "Support",
-        "img_url": "Support.png",
+        "icon": "Support.png",
         "description": "Controllers are the most selfless champions in the game, forgoing personal power to assist their allies with potent utility and keep enemies at bay with crowd control. Weak when alone, supports are capable of massively amplifying their teammates' power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team. Supports typically start out by assisting the marksman in lane, as their own power is less dependent on items to function well, but over time their contribution expands as they lend aid to their entire team with both their spells and effective, yet affordable, items.",
         "champions": [
             "Nunu",
@@ -506,7 +506,7 @@
     },
     {
         "name": "Fighter",
-        "img_url": "Fighter.png",
+        "icon": "Fighter.png",
         "description": "Fighters are a diverse group of short-ranged combatants who excel at both dealing and surviving damage. With easy access to heavy, continuous damage (or DPS) and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, but their limited range puts them at constant risk of being kept at bay (or kited) by their opponents via crowd control, range and mobility.  Fighters tend to be advantaged against assassins, whose burst tends to fall short of killing them when unaided, as well as tanks, whose inferior damage allows fighters to eventually defeat them in duels, but often struggle against mages and marksmen, whose superior reach allows them to kite approaching fighters.",
         "champions": [
             "Quinn",
@@ -687,7 +687,7 @@
     },
     {
         "name": "Tank",
-        "img_url": "Tank.png",
+        "icon": "Tank.png",
         "description": "Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank's purpose isn't usually to kill opponents; rather, tanks excel at disrupting enemies and diverting their focus to themselves, allowing them to lock down specific targets (or several targets at once), as well as remove (or peel) threats from their allies. In addition to strong base defenses, tanks generally have a means of amplifying their tankiness even further with their abilities, and tend to fully invest in defensive items to maximize their resilience. However, tanks lack the tools to truly succeed in single combat, and their influence is limited by their low overall mobility, preventing them from constantly staying on top of their targets. As tanks can handle burst damage very well, they tend to succeed against assassins and most mages, but their vulnerability to continuous damage puts them at a disadvantage against fighters and marksmen.",
         "champions": [
             "Wukong",

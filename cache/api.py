@@ -32,7 +32,8 @@ def print_champions_full():
 
     name_roles = champion_roles_parser.parse("champion-roles.txt")
 
-    all_champion_data = {}
+    # all_champion_data = {}
+    all_champion_data = []
     for champion in data['data'].keys(): 
         model = []
         input_data = data['data'][champion]
@@ -59,9 +60,9 @@ def print_champions_full():
                 model.append(('items', all_item_names))
                 break
         model.append(('lore',input_data['lore']))
-        model.append(('image', input_data['image']['full']))
+        model.append(('icon', input_data['image']['full']))
 
-        all_champion_data[input_data['name']] = OrderedDict(model)
+        all_champion_data.append(OrderedDict(model))
 
     print(json.dumps(all_champion_data, indent=4, separators=(',',': ')))
 
@@ -90,7 +91,17 @@ def find_longest_name():
         data = json.load(champs)
     max_len = 0
     for champ in data:
-        l = len(champ['image'])
+        l = len(champ['icon'])
+        if l > max_len:
+            max_len = l
+    print(max_len)
+
+def find_longest_name_item():
+    with open("api_items.json") as f:
+        data = json.load(f)
+    max_len = 0
+    for ele in data:
+        l = len(ele['name'])
         if l > max_len:
             max_len = l
     print(max_len)
@@ -129,12 +140,33 @@ def create_item_roles_dict():
             result[k] = list(v)
     return result
 
+def create_item_classes_dict():
+    with open("api_champions.json") as c:
+        champs = json.load(c)
+
+    item_classes = {}
+    for champ in champs:
+        classes = set(champ['classes'])
+        items = champ['items']
+
+        for item in items:
+            if item not in item_classes:
+                item_classes[item] = classes
+            else:
+                item_classes[item] |= classes
+        
+        result = {}
+        for k,v in item_classes.items():
+            result[k] = list(v)
+    return result
+
 def print_items_full():
     # image_url = "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/"
     with open("items.json") as items:
         data = json.load(items)
 
     item_roles = create_item_roles_dict()
+    item_classes = create_item_classes_dict()
 
     all_items_data = []
     for item in data['data'].keys(): 
@@ -146,8 +178,9 @@ def print_items_full():
             imag = input_data['image']['full']
             model.append(('name',name))
             model.append(('categories', cate))
-            model.append(('image', imag))
+            model.append(('icon', imag))
             model.append(('roles', item_roles[name]))
+            model.append(('classes', item_classes[name]))
         except Exception as e:
             pass
         else:
@@ -189,7 +222,7 @@ def print_classes_full():
         model = []
         try:
             model.append(('name', cl))
-            model.append(('img_url', cl + '.png'))
+            model.append(('icon', cl + '.png'))
             model.append(('description', class_descriptions[cl]))
             model.append(('champions', champs))
 
@@ -237,7 +270,7 @@ def print_roles_full():
     for role, classes in role_classes.items():
         model = []
         model.append(('name', role))
-        model.append(('img_url', str(role).lower() + '.png'))
+        model.append(('icon', str(role).lower() + '.png'))
         model.append(('classes', classes))
         data.append(OrderedDict(model))
 
@@ -246,14 +279,14 @@ def print_roles_full():
 if __name__ == "__main__":
     # pass
     # print_champions_full()
+    # print_items_full()
+    print_classes_full()
+    # print_roles_full()
     # print_champion_names()
     # find_longest_lore()
     # find_longest_name()
     # ic = create_item_champions_dict()
     # create_item_roles_dict()
-    # print_items_full()
     # create_class_descriptions_dict()
-    # print_classes_full()
     # create_champion_items_dict()
     # create_role_classes_dict()
-    print_roles_full()
