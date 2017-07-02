@@ -1,6 +1,6 @@
-from flask import Flask, render_template, send_from_directory, jsonify, Response
+from flask import Flask, render_template, send_from_directory, jsonify, Response, url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import json
 import os
 
@@ -32,12 +32,40 @@ def favicon() -> str:
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+
+#
+# glob routing
+#
+
+
 @app.route("/")
-@app.route("/<page>")
-def home(page: str = None) -> str:
-    if page:
-        return render_template(page + ".html")
-    return render_template("home.html", page=page)
+def home() -> str:
+    return render_template("home.html")
+
+
+@app.route("/<base_route>")
+def route_template(base_route):
+    return render_template(base_route + ".html")
+
+
+@app.route("/items")
+def route_items():
+    return send_from_directory("react/items", 'index.html')
+
+
+@app.route("/champions")
+def route_react() -> str:
+    return send_from_directory("react/champions", 'index.html')
+
+
+@app.route("/images/<path:image_name>")
+def image(image_name):
+    return send_from_directory("static", image_name)
+
+
+#
+# particle routing
+#
 
 
 @app.route("/champions/<name>")
@@ -62,6 +90,7 @@ def role_route(name: str) -> str:
 #####
 # API
 #####
+
 
 def json_response(filename: str) -> Response:
     f = open("static/json/" + filename, "r")
