@@ -36,7 +36,7 @@ class RoleList extends Component {
               <div className="col-sm-4">
                 <a href={"/roles/" + roles.name}>
                   <figure> <figcaption>{roles.name}</figcaption>
-                    <img alt={roles.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + roles.image}/>
+                    <img alt={roles.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + roles.icon}/>
                   </figure>
                 </a>
               </div>

@@ -14,10 +14,10 @@ def main():
 
     print(react_scripts)
 
-    # for project in react_scripts:
-    #     os.chdir(project)
-    #     call("npm run build".split())
-    #     os.chdir("..")
+    for project in react_scripts:
+        os.chdir(project)
+        call("npm run build".split())
+        os.chdir("..")
 
     for project in react_scripts:
         os.chdir(os.path.join(project, "build", "static", "js"))
@@ -31,8 +31,6 @@ def main():
 
     run("rm -rf ../leaguedb/app/react/")
     run("mkdir ../leaguedb/app/react/")
-
-    run("cp output/*.js ../leaguedb/app/react")
 
     for file in os.listdir("output"):
         run("cp output/" + file + " ../leaguedb/app/react/" + file)

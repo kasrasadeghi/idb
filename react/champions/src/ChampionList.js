@@ -36,10 +36,11 @@ class ChampionList extends Component {
               <div className="col-sm-4">
                 <a href={"/champions/" + champion.name}>
                   <figure> <figcaption>{champion.name}</figcaption>
-                    <img alt={champion.name + "'s icon"} src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + champion.image}/>
+                    <img alt={champion.name + "'s icon"} src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + champion.icon}/>
                   </figure>
                 </a>
               </div>
+              <pre>{JSON.stringify(champion)}</pre>
             </div>
         })}
       </div>

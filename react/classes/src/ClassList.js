@@ -36,7 +36,7 @@ class ClassList extends Component {
               <div className="col-sm-4">
                 <a href={"/classes/" + _class.name}>
                   <figure> <figcaption>{_class.name}</figcaption>
-                    <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.image}/>
+                    <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.icon}/>
                   </figure>
                 </a>
               </div>
