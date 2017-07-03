@@ -34,7 +34,7 @@ class ChampionList extends Component {
         {this.state.list.map((item) => {
           return <div className="row">
             <div className="col-sm-4">
-              <a href={"/item/" + item.name}>
+              <a href={"/items/" + item.name}>
                 <figure> <figcaption>{item.name}</figcaption>
                   <img alt={item.name + "'s icon"} src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + item.icon}/>
                 </figure>

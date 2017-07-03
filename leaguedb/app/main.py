@@ -29,7 +29,9 @@ def get_champion(name):
 def get_item(name):
     row = Item.query.get(name)
     contents = {}
-    contents['categories'] = row.categories
+    print(row.categories)
+    print(row.categories[:-1])
+    contents['categories'] = row.categories[1:-1].split(",")
     contents['champions']  = [x.name for x in row.champions]
     contents['classes']    = [x.name for x in row.classes]
     contents['icon']       = row.icon
@@ -103,7 +105,7 @@ def champion_route(name: str) -> Response:
 
 @app.route("/items/<name>")
 def item_route(name: str) -> Response:
-    return render_template("items/" + name + ".html", name=name)
+    return render_template("item.html", item=get_item(name))
 
 
 @app.route("/classes/<name>")
