@@ -16,56 +16,70 @@ Get information about every champion.
 
         [
             {
-                "name": "aatrox",
-                "role": "top",
-                "class": "skirmishers",
+                "classes": [
+                    "Fighter", 
+                    "Tank"
+                ], 
+                "icon": "Aatrox.png", 
                 "items": [
-                    "bladeoftheruinedking",
-                    "deathsdance",
+                    "Ravenous Hydra", 
+                    "Death's Dance",
                     ...
                 ],
-                "lore": "Aatrox is a legendary warrior...",
-                "image": "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/Aatrox.png"
+                "lore": "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's seemingly living blade drinks in their blood, empowering him and fueling his brutal, elegant campaign of slaughter.<br><br>The earliest tale of Aatrox is as old as recorded history. It tells of a war between two great factions remembered only as the Protectorate and the Magelords. Over time, the Magelords won a series of crushing victories, leaving them on the brink of obliterating their sworn enemy forever. On the day of their final confrontation, the Protectorate army found themselves outnumbered, exhausted, and poorly equipped. They braced for inevitable defeat.<br><br>Just when all hope seemed lost, Aatrox appeared among the ranks of the Protectorate. With but a few words, he urged the soldiers to fight to the last before throwing himself into battle. His presence inspired the desperate warriors. At first, they could only watch in awe as this unknown hero cleaved through their enemies, his body and blade moving in unison as if one being. Soon, the warriors found themselves imbued with a potent thirst for battle. They followed Aatrox into the fray, each fighting with the furious strength of ten until they had won a most unlikely victory.<br><br>Aatrox vanished after that battle, but the Protectorate army's newfound fury did not. Their surprising triumph led to many more until they were able to finally return home victorious. Their countrymen hailed them as heroes, but though they had saved their entire civilization from destruction, darkness lingered in the mind of each warrior. Something within them had changed. Over time, their memories of battle faded, only to be replaced with a grim revelation: their acts of heroism were, in fact, brutal atrocities committed by their own hands.<br><br>Tales like these appear among the myths of many cultures. If they are all to be believed, Aatrox's presence has changed the course of some of the most important wars in history. Though these stories remember him as a savior in dark times, Aatrox's true legacy may be a world filled with conflict and strife.<br><br>''Some fight for honor, some fight for glory. It matters only that you fight.''<br>-- Aatrox", 
+                "name": "Aatrox", 
+                "roles": [
+                    "Top", 
+                    "Jg"
+                ] 
             },
             {
-                "name": "ahri",
-                "role": "mid",
-                "class": "mages",
+                "classes": [
+                    "Mage", 
+                    "Assassin"
+                ], 
+                "icon": "Ahri.png", 
                 "items": [
-                    "morellonomicon",
-                    "ludensecho",
+                    "Abyssal Mask", 
+                    "Sorcerer's Shoes", 
                     ...
-                ],
-                "lore": "Unlike other foxes that roamed the woods of southern Ionia...",                
-                "image": "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/Ahri.png"
+                ], 
+                "lore": "Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was an ill fit for her and dreamt of one day becoming human. Her goal seemed forever out of reach, until she happened upon the wake of a human battle. It was a grisly scene, the land obscured by the forms of wounded and dying soldiers. She felt drawn to one: a robed man encircled by a waning field of magic, his life quickly slipping away. She approached him and something deep inside of her triggered, reaching out to the man in a way she couldn't understand. His life essence poured into her, carried on invisible strands of magic. The sensation was intoxicating and overwhelming. As her reverie faded, she was delighted to discover that she had changed. Her sleek white fur had receded and her body was long and lithe - the shape of the humans who lay scattered about her.<br><br>However, though she appeared human, she knew that in truth the transformation was incomplete. A cunning creature, she adapted herself to the customs of human society and used her profound gift of beauty to attract unsuspecting men. She could consume their life essences when they were under the spell of her seductive charms. Feeding on their desires brought her closer to her dream, but as she took more lives, a strange sense of regret began to well within her. She had reservations about actions which never troubled her as a fox. She realized that she could not overcome the pangs of her evolving morality. In search of a solution, Ahri found the Institute of War, home of the most gifted mages on Runeterra. They offered her a chance to attain her humanity without further harm through service in the League of Legends.<br><br>''Mercy is a human luxury... and responsibility.''<br>-- Ahri", 
+                "name": "Ahri", 
+                "roles": [
+                    "Mid"
+                ]
             },
             ...
         ]
 
 ### Get A Champion By Name [GET /api/champions/{name}]
 
-Get information about one champion by using a name parameter, which must contain only 
-lowercase letters.
+Get information about one champion by using a name parameter.
 
 + Parameters
-    + name: draven
+    + name: Aatrox
 
 + Response 200 (application/json)
 
-        [
-            {
-                "name": "draven",
-                "role": "bot",
-                "class": "marksmen",
-                "items": [
-                    "deathsdance",
-                    "statikkshiv",
-                    ...
-                ],
-                "lore": "Unlike his brother Darius,champ victory in battle was never enough for Draven...",
-                "image": "https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/Draven.png"
-            }
-        ]
+        {
+            "classes": [
+                "Fighter", 
+                "Tank"
+            ], 
+            "icon": "Aatrox.png", 
+            "items": [
+                "Ravenous Hydra", 
+                "Death's Dance",
+                ...
+            ],
+            "lore": "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's seemingly living blade drinks in their blood, empowering him and fueling his brutal, elegant campaign of slaughter.<br><br>The earliest tale of Aatrox is as old as recorded history. It tells of a war between two great factions remembered only as the Protectorate and the Magelords. Over time, the Magelords won a series of crushing victories, leaving them on the brink of obliterating their sworn enemy forever. On the day of their final confrontation, the Protectorate army found themselves outnumbered, exhausted, and poorly equipped. They braced for inevitable defeat.<br><br>Just when all hope seemed lost, Aatrox appeared among the ranks of the Protectorate. With but a few words, he urged the soldiers to fight to the last before throwing himself into battle. His presence inspired the desperate warriors. At first, they could only watch in awe as this unknown hero cleaved through their enemies, his body and blade moving in unison as if one being. Soon, the warriors found themselves imbued with a potent thirst for battle. They followed Aatrox into the fray, each fighting with the furious strength of ten until they had won a most unlikely victory.<br><br>Aatrox vanished after that battle, but the Protectorate army's newfound fury did not. Their surprising triumph led to many more until they were able to finally return home victorious. Their countrymen hailed them as heroes, but though they had saved their entire civilization from destruction, darkness lingered in the mind of each warrior. Something within them had changed. Over time, their memories of battle faded, only to be replaced with a grim revelation: their acts of heroism were, in fact, brutal atrocities committed by their own hands.<br><br>Tales like these appear among the myths of many cultures. If they are all to be believed, Aatrox's presence has changed the course of some of the most important wars in history. Though these stories remember him as a savior in dark times, Aatrox's true legacy may be a world filled with conflict and strife.<br><br>''Some fight for honor, some fight for glory. It matters only that you fight.''<br>-- Aatrox", 
+            "name": "Aatrox", 
+            "roles": [
+                "Top", 
+                "Jg"
+            ] 
+        }
 
 ## Items [/api/items]
 
@@ -77,69 +91,76 @@ Get information about all the items in the game.
 
         [
             {
-                "name": "statikkshiv",
+                "categories": "{AttackSpeed,CriticalStrike,NonbootsMovement,OnHit}", 
                 "champions": [
-                    "draven",
-                    "vayne",
+                    "Draven",
+                    "Kalista",
                     ...
                 ],
+                "classes": [
+                    "Mage", 
+                    "Fighter",
+                    ...
+                ], 
+                "icon": "3087.png",
+                "name": "Statikk Shiv",
                 "roles": [
-                    "bot"
-                ],
-                "categories": [
-                    "attack_speed",
-                    "nonboots_movement",
+                    "Bot",
+                    "Sup",
                     ...
-                ],
-                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png"
+                ]
             },
             {
-                "name": "phantomdancer",
+                "categories": "{AttackSpeed,CriticalStrike,NonbootsMovement}",
                 "champions": [
-                    "draven",
-                    "vayne",
+                    "Kindred", 
+                    "Ashe",
                     ...
-                ],
-                "categories": [
-                    "attack_speed",
-                    "nonboots_movement",
+                ], 
+                "classes": [
+                    "Mage", 
+                    "Fighter",
                     ...
-                ],
+                ], 
+                "icon": "3046.png", 
+                "name": "Phantom Dancer", 
                 "roles": [
-                    "bot"
-                ],
-                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3046.png"
-            }
+                    "Bot", 
+                    "Top",
+                    ...
+                ]
+            },
+            ...
         ]
 
 ### Get An Item by Name [GET /api/items/{name}]
 
-Get information about an item by its name, which must contain only lowercase letters.
+Get information about an item by its name.
 
 + Parameters
-    + name: statikkshiv
+    + name: Statikk Shiv
 
 + Response 200 (application/json)
 
-        [
-            {
-                "name": "statikkshiv",
-                "champions": [
-                    "draven",
-                    "vayne",
-                    ...
-                ],
-                "categories": [
-                    "attack_speed",
-                    "nonboots_movement",
-                    ...
-                ],
-                "roles": [
-                    "bot"
-                ],
-                "image": "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/3087.png"
-            }
-        ]
+        {
+            "categories": "{AttackSpeed,CriticalStrike,NonbootsMovement,OnHit}", 
+            "champions": [
+                "Draven", 
+                "Kalista",
+                ...
+            ], 
+            "classes": [
+                "Mage", 
+                "Fighter",
+                ...
+            ], 
+            "icon": "3087.png", 
+            "name": "Statikk Shiv", 
+            "roles": [
+                "Bot",
+                ...
+            ]
+        }
         
 ## Classes [/api/classes]
 
@@ -151,64 +172,61 @@ Get information of all of the classes in League of Legends.
 
         [
             {
-                "name": "marksman",
-                "description": "Marksmen are ranged champions whose power revolves mostly around their basic attaks."
                 "champions": [
-                    "caitlyn",
-                    "draven",
+                    "Draven", 
+                    "Ezreal", 
                     ...
                 ],
+                "description": "Marksman are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as turrets, Dragon and Baron Nashor.  However, they are also tremendously vulnerable to burst damage due to their squishiness, and tend to be exceptionally weak early in the game, requiring high amounts of gold, mostly via minion kills (or CS: Creep Score) to acquire powerful, but expensive, damage-focused items. Due to their potent reach and DPS, marksmen are particularly strong against more durable opponents, namely fighters and tanks, but fall quickly to the burst damage of assassins and mages.", 
+                "icon": "Marksman.png", 
                 "items": [
-                    "infinityedge",
-                    "phantomdancer",
+                    "Warmog's Armor", 
+                    "Sapphire Crystal",
                     ...
-                ],
-                "image":"/images/marksman"
+                ], 
+                "name": "Marksman"
             },
             {
-                "name": "Controller",
-                "description": "Controllers are selfless champions who lack in personal power but have strong abilities that assist their teammates."
                 "champions": [
-                    "blitzcrank",
-                    "thresh",
+                    "Zilean", 
+                    "Thresh", 
                     ...
-                ],
+                ], 
+                "description": "Controllers are the most selfless champions in the game, forgoing personal power to assist their allies with potent utility and keep enemies at bay with crowd control. Weak when alone, supports are capable of massively amplifying their teammates' power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch moments to save allies from death and enable takedowns on the enemy team. Supports typically start out by assisting the marksman in lane, as their own power is less dependent on items to function well, but over time their contribution expands as they lend aid to their entire team with both their spells and effective, yet affordable, items.", 
+                "icon": "Support.png", 
                 "items": [
-                    "bannerofcommand",
-                    "locketoftheironsolari",
-                    ...
-                ],
-                "image":"/images/controller"
+                    "Warmog's Armor", 
+                    "Mikael's Crucible", 
+                ], 
+                "name": "Support"
             },
             ...
         ]
 
 ### Get A Class by Name [GET /api/classes/{name}]
 
-Get information about a class with a name parameter, which must contain only 
-lowercase letters.
+Get information about a class with a name parameter.
 
 + Parameters
-    + name: noxus
+    + name: Marksman
 
 + Response 200 (application/json)
 
-        [
-            {
-                "name": "marksman",
-                "description": "Marksmen are ranged champions whose power revolves mostly around their basic attacks."
-                "champions": [
-                    "caitlyn",
-                    "draven",
-                ],
-                "items": [
-                    "infinityedge",
-                    "phantomdancer",
-                    ...
-                ],
-                "image":"/images/marksman"
-            }
-        ]
+        {
+            "champions": [
+                "Draven", 
+                "Ezreal", 
+                ...
+            ],
+            "description": "Marksman are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as turrets, Dragon and Baron Nashor.  However, they are also tremendously vulnerable to burst damage due to their squishiness, and tend to be exceptionally weak early in the game, requiring high amounts of gold, mostly via minion kills (or CS: Creep Score) to acquire powerful, but expensive, damage-focused items. Due to their potent reach and DPS, marksmen are particularly strong against more durable opponents, namely fighters and tanks, but fall quickly to the burst damage of assassins and mages.", 
+            "icon": "Marksman.png", 
+            "items": [
+                "Warmog's Armor", 
+                "Sapphire Crystal",
+                ...
+            ], 
+            "name": "Marksman"
+        }
 
 ## Roles [/api/roles]
 
@@ -220,67 +238,58 @@ Get information about all the roles in the game.
 
         [
             {
-                "type": "bot",
-                "champions":[
-                    "draven",
-                    "vayne",
+                "champions": [
+                    "Draven", 
+                    "Ezreal", 
                     ...
-                ],
+                ], 
+                "classes": "Mage,Fighter,Support,Marksman,Assassin", 
+                "icon": "bot.png", 
                 "items": [
-                    "infinityedge",
-                    "phantomdancer",
+                    "Warmog's Armor", 
+                    "Sapphire Crystal", 
                     ...
-                ],
-                "classes": [
-                    "marksman"
-                ],
-                "image": "/images/bot"
+                ], 
+                "name": "Bot"
             },
             {
-                "type": "top",typ
                 "champions": [
-                    "renekton",
-                    "riven",
+                    "Kled", 
+                    "Jax", 
                     ...
-                ],
+                ], 
+                "classes": "Mage,Fighter,Support,Marksman,Tank,Assassin", 
+                "icon": "top.png", 
                 "items": [
-                    "randiunsomen",
-                    "titanichydra",
+                    "Warmog's Armor", 
+                    "Mikael's Crucible", 
                     ...
-                ],
-                "classes": [
-                    "fighter",
-                    "tank"
-                ],
-                "image": "/images/top"
+                ], 
+                "name": "Top"
             },
             ...
         ]
 
 ### Get A Role by Type [GET /api/roles/{type}]
 
-Get information about a role by its type, which must contain only lowercase letters.
+Get information about a role by its type.
 
 + Parameters
     + type: bot
 + Response 200 (application/json)
 
-        [
-            {
-                "type": "bot",
-                "champions":[
-                    "draven",
-                    "vayne",
-                    ...
-                ],
-                "items": [
-                    "infinityedge",
-                    "phantomdancer",
-                    ...
-                ],
-                "classes": ]
-                    "marksman"
-                ],
-                "image": "/images/bot"
-            }
-        ]
+        {
+            "champions": [
+                "Draven", 
+                "Ezreal", 
+                ...
+            ], 
+            "classes": "Mage,Fighter,Support,Marksman,Assassin", 
+            "icon": "bot.png", 
+            "items": [
+                "Warmog's Armor", 
+                "Sapphire Crystal", 
+                ...
+            ], 
+            "name": "Bot"
+        }
