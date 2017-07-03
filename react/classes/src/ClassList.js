@@ -40,7 +40,6 @@ class ClassList extends Component {
                   </figure>
                 </a>
               </div>
-            <pre>{JSON.stringify(_class, undefined, 2)}</pre>
             </div>
         })}
       </div>

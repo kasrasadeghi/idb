@@ -3,6 +3,7 @@ from subprocess import call
 
 
 def run(command: str) -> None:
+    print("$", command)
     call(command.split())
 
 
@@ -27,6 +28,15 @@ def main():
         run(command)
 
     run("tree output")
+
+    run("rm -rf ../leaguedb/app/react/")
+    run("mkdir ../leaguedb/app/react/")
+
+    run("cp output/*.js ../leaguedb/app/react")
+
+    for file in os.listdir("output"):
+        run("cp output/" + file + " ../leaguedb/app/react/" + file)
+
 
 if __name__ == "__main__":
     main()
