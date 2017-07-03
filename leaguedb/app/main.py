@@ -97,7 +97,8 @@ def image(image_name) -> Response:
 
 @app.route("/champions/<name>")
 def champion_route(name: str) -> Response:
-    return render_template("champions/" + name + ".html", name=name)
+    data = get_champion(name)
+    return render_template("champion.html", champion=data)
 
 
 @app.route("/items/<name>")

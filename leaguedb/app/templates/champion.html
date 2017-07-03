@@ -1,15 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
   <h1>{{ champion.name }}</h1>
-  <h2>{{ champion.title }}</h2>
-  <h3>Class: {{ champion.class }}</h3>
-  <h4>Subclass: {{ champion.subclass }}</h4>
   <div class="modal-body row">
     <div class="col-md-6">
-      <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{ champion.file_name }}_0.jpg">
+      <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{
+      champion.icon[:-4] }}_0.jpg" >
     </div>
     <div class="col-md-6">
-      <p>{{ champion.lore }}</p>
+      {{ champion.lore|safe }}
     </div>
   </div>
+  <h3>Items</h3>
+    <ul>
+    {% for thing in champion['items'] %}
+      <li><a href="/items/{{ thing }}">{{ thing }}</a></li>
+    {% endfor %}
+    </ul>
+  <h3>Classes</h3>
+    <ul>
+    {% for thing in champion['classes'] %}
+      <li><a href="/classes/{{ thing }}">{{ thing }}</a></li>
+    {% endfor %}
+    </ul>
+  <h3>Roles</h3>
+    <ul>
+    {% for thing in champion['roles'] %}
+      <li><a href="/roles/{{ thing }}">{{ thing }}</a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}
