@@ -1,31 +1,7 @@
-from flask import Flask, render_template, send_from_directory, jsonify, Response, url_for
-from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS
+from flask import render_template, send_from_directory, jsonify, Response, url_for
+from models import app, Champion, Item, Class, Role
 import json
 import os
-
-from password import secret_database_password
-"""
-make a file in this directory called password.py
-
-it should have one line:
-secret_database_password = "INSERT PASSWORD HERE"
-"""
-
-
-app = Flask(__name__)
-CORS(app) # may be able remove this
-
-# TODO: Remote PostgreSQL data base configuration/connection
-user = 'adben'
-pwd = secret_database_password
-host = 'swe.ccju5j8yyny7.us-east-2.rds.amazonaws.com'
-db = 'postgres'
-uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
-app.config['SQLALCHEMY_DATABASE_URI'] = uri
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
-
 
 @app.route("/favicon.ico")
 def favicon() -> str:
@@ -98,7 +74,6 @@ def json_response(filename: str) -> Response:
     response = jsonify(contents)
     return response
 
-
 #
 # region champions
 #
@@ -155,7 +130,16 @@ def api_champion(name: str) -> Response:
         "icon": "Quinn.png"
     }
     """
-    raise NotImplemented("cannot get champion by name yet")
+    row = Champion.query.get(name)
+    contents = {}
+    contents['name']    = row.name
+    contents['roles']   = [x.name for x in row.roles]
+    contents['classes'] = [x.name for x in row.classes]
+    contents['items']   = [x.name for x in row.items]
+    contents['lore']    = row.lore
+    contents['icon']    = row.icon
+    response = jsonify(contents)
+    return response
 
 
 # endregion

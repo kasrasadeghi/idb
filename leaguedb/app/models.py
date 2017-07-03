@@ -1,6 +1,28 @@
 #!/usr/bin/env python3
-from main import db
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 import json
+
+from password import secret_database_password
+"""
+make a file in this directory called password.py
+
+it should have one line:
+secret_database_password = "INSERT PASSWORD HERE"
+"""
+
+app = Flask(__name__)
+CORS(app) # may be able remove this
+
+user = 'adben'
+pwd = secret_database_password
+host = 'swe.ccju5j8yyny7.us-east-2.rds.amazonaws.com'
+db = 'postgres'
+uri = 'postgresql://%s:%s@%s/%s' % (user, pwd, host, db)
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 # consider many-to-many relationships
  
