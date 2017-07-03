@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class ChampionList extends Component {
+class ClassList extends Component {
   constructor() {
     super();
 
@@ -8,7 +8,7 @@ class ChampionList extends Component {
       list: []
     };
 
-    fetch('http://leaguedb.me/api/items', {
+    fetch('http://leaguedb.me/api/classes', {
       method: 'GET',
       dataType: 'json'
     })
@@ -31,20 +31,21 @@ class ChampionList extends Component {
   render() {
     return (
       <div className="container">
-        {this.state.list.map((item) => {
+        {this.state.list.map((_class) => {
           return <div className="row">
-            <div className="col-sm-4">
-              <a href={"/item/" + item.name}>
-                <figure> <figcaption>{item.name}</figcaption>
-                  <img alt={item.name + "'s icon"} src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + item.image}/>
-                </figure>
-              </a>
+              <div className="col-sm-4">
+                <a href={"/classes/" + _class.name}>
+                  <figure> <figcaption>{_class.name}</figcaption>
+                    <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.image}/>
+                  </figure>
+                </a>
+              </div>
+            <pre>{JSON.stringify(_class, undefined, 2)}</pre>
             </div>
-          </div>
         })}
       </div>
     );
   }
 }
 
-export default ChampionList;
+export default ClassList;

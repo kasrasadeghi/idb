@@ -1,1 +1,61 @@
-../../../../cache/api_roles.json
+[
+    {
+        "name": "Bot",
+        "icon": "bot.png",
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Sup",
+        "icon": "sup.png",
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Top",
+        "icon": "top.png",
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Jg",
+        "icon": "jg.png",
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    },
+    {
+        "name": "Mid",
+        "icon": "mid.png",
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ]
+    }
+]

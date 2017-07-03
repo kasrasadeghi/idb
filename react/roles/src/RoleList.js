@@ -8,7 +8,7 @@ class ChampionList extends Component {
       list: []
     };
 
-    fetch('http://leaguedb.me/api/items', {
+    fetch('http://leaguedb.me/api/champions', {
       method: 'GET',
       dataType: 'json'
     })
@@ -31,16 +31,16 @@ class ChampionList extends Component {
   render() {
     return (
       <div className="container">
-        {this.state.list.map((item) => {
+        {this.state.list.map((roles) => {
           return <div className="row">
-            <div className="col-sm-4">
-              <a href={"/item/" + item.name}>
-                <figure> <figcaption>{item.name}</figcaption>
-                  <img alt={item.name + "'s icon"} src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + item.image}/>
-                </figure>
-              </a>
+              <div className="col-sm-4">
+                <a href={"/roles/" + roles.name}>
+                  <figure> <figcaption>{roles.name}</figcaption>
+                    <img alt={roles.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + roles.image}/>
+                  </figure>
+                </a>
+              </div>
             </div>
-          </div>
         })}
       </div>
     );

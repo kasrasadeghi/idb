@@ -3,6 +3,7 @@ from models import app, Champion, Item, Class, Role
 import json
 import os
 
+
 @app.route("/favicon.ico")
 def favicon() -> str:
     return send_from_directory(os.path.join(app.root_path, 'static'),
@@ -247,11 +248,11 @@ def api_class(name: str) -> Response:
     """
     row = Class.query.get(name)
     contents = {}
-    contents['champions']  = [x.name for x in row.champions]
+    contents['champions']   = [x.name for x in row.champions]
     contents['description'] = row.description
-    contents['icon']       = row.icon
-    contents['items']      = [x.name for x in row.items]
-    contents['name']       = row.name
+    contents['icon']        = row.icon
+    contents['items']       = [x.name for x in row.items]
+    contents['name']        = row.name
     response = jsonify(contents)
     return response
 
@@ -304,11 +305,11 @@ def api_role(name: str) -> Response:
     """
     row = Role.query.get(name)
     contents = {}
-    contents['champions']  = [x.name for x in row.champions]
-    contents['classes']    = row.classes
-    contents['icon']       = row.icon
-    contents['items']      = [x.name for x in row.items]
-    contents['name']       = row.name
+    contents['champions'] = [x.name for x in row.champions]
+    contents['classes']   = row.classes
+    contents['icon']      = row.icon
+    contents['items']     = [x.name for x in row.items]
+    contents['name']      = row.name
     response = jsonify(contents)
     return response
 
