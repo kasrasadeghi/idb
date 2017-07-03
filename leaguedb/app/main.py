@@ -86,7 +86,7 @@ def api_champion_names() -> Response:
 
     :return: a list of champion names
 
-    { "Thresh", "Viktor", "Hecarim", ... }
+    [ "Thresh", "Viktor", "Hecarim", ... ]
     """
     return json_response("champion_names.json")
 
@@ -100,12 +100,12 @@ def api_champions() -> Response:
 
     [
         {
-            "name": "Quinn",
-            "roles": [ ... ],
             "classes": [ ... ],
+            "icon": "Quinn.png"
             "items": [ ... ],
             "lore": "Quinn and ...
-            "icon": "Quinn.png"
+            "name": "Quinn",
+            "roles": [ ... ],
         },
         ...
     ]
@@ -122,78 +122,28 @@ def api_champion(name: str) -> Response:
     :return: the response
 
     {
-        "name": "Quinn",
-        "roles": [ ... ],
         "classes": [ ... ],
+        "icon": "Quinn.png"
         "items": [ ... ],
         "lore": "Quinn and ...
-        "icon": "Quinn.png"
+        "name": "Quinn",
+        "roles": [ ... ],
     }
     """
     row = Champion.query.get(name)
     contents = {}
-    contents['name']    = row.name
-    contents['roles']   = [x.name for x in row.roles]
     contents['classes'] = [x.name for x in row.classes]
+    contents['icon']    = row.icon
     contents['items']   = [x.name for x in row.items]
     contents['lore']    = row.lore
-    contents['icon']    = row.icon
+    contents['name']    = row.name
+    contents['roles']   = [x.name for x in row.roles]
     response = jsonify(contents)
     return response
 
 
 # endregion
 #
-
-
-#
-# region classes
-#
-
-
-@app.route("/api/classes")
-def api_classes() -> Response:
-    """
-    gets all class in a json
-
-    :return: the response
-
-    [
-        {
-            "name": "Marksman",
-            "icon": "Marksman.png",
-            "description": "Marksman are ranged ...
-            "champions": [ ...],
-            "items": [ ... ]
-        },
-        ...
-    ]
-    """
-    return json_response("api_classes.json")
-
-
-@app.route("/api/class/<name>")
-def api_class(name: str) -> Response:
-    """
-    gets a single class's json
-
-    :param name: the name of a specific class
-    :return: the response
-
-    {
-        "name": "Marksman",
-        "icon": "Marksman.png",
-        "description": "Marksman are ranged ...
-        "champions": [ ...],
-        "items": [ ... ]
-    }
-    """
-    raise NotImplemented("cannot get classes by name yet")
-
-
-# endregion
-#
-
 
 #
 # region items
@@ -208,11 +158,12 @@ def api_items() -> Response:
     :return: the response
     [
         {
+            "categories": [ ... ],
+            "champions": [ ... ],
+            "classes": [ ... ],
+            "icon": "1038.png"
             "name": "B. F. Sword",
             "roles": [ ... ],
-            "champions": [ ... ],
-            "categories": [ ... ],
-            "image": "1038.png"
         },
         ...
     ]
@@ -229,14 +180,80 @@ def api_item(name: str) -> Response:
     :return: the response
 
     {
+        "categories": Health, ,
+        "champions": [ ... ],
+        "classes": [ ... ],
+        "icon": "1038.png"
         "name": "B. F. Sword",
         "roles": [ ... ],
-        "champions": [ ... ],
-        "categories": [ ... ],
-        "image": "1038.png"
     }
     """
-    raise NotImplemented("cannot get items by name yet")
+    row = Item.query.get(name)
+    contents = {}
+    contents['categories'] = row.categories
+    contents['champions']  = [x.name for x in row.champions]
+    contents['classes']    = [x.name for x in row.classes]
+    contents['icon']       = row.icon
+    contents['name']       = row.name
+    contents['roles']      = [x.name for x in row.roles]
+    response = jsonify(contents)
+    return response
+
+
+# endregion
+#
+
+#
+# region classes
+#
+
+
+@app.route("/api/classes")
+def api_classes() -> Response:
+    """
+    gets all class in a json
+
+    :return: the response
+
+    [
+        {
+            "champions": [ ...],
+            "description": "Marksman are ranged ...
+            "icon": "Marksman.png",
+            "items": [ ... ]
+            "name": "Marksman",
+        },
+        ...
+    ]
+    """
+    return json_response("api_classes.json")
+
+
+@app.route("/api/class/<name>")
+def api_class(name: str) -> Response:
+    """
+    gets a single class's json
+
+    :param name: the name of a specific class
+    :return: the response
+
+    {
+        "champions": [ ...],
+        "description": "Marksman are ranged ...
+        "icon": "Marksman.png",
+        "items": [ ... ]
+        "name": "Marksman",
+    }
+    """
+    row = Class.query.get(name)
+    contents = {}
+    contents['champions']  = [x.name for x in row.champions]
+    contents['description'] = row.description
+    contents['icon']       = row.icon
+    contents['items']      = [x.name for x in row.items]
+    contents['name']       = row.name
+    response = jsonify(contents)
+    return response
 
 
 # endregion
@@ -257,11 +274,11 @@ def api_roles() -> Response:
 
     [
         {
-            "name": "Sup",
-            "icon": "sup.png",
-            "classes": [ ... ],
-            "items": [ ... ],
             "champions" : [ ... ]
+            "classes": [ ... ],
+            "icon": "sup.png",
+            "items": [ ... ],
+            "name": "Sup",
         },
         ...
     ]
@@ -278,14 +295,22 @@ def api_role(name: str) -> Response:
     :return: the response
 
     {
-        "name": "Sup",
-        "icon": "sup.png",
-        "classes": [ ... ],
-        "items": [ ... ],
         "champions" : [ ... ]
+        "classes": [ ... ],
+        "icon": "sup.png",
+        "items": [ ... ],
+        "name": "Sup",
     }
     """
-    raise NotImplemented("cannot get role by name yet")
+    row = Role.query.get(name)
+    contents = {}
+    contents['champions']  = [x.name for x in row.champions]
+    contents['classes']    = row.classes
+    contents['icon']       = row.icon
+    contents['items']      = [x.name for x in row.items]
+    contents['name']       = row.name
+    response = jsonify(contents)
+    return response
 
 
 # endregion
