@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChampionList from './ChampionList';
+import RoleList from './RoleList';
 
-ReactDOM.render(<ChampionList />, document.getElementById('root'));
+ReactDOM.render(<RoleList />, document.getElementById('root'));

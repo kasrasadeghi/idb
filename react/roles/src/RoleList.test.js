@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChampionList from './ChampionList';
+import RoleList from './RoleList';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<ChampionList />, div);
+  ReactDOM.render(<RoleList />, div);
 });

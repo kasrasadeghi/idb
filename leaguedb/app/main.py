@@ -5,10 +5,59 @@ import os
 
 
 @app.route("/favicon.ico")
-def favicon() -> str:
+def favicon() -> Response:
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+
+#
+# database querying
+#
+
+def get_champion(name):
+    row = Champion.query.get(name)
+    contents = {}
+    contents['classes'] = [x.name for x in row.classes]
+    contents['icon']    = row.icon
+    contents['items']   = [x.name for x in row.items]
+    contents['lore']    = row.lore
+    contents['name']    = row.name
+    contents['roles']   = [x.name for x in row.roles]
+    return contents
+
+
+def get_item(name):
+    row = Item.query.get(name)
+    contents = {}
+    contents['categories'] = row.categories
+    contents['champions']  = [x.name for x in row.champions]
+    contents['classes']    = [x.name for x in row.classes]
+    contents['icon']       = row.icon
+    contents['name']       = row.name
+    contents['roles']      = [x.name for x in row.roles]
+    return contents
+
+
+def get_class(name):
+    row = Class.query.get(name)
+    contents = {}
+    contents['champions']   = [x.name for x in row.champions]
+    contents['description'] = row.description
+    contents['icon']        = row.icon
+    contents['items']       = [x.name for x in row.items]
+    contents['name']        = row.name
+    return contents
+
+
+def get_role(name):
+    row = Role.query.get(name)
+    contents = {}
+    contents['champions'] = [x.name for x in row.champions]
+    contents['classes']   = row.classes
+    contents['icon']      = row.icon
+    contents['items']     = [x.name for x in row.items]
+    contents['name']      = row.name
+    return contents
 
 #
 # glob routing
@@ -16,28 +65,29 @@ def favicon() -> str:
 
 
 @app.route("/")
-def home() -> str:
+def home() -> Response:
     return render_template("home.html")
 
 
-@app.route("/<base_route>")
-def route_template(base_route):
-    return render_template(base_route + ".html")
+@app.route("/about")
+def route_about() -> Response:
+    return render_template("about.html")
 
 
-@app.route("/items")
-def route_items():
-    return send_from_directory("react/items", 'index.html')
+@app.route("/<react_route>")
+def route_items(react_route: str) -> Response:
+    filename = [file for file in os.listdir("react") if file.startswith(react_route)][0]
+    return render_template("model_view.html", filename=filename)
 
 
-@app.route("/champions")
-def route_react() -> str:
-    return send_from_directory("react/champions", 'index.html')
+@app.route("/react/<filename>")
+def route_react(filename: str) -> Response:
+    return send_from_directory("react", filename)
 
 
 @app.route("/images/<path:image_name>")
-def image(image_name):
-    return send_from_directory("static", image_name)
+def image(image_name) -> Response:
+    return send_from_directory("static/images", image_name)
 
 
 #
@@ -46,22 +96,22 @@ def image(image_name):
 
 
 @app.route("/champions/<name>")
-def champion_route(name: str) -> str:
+def champion_route(name: str) -> Response:
     return render_template("champions/" + name + ".html", name=name)
 
 
 @app.route("/items/<name>")
-def item_route(name: str) -> str:
+def item_route(name: str) -> Response:
     return render_template("items/" + name + ".html", name=name)
 
 
 @app.route("/classes/<name>")
-def class_route(name: str) -> str:
+def class_route(name: str) -> Response:
     return render_template("classes/" + name + ".html", name=name)
 
 
 @app.route("/roles/<name>")
-def role_route(name: str) -> str:
+def role_route(name: str) -> Response:
     return render_template("roles/" + name + ".html", name=name)
 
 #####
@@ -131,15 +181,7 @@ def api_champion(name: str) -> Response:
         "roles": [ ... ],
     }
     """
-    row = Champion.query.get(name)
-    contents = {}
-    contents['classes'] = [x.name for x in row.classes]
-    contents['icon']    = row.icon
-    contents['items']   = [x.name for x in row.items]
-    contents['lore']    = row.lore
-    contents['name']    = row.name
-    contents['roles']   = [x.name for x in row.roles]
-    response = jsonify(contents)
+    response = jsonify(get_champion(name))
     return response
 
 
@@ -189,15 +231,7 @@ def api_item(name: str) -> Response:
         "roles": [ ... ],
     }
     """
-    row = Item.query.get(name)
-    contents = {}
-    contents['categories'] = row.categories
-    contents['champions']  = [x.name for x in row.champions]
-    contents['classes']    = [x.name for x in row.classes]
-    contents['icon']       = row.icon
-    contents['name']       = row.name
-    contents['roles']      = [x.name for x in row.roles]
-    response = jsonify(contents)
+    response = jsonify(get_item(name))
     return response
 
 
@@ -246,14 +280,7 @@ def api_class(name: str) -> Response:
         "name": "Marksman",
     }
     """
-    row = Class.query.get(name)
-    contents = {}
-    contents['champions']   = [x.name for x in row.champions]
-    contents['description'] = row.description
-    contents['icon']        = row.icon
-    contents['items']       = [x.name for x in row.items]
-    contents['name']        = row.name
-    response = jsonify(contents)
+    response = jsonify(get_class(name))
     return response
 
 
@@ -303,14 +330,7 @@ def api_role(name: str) -> Response:
         "name": "Sup",
     }
     """
-    row = Role.query.get(name)
-    contents = {}
-    contents['champions'] = [x.name for x in row.champions]
-    contents['classes']   = row.classes
-    contents['icon']      = row.icon
-    contents['items']     = [x.name for x in row.items]
-    contents['name']      = row.name
-    response = jsonify(contents)
+    response = jsonify(get_role(name))
     return response
 
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class ChampionList extends Component {
+class RoleList extends Component {
   constructor() {
     super();
 
@@ -8,7 +8,7 @@ class ChampionList extends Component {
       list: []
     };
 
-    fetch('http://leaguedb.me/api/champions', {
+    fetch('http://leaguedb.me/api/roles', {
       method: 'GET',
       dataType: 'json'
     })
@@ -47,4 +47,4 @@ class ChampionList extends Component {
   }
 }
 
-export default ChampionList;
+export default RoleList;
