@@ -40,7 +40,6 @@ class ChampionList extends Component {
                   </figure>
                 </a>
               </div>
-              <pre>{JSON.stringify(champion)}</pre>
             </div>
         })}
       </div>
