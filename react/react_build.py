@@ -14,10 +14,10 @@ def main():
 
     print(react_scripts)
 
-    for project in react_scripts:
-        os.chdir(project)
-        call("npm run build".split())
-        os.chdir("..")
+    # for project in react_scripts:
+    #     os.chdir(project)
+    #     call("npm run build".split())
+    #     os.chdir("..")
 
     for project in react_scripts:
         os.chdir(os.path.join(project, "build", "static", "js"))
@@ -25,6 +25,14 @@ def main():
         os.chdir("../../../..")
         command = "cp %s/build/static/js/%s output/%s" \
                   % (project, javascript_file_path, javascript_file_path.replace("main", project))
+        run(command)
+
+    for project in react_scripts:
+        os.chdir(os.path.join(project, "build", "static", "css"))
+        css_file_path = [name for name in os.listdir(".") if name.endswith(".css")][0]
+        os.chdir("../../../..")
+        command = "cp %s/build/static/css/%s output/%s" \
+                  % (project, css_file_path, css_file_path.replace("main", project))
         run(command)
 
     run("tree output")
