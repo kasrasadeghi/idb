@@ -177,11 +177,4 @@ times does not seem to do anything.
 Adding a row that already exists (that is supposed to be unique) raises an
 exception, and the transaction fails.
 
-### Adding Our Tables
-
-Let's relate it to our project now. First, open a Python 3 interpreter. Then,
-`import models`, which allows us to access `models.py`. This file defines every
-model of our website.  We can create all the tables with a simple command:
-`models.db_create_tables()`.
-
 [1]:https://www.fullstackpython.com/blog/postgresql-python-3-psycopg2-ubuntu-1604.html
