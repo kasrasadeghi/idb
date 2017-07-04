@@ -8,4 +8,4 @@ install:
 script:
  - date
  - ls -al
- - python leaguedb/app/tests.py
+ - cat leaguedb/app/tests.out
