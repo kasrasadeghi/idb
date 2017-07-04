@@ -18,7 +18,9 @@ class ChampionList extends Component {
 
     this.state = {
       list: [],
-      view: []
+      view: [],
+      currentFilter: 'None',
+      forwards: true
     };
 
     fetch('http://leaguedb.me/api/champions', {
@@ -29,10 +31,6 @@ class ChampionList extends Component {
     .then(j => {
       console.log("api response received");
 
-      this.setState({
-        list: j
-      });
-
       j.sort((a, b) => {
         if (a.name < b.name) return -1;
         if (a.name > b.name) return 1;
@@ -40,16 +38,36 @@ class ChampionList extends Component {
       });
 
       this.setState({
+        list: j,
         view: j
       });
     });
   }
 
+  flip() {
+    this.setState({
+      list: this.state.list.reverse()
+    });
+    this.filterChampions(this.state.currentFilter)
+  }
+
   filterChampions(className) {
+    this.setState({
+      currentFilter: className
+    });
+
+    if (className === 'None') {
+      this.setState({
+        view: this.state.list
+      });
+      return;
+    }
+
     console.log('filtering by ' + className);
     let view = this.state.list.filter(a => {
       return !(a.classes.indexOf(className) === -1);
     });
+
     this.setState({
       view: view
     });
@@ -84,6 +102,7 @@ class ChampionList extends Component {
 
         <h4>Filter by Classes:</h4>
         <ul>
+          <Button onClick={() => this.filterChampions('None')}>Reset</Button>
           <Button onClick={() => this.filterChampions('Assassin')}>Assassin</Button>
           <Button onClick={() => this.filterChampions('Fighter')}>Fighter</Button>
           <Button onClick={() => this.filterChampions('Mage')}>Mage</Button>
@@ -91,6 +110,8 @@ class ChampionList extends Component {
           <Button onClick={() => this.filterChampions('Support')}>Support</Button>
           <Button onClick={() => this.filterChampions('Tank')}>Tank</Button>
         </ul>
+
+        <Button onClick={() => this.flip()}>Sort Alphabetically {(this.state.forwards)? "Backwards" : "Forwards"}</Button>
 
         <ListGroup>
           {this.state.view.map((champion) => {

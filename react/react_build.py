@@ -14,10 +14,10 @@ def main():
 
     print(react_scripts)
 
-    # for project in react_scripts:
-    #     os.chdir(project)
-    #     call("npm run build".split())
-    #     os.chdir("..")
+    for project in react_scripts:
+        os.chdir(project)
+        call("npm run build".split())
+        os.chdir("..")
 
     for project in react_scripts:
         os.chdir(os.path.join(project, "build", "static", "js"))
