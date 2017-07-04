@@ -112,7 +112,7 @@ def class_route(name: str) -> Response:
 
 @app.route("/roles/<name>")
 def role_route(name: str) -> Response:
-    return render_template("roles/" + name + ".html", name=name)
+    return render_template("role.html", role=get_role(name))
 
 #####
 # API
