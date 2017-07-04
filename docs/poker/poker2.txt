@@ -5,22 +5,22 @@
  - [] have "many instances" of each model from API sources
  - [] have model pages link automatically
 
- estimate:
- actual:
+ estimate: 8 
+ actual: 10
 
 2. Server-GUI Integration
  - Have the GUI use API calls from the website to load information
  - Will help with integration with external APIs in Phase 4
 
- estimate:
- actual:
+ estimate: 4
+ actual: 6
 
 
 3. Server-Database Integration
  - Have the server pull data from the database to serve with the API
 
- estimate:
- actual:
+ estimate: 1
+ actual: 2
 
 
 4. Cache-Database Integration
@@ -28,8 +28,8 @@
  - Used to automatically fill the database
  - The database should be used to memoize these responses
 
- estimate:
- actual:
+ estimate: 4
+ actual: 7
 
 
 5. Server setup with Python 3.6 and Docker
@@ -38,8 +38,8 @@
  - [] clean up cdn-based dependencies
  - [] document npm setup process
 
- estimate:
- actual:
+ estimate: 5
+ actual: 5
 
 
 6. Finish About Page
@@ -71,8 +71,8 @@
    - special focus on tools that were not required
  - link to Report.pdf
 
- estimate:
- actual:
+ estimate: 3
+ actual: 2
 
 
 7. React JS - Champions Home Page
@@ -81,8 +81,8 @@
  - pagination
  - sorting
 
- estimate:
- actual:
+ estimate: 6
+ actual: 7
 
 
 8. React JS - Items Home Page
@@ -91,8 +91,8 @@
  - pagination
  - sorting
 
- estimate:
- actual:
+ estimate: 6
+ actual: 5
 
 
 9. React JS - Classes Home Page
@@ -101,8 +101,8 @@
  - pagination
  - sorting
 
- estimate:
- actual:
+ estimate: 5
+ actual: 3
 
 
 10. React JS - Roles Home Page
@@ -111,8 +111,8 @@
  - pagination
  - sorting
 
- estimate:
- actual:
+ estimate: 5
+ actual: 3
 
 
 11. Technical Report 2
@@ -123,8 +123,8 @@
  - [] tools (update)
  - [] database
 
- estimate:
- actual:
+ estimate: 3
+ actual: 3
 
 
 12. Update Splash
@@ -132,21 +132,21 @@
  - styling
  - [] links to home pages
 
- estimate:
- actual:
+ estimate: 2
+ actual: 1
 
 
 13. Embedded Media
  - [] champion spotlights
  - [] class updates
 
- estimate:
- actual:
+ estimate: 4
+ actual: 3
 
 
 14. Testing and Continuous Integration
  - [] Travis CI
  - Python unittest
 
- estimate:
- actual:
+ estimate: 4
+ actual: 4
