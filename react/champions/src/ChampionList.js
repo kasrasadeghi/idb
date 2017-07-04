@@ -102,16 +102,16 @@ class ChampionList extends Component {
                 <NavLink href="/champions">Champions</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/items/">Items</NavLink>
+                <NavLink href="/items">Items</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/classes/">Classes</NavLink>
+                <NavLink href="/classes">Classes</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/roles/">Roles</NavLink>
+                <NavLink href="/roles">Roles</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about/">About</NavLink>
+                <NavLink href="/about">About</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
