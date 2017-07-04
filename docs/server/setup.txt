@@ -6,20 +6,23 @@ sudo apt-get install -y build-essential libbz2-dev libssl-dev  libreadline-dev l
 
 sudo apt-get install -y libpng-dev libfreetype6-dev
 
+sudo apt-get install -y emacs24
+
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
 # load pyenv automatically by editting .bash_profile
-emacs ~/.bash_profile
+emacs ~/.bashrc
+rm .bashrc~
 
 pyenv install 3.6.1
 pyenv virtualenv 3.6.1 general
 pyenv global general
 
-sudo apt install git docker.io
-
 # to get virtualenv (general) thing to go away
 source .bashrc
 which python
+
+sudo apt-get install -y git docker.io
 
 # init project
 mkdir leaguedb
@@ -36,3 +39,17 @@ sudo docker run -d --restart=always -p 80:80 -t my_flask_app
 # kill old docker
 sudo docker ps                  # => lists docker containers running
 sudo docker kill <DOCKER NAME>  # <DOCKER NAME> is under NAMES with docker ps
+
+# UPDATE: July 3rd, 2017
+# to run the project now, simply do the following
+
+sudo -s
+source .bashrc
+
+git clone http://www.github.com/kasrasadeghi/idb.git
+cd idb/leaguedb/
+
+# !! MAKE THE password.py FILE
+# for the database
+
+bash docker.sh
