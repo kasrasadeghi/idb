@@ -53,7 +53,7 @@ def get_role(name):
     row = Role.query.get(name)
     contents = {}
     contents['champions'] = [x.name for x in row.champions]
-    contents['classes']   = row.classes
+    contents['classes']   = row.classes.split(",")
     contents['icon']      = row.icon
     contents['items']     = [x.name for x in row.items]
     contents['name']      = row.name
