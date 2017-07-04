@@ -1,0 +1,11 @@
+language: python
+python:
+ - "3.6.1"
+
+install:
+ - pip install -r leaguedb/requirements.txt
+
+script:
+ - date
+ - ls -al
+ - python leaguedb/app/tests.py
