@@ -20,7 +20,8 @@ class ChampionList extends Component {
       list: [],
       view: [],
       currentFilter: 'None',
-      forwards: true
+      forwards: true,
+      pageNumber: 0
     };
 
     fetch('http://leaguedb.me/api/champions', {
@@ -73,6 +74,22 @@ class ChampionList extends Component {
     });
   }
 
+  next() {
+    if (this.state.pageNumber < (this.state.list.length / 6 - 1)) {
+      this.setState({
+        pageNumber: this.state.pageNumber + 1
+      });
+    }
+  }
+
+  previous() {
+    if (this.state.pageNumber > 0) {
+      this.setState({
+        pageNumber: this.state.pageNumber - 1
+      });
+    }
+  }
+
   render() {
     return (
       <div>
@@ -111,10 +128,16 @@ class ChampionList extends Component {
           <Button onClick={() => this.filterChampions('Tank')}>Tank</Button>
         </ul>
 
-        <Button onClick={() => this.flip()}>Sort Alphabetically {(this.state.forwards)? "Backwards" : "Forwards"}</Button>
+        <ul>
+          <Button onClick={() => this.flip()}>Sort Alphabetically {(this.state.forwards)? "Backwards" : "Forwards"}</Button>
+        </ul>
+
+        <ul>
+          <Button onClick={() => this.next()}>Next</Button><Button onClick={() => this.previous()}>Previous</Button>
+        </ul>
 
         <ListGroup>
-          {this.state.view.map((champion) => {
+          {this.state.view.slice(this.state.pageNumber * 6, this.state.pageNumber * 6 + 6).map((champion) => {
             return <ListGroupItem>
               <a href={"/champions/" + champion.name}>
                 <figure>
