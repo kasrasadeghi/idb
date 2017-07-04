@@ -47,15 +47,12 @@ class ChampionList extends Component {
 
   filterChampions(className) {
     console.log('filtering by ' + className);
-    let view = this.state.list;
-    view.filter(a => {
-      console.log(a.classes);
-      console.log(!(a.classes.indexOf(className) === -1));
+    let view = this.state.list.filter(a => {
       return !(a.classes.indexOf(className) === -1);
     });
     this.setState({
       view: view
-    })
+    });
   }
 
   render() {
@@ -96,7 +93,7 @@ class ChampionList extends Component {
         </ul>
 
         <ListGroup>
-          {this.state.list.map((champion) => {
+          {this.state.view.map((champion) => {
             return <ListGroupItem>
               <a href={"/champions/" + champion.name}>
                 <figure>
