@@ -1,4 +1,4 @@
-# Setting up Node.js
+## Setting up Node.js
  - [link](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 
 First, set up all of the dependencies for node.js 8.

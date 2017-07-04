@@ -1,10 +1,85 @@
 # Technical Report
 Kasra Sadeghi, Ben Yang, Todd Schriber, Avilash Rath
 
+## Introduction
+
+### Motivation
+
+We want to create a site full of information on the global game, League of
+Legends. The developers play the game and are somewhat passionate about it.
+
+### Use Cases and API
+
+The website is primarily designed for information gathering with a simple to use
+API. The original League of Legends API from Riot Games uses an arbitrary `id`
+value in the API methods. It would be something like `/api/champions/123`. Our
+API is more user friendly as we use the name instead, so it looks like
+`/api/champions/Zyra`. We predict the majority of people using the website will
+be League of Legends players and fans. This implies that they know something
+about the game.
+
+The API is primarily a set of GET methods. For every model, you can get every
+row in the database in a JSON file. You can also specify an individual row if
+you want, like how we did above with Zyra.
+
+## Tools Overview
+
+### AWS
+
+AWS hosts our web server and our database.
+
+### Apiary
+
+Apiary gives us and the future users of our API a clean, easy-to-read document
+of our API calls.
+
+### Bootstrap
+
+Bootstrap gives us a starter template for a potentially attractive website.
+
+### Namecheap
+
+We got `leaguedb.me` through this thing.
+
+### Plan it Poker
+
+This is a group oriented piece of technology. We come up with stories that a
+user would want. We vote on those stories to see how long each would take or how
+hard each one is. Then, we implement the stories. When we finish the
+implementation, we repeat the cycle and refine our estimates through this
+method.
+
+### PostgreSQL
+
+This is the database we use. It is SQL based and we interact with it through the
+next software.
+
+### SQLALchemy
+
+The object relational model that allows us to talk about databases like they are
+Python objects and classes.
+
+### React
+
+The majority of the front end of our website. This allows for efficient
+rendering of our templates, since it only loads changes.
+
+### Slack
+
+We communicate through this thing. This allows us to focus on work. If our
+primary communication tool were Facebook messenger, we would be distracted all
+the time.
+
+### Trello
+
+We also communicate through this thing. Except Trello allows us to have an issue
+tracker. We put our stories on here and each developer chooses some stories to
+work on. This is how we prevent two people from working on the same thing
+without realizing that they are.
+
 ## Bootstrap (GUI setup)
 
 ### Installation
-
 
 Click on the "Get Bootstrap" button from the
 [above](http://getbootstrap.com/getting-started/#download) page in order to get
@@ -115,6 +190,86 @@ or it use a line of code: `{% block head %}`. This was specified in the parent
 template. What it does in the child template is allow it to put whatever HTML
 code in the exact spot where `{% block head %}` was declared in the parent
 template.
+
+## Setting up Node.js
+ - [link](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+
+First, set up all of the dependencies for node.js 8.
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+Then, actually install it.
+sudo apt-get install -y nodejs
+
+We're currently using npm 8.1.3 on the server for this project.
+
+### Installing a package
+
+To install a package called *the_package* locally:
+$ npm install *the_package*
+
+To install a package globally:
+$ npm install -g *the_package*
+
+local vs global:
+ - local is a project dependency
+ - global is a global utility or commandline helper.
+   - usually actual programs instead of libraries/dependencies
+
+some local options, from [this link](https://docs.npmjs.com/cli/install)
+
+$ npm install -E
+$ npm install --save-exact
+ - saves the exact version of the dependency
+ - otherwise nodejs will figure out the range that you need
+ 
+$ npm install -D
+$ npm install --save-dev
+ - saves in devDependencies
+ - used for development but not shipped
+
+## Creating a React app
+
+This is a docfile describing the setup procedure and some notes for 
+[Create React App](https://github.com/facebookincubator/create-react-app).
+
+### Basic Initialization
+
+You need npm set up to do this. See docs/server/npm for details.
+
+overview:
+ - dependencies
+ - make project
+ - commands
+ 
+### Dependencies
+
+npm install -g create-react-app
+ 
+### Make Project
+
+$ cd react
+$ create-react-app leaguedb
+    This makes the folder react/leaguedb.
+
+### Commands
+
+$ npm start
+Starts the development server.
+ - you can edit files and then see updates live (!)
+
+
+$ npm run build
+Bundles the app into static files for production.
+ - you can build the project for use in production (on flask!)
+
+$ npm test
+Starts the test runner.
+ - tests are nice
+
+$ npm run eject
+Removes this tool and copies build dependencies, configuration files
+and scripts into the app directory. If you do this, you can’t go back!
+ - I'm probably not going to do this for a long time.
 
 ## AWS Setup
  - by Kasra Sadeghi
@@ -463,3 +618,23 @@ The sources are [here][db aws 1] and [here][db aws 2].
 
 [db aws 1]:http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SettingUp.html 
 [db aws 2]:http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html
+
+## Database Setup
+
+### Create the Models
+
+In order to create a model
+
+### Connect to the Database from Python
+
+For this project, the database requires a secret password that is on the server,
+so that the server can connect. We specify inside of `models.py` the remaining
+specifications such as user name, database name and database location.
+
+### Populate the Database
+
+In `models.py`, I wrote a few functions that populate the database. In fact, you
+can execute `models.py` on the command line, wait a few minutes, and the
+database will be full with data.
+
+

@@ -1,9 +1,9 @@
-# Creating a React app
+## Creating a React app
 
 This is a docfile describing the setup procedure and some notes for 
 [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## Basic Initialization
+### Basic Initialization
 
 You need npm set up to do this. See docs/server/npm for details.
 

@@ -1,5 +1,9 @@
 ## Database Setup
 
+### Create the Models
+
+In order to create a model
+
 ### Connect to the Database from Python
 
 For this project, the database requires a secret password that is on the server,
