@@ -1,12 +1,26 @@
 {% extends "layout.html" %}
 {% block content %}
-  <h1>{{ class.name }}</h1>
-  <h2>{{ class.title }}</h2>
-  <h3>Class: {{ class.class }}</h3>
-  <h4>Subclass: {{ class.subclass }}</h4>
-  <div class="modal-body row">
-    <div class="col-md-6">
-      <p>{{ class.lore }}</p>
-    </div>
-  </div>
-{% endblock %}
+  <img src="http://leaguedb.me/images/classes/{{ class_data.icon }}">
+  <br>
+  <h1>{{ class_data.name }}</h1>
+
+  <p>{{ class_data.description|safe }}</p>
+
+  <h4>Champions:</h4>
+  <ul>
+    {% for champion in class_data['champions'] %}
+      <li>
+        <a href="/champions/{{ champion }}">{{ champion }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h4>Items:</h4>
+  <ul>
+    {% for item in class_data['items'] %}
+      <li>
+        <a href="/roles/{{ item }}">{{ item }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock%}

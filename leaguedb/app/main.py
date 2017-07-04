@@ -29,8 +29,6 @@ def get_champion(name):
 def get_item(name):
     row = Item.query.get(name)
     contents = {}
-    print(row.categories)
-    print(row.categories[:-1])
     contents['categories'] = row.categories[1:-1].split(",")
     contents['champions']  = [x.name for x in row.champions]
     contents['classes']    = [x.name for x in row.classes]
@@ -77,7 +75,7 @@ def route_about() -> Response:
 
 
 @app.route("/<react_route>")
-def route_items(react_route: str) -> Response:
+def route_models(react_route: str) -> Response:
     filename = [file for file in os.listdir("react") if file.startswith(react_route)][0]
     return render_template("model_view.html", filename=filename)
 
@@ -99,8 +97,7 @@ def image(image_name) -> Response:
 
 @app.route("/champions/<name>")
 def champion_route(name: str) -> Response:
-    data = get_champion(name)
-    return render_template("champion.html", champion=data)
+    return render_template("champion.html", champion=get_champion(name))
 
 
 @app.route("/items/<name>")
@@ -110,7 +107,7 @@ def item_route(name: str) -> Response:
 
 @app.route("/classes/<name>")
 def class_route(name: str) -> Response:
-    return render_template("classes/" + name + ".html", name=name)
+    return render_template("class.html", class_data=get_class(name))
 
 
 @app.route("/roles/<name>")
