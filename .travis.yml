@@ -6,7 +6,8 @@ install:
 script:
 - date
 - ls -al
-- echo "secret_database_password = '$SECRET'" > leaguedb/app/password.py
+- cd leaguedb/app
+- echo "secret_database_password = '$SECRET'" > password.py
 - coverage run --source=.. tests.py
 - coverage report
 env:
