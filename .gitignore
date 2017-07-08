@@ -5,3 +5,4 @@ leaguedb/app/__pycache__/
 leaguedb/app/password.py
 *.swp
 react/output/
+.coverage
