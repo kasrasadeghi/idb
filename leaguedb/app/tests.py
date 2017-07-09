@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
 from models import db, Champion, Item, Class, Role
+import requests
 
 class TestModels (TestCase):
     
+    ############
+    # Champion #
+    ############
+
     def test_champion_query_exists(self):
         result = Champion.query.all()
         self.assertNotEqual(len(result), 0)
@@ -30,6 +35,24 @@ class TestModels (TestCase):
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.lore, lore)
 
+    def test_champion_names(self):
+        r = requests.get('http://leaguedb.me/api/champion_names')
+        data = r.json()
+        self.assertIn('Thresh', data)
+        self.assertIn('Draven', data)
+        self.assertIn('Vayne', data)
+        self.assertNotIn('vayne', data)
+
+    def test_champion_champions(self):
+        r = requests.get('http://leaguedb.me/api/champions')
+        data = r.json()
+        self.assertNotEqual(len(data), 0)
+
+
+    ########
+    # Item #
+    ########
+
     def test_item_query_exists(self):
         result = Item.query.all()
         self.assertNotEqual(len(result), 0)
@@ -54,6 +77,10 @@ class TestModels (TestCase):
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.categories, categories)
 
+    #########
+    # Class #
+    #########
+
     def test_class_query_exists(self):
         result = Class.query.all()
         self.assertNotEqual(len(result), 0)
@@ -77,6 +104,10 @@ class TestModels (TestCase):
         self.assertEqual(result.name, name)
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.description, desc)
+
+    ########
+    # Role #
+    ########
 
     def test_role_query_exists(self):
         result = Role.query.all()

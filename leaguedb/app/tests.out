@@ -1,18 +1,12 @@
-# Output of coverage run --source=.. tests.py
-
-................
+..................
 ----------------------------------------------------------------------
-Ran 16 tests in 5.557s
+Ran 18 tests in 7.276s
 
 OK
-
-# Output of coverage report
-
 Name          Stmts   Miss  Cover
 ---------------------------------
 models.py       123     56    54%
 password.py       1      0   100%
-tests.py         83      0   100%
+tests.py         95      0   100%
 ---------------------------------
-TOTAL           207     56    73%
-
+TOTAL           219     56    74%
