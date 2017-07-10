@@ -1,4 +1,7 @@
-https://ianlondon.github.io/blog/deploy-flask-docker-nginx/
+# Run these commands to install python and flask onto a bare Ubuntu 16.04 instance.
+# Should also work for any home computer.
+
+# https://ianlondon.github.io/blog/deploy-flask-docker-nginx/
 
 ## command log:
 
