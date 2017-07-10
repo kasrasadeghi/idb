@@ -164,6 +164,7 @@ class ItemList extends Component {
             <Button onClick={() => this.previous()}>Previous</Button><Button onClick={() => this.next()}>Next</Button>
           </ul>
 
+
           <Row>
             <Col><ItemElement data={Object(currentView[counter++])}/></Col>
             <Col><ItemElement data={Object(currentView[counter++])}/></Col>
@@ -182,8 +183,8 @@ class ItemList extends Component {
 
 class ItemElement extends Component {
   render() {
-    let data = this.props.item;
-    if (data.name === undefined) return <div/>;
+    let data = this.props.data;
+    if (data === undefined) return <div/>;
     return (
       <div>
         <a href={"/items/" + data.name}>
