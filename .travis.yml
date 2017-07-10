@@ -1,11 +1,15 @@
 language: python
 python:
- - "3.6.1"
-
+- 3.6.1
 install:
- - pip install -r leaguedb/requirements.txt
-
+- pip install -r leaguedb/requirements.txt
 script:
- - date
- - ls -al
- - cat leaguedb/app/tests.out
+- date
+- ls -al
+- cd leaguedb/app
+- echo "secret_database_password = '$SECRET'" > password.py
+- coverage run --source=.. tests.py
+- coverage report
+env:
+  global:
+    secure: Wz6NWd9e87k42MySm4oTRaGzU98ipykhTIPsaC8svb2aBlFZDmJY+kbUg1wNub0i0B7N83JNK3vNii/K4QSL1bBcrt2XEpE35/SN6PURIZ6yHY3WSWGSUx73pICz5jKa5RZDnYoGVucvhLU8GIdf/5mYtzusx2lXp5D8uKcljNjgSwDUcf2BK3nFzCllEcp8m6p/2W0HGnv993C5ilGFQEarMkHIWZ49Clz2btQwtizzhUIWkVzRdfeLpbBaCmAJGXBDhuVyp+rbU4HHrUnm3mPaMc3exFspNHJkQnac6kcTABJ4yZnaY+ZbYi/AMxAgD0dX5/L3o5tMl2JP65R+UXPnDLCURmwn2Y1RXIc2n7x/vM44K+MzQ8eyZD1zbPI8fdwMlDSyMQqqng2DUMFtw4CKEZBSsEWVxn3wPh+407eHolsttSGB8FwBFwam/oBA+5Dlx30bnkzyILyjuWInJAZP4ssa/jwXBEvA/IkqxMkvBOK9Lz5Vu9cEPKWUw6Na71H51MCbfY1Su4SAUOMN3nmOboDTZW/qMLhDi2xW9dT5f+2zl9ot5FtPI7y9/e4LWW9WJUgDnUTcpJWpFRdKnKaYXaV4FIQG52StYYDsqRDOvhB9CNie5cbGf65GffYtEKF3L2ZyS51C0TBOcKJKrRVfuYZD0XOdCxS5zIlCw1o=

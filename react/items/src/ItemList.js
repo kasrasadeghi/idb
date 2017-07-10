@@ -134,7 +134,7 @@ class ItemList extends Component {
         </ul>
 
         <ul>
-          <Button onClick={() => this.next()}>Next</Button><Button onClick={() => this.previous()}>Previous</Button>
+          <Button onClick={() => this.previous()}>Previous</Button><Button onClick={() => this.next()}>Next</Button>
         </ul>
 
         <ListGroup>

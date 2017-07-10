@@ -1,31 +1,37 @@
 {% extends "layout.html" %}
 {% block content %}
-  <h1>{{ champion.name }}</h1>
-  <div class="modal-body row">
-    <div class="col-md-6">
-      <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{
-      champion.icon[:-4] }}_0.jpg" >
+  <div class="container">
+    <h1>{{ champion.name }}</h1>
+    <div class="modal-body row">
+      <div class="col-md-6">
+        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{
+        champion.icon[:-4] }}_0.jpg" >
+      </div>
+      <div class="col-md-6">
+        {{ champion.lore|safe }}
+      </div>
     </div>
-    <div class="col-md-6">
-      {{ champion.lore|safe }}
+    <div class="col-lg-6">
+      <h3>Items</h3>
+        <ul>
+        {% for thing in champion['items'] %}
+          <li><a href="/items/{{ thing }}">{{ thing }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="col-lg-6">
+      <h3>Classes</h3>
+        <ul>
+        {% for thing in champion['classes'] %}
+          <li><a href="/classes/{{ thing }}">{{ thing }}</a></li>
+        {% endfor %}
+        </ul>
+      <h3>Roles</h3>
+        <ul>
+        {% for thing in champion['roles'] %}
+          <li><a href="/roles/{{ thing }}">{{ thing }}</a></li>
+        {% endfor %}
+        </ul>
     </div>
   </div>
-  <h3>Items</h3>
-    <ul>
-    {% for thing in champion['items'] %}
-      <li><a href="/items/{{ thing }}">{{ thing }}</a></li>
-    {% endfor %}
-    </ul>
-  <h3>Classes</h3>
-    <ul>
-    {% for thing in champion['classes'] %}
-      <li><a href="/classes/{{ thing }}">{{ thing }}</a></li>
-    {% endfor %}
-    </ul>
-  <h3>Roles</h3>
-    <ul>
-    {% for thing in champion['roles'] %}
-      <li><a href="/roles/{{ thing }}">{{ thing }}</a></li>
-    {% endfor %}
-    </ul>
 {% endblock %}
