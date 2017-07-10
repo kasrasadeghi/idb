@@ -17,6 +17,9 @@ import {
   CardTitle,
   CardText
 } from 'reactstrap';
+import Rodal from 'rodal';
+
+import 'rodal/lib/rodal.css';
 
 class LeagueBar extends Component {
   constructor() {
@@ -40,6 +43,9 @@ class LeagueBar extends Component {
         <NavbarBrand href="/">LeagueDB</NavbarBrand>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/search">Search</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/champions">Champions</NavLink>
             </NavItem>
@@ -71,7 +77,8 @@ class ChampionList extends Component {
       view: [],
       currentFilter: 'None',
       forwards: true,
-      pageNumber: 0
+      pageNumber: 0,
+      currentChampion: null
     };
 
     fetch('http://leaguedb.me/api/champions', {
@@ -214,6 +221,31 @@ class ChampionElement extends Component {
         </CardBlock>
       </Card>
     )
+  }
+}
+
+class ChampionView extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {visible: false};
+  }
+
+  show() {
+    this.setState({
+      visible: !this.state.visible
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={() => this.show()}>show</button>
+
+        <Rodal visible={this.state.visible} onClose={() => this.show()}>
+          <div>{JSON.stringify(this.state.visible)}</div>
+        </Rodal>
+      </div>
+    );
   }
 }
 

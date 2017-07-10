@@ -23,6 +23,16 @@ import {
   CardText
 } from 'reactstrap';
 
+function matchAll(obj, query) {
+  let matches = [];
+  for (let key in obj) {
+    if (JSON.stringify(obj[key]).toLowerCase().includes(query.toLowerCase())) {
+      matches.push(key);
+    }
+  }
+  return matches;
+}
+
 class LeagueBar extends Component {
   constructor() {
     super();
@@ -45,6 +55,9 @@ class LeagueBar extends Component {
         <NavbarBrand href="/">LeagueDB</NavbarBrand>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/search">Search</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/champions">Champions</NavLink>
             </NavItem>
@@ -73,6 +86,9 @@ class Search2 extends Component {
 
     this.state = {
       champions: [],
+      items: [],
+      classes: [],
+      roles: [],
       forwards: true,
       pageNumber: 0,
       isOpen: false,
@@ -97,6 +113,57 @@ class Search2 extends Component {
       console.log("api ready");
       this.setState({
         champions: j,
+      });
+    });
+
+    fetch('http://leaguedb.me/api/items', {
+      method: 'GET',
+      dataType: 'json'
+    })
+    .then(r => r.json())
+    .then(j => {
+      j.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      });
+      console.log("api ready");
+      this.setState({
+        items: j,
+      });
+    });
+
+    fetch('http://leaguedb.me/api/classes', {
+      method: 'GET',
+      dataType: 'json'
+    })
+    .then(r => r.json())
+    .then(j => {
+      j.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      });
+      console.log("api ready");
+      this.setState({
+        classes: j,
+      });
+    });
+
+    fetch('http://leaguedb.me/api/roles', {
+      method: 'GET',
+      dataType: 'json'
+    })
+    .then(r => r.json())
+    .then(j => {
+      j.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      });
+      console.log("api ready");
+      this.setState({
+        roles: j,
       });
     });
   }
@@ -130,9 +197,9 @@ class Search2 extends Component {
   }
 
   getResults() {
-    return this.state.champions.filter(c => {
-      return JSON.stringify(c).toLowerCase().includes(this.state.searchValue.toLowerCase());
-    })
+    return this.state.champions.map(c => {
+      return [c, matchAll(c, (this.state.searchValue.toLowerCase()))];
+    }).filter(pair => pair[1].length !== 0);
   }
 
   render() {
@@ -141,6 +208,25 @@ class Search2 extends Component {
     let c = this.pgLimit;
     let n = this.state.pageNumber * c;
     let currentView = results.slice(n, n + c);
+
+    if (this.state.searchValue === "") {
+      return (
+        <div>
+          <LeagueBar/>
+          <Container>
+            <Row>
+              <Col sm="12" md={{size: 8, offset: 2}}><br />
+                <InputGroup>
+                  <InputGroupAddon>Search</InputGroupAddon>
+                  <Input placeholder="Type in your desires" value={this.state.searchValue}
+                         onChange={this.handleChange}/>
+                </InputGroup>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      )
+    }
 
     if (results.length === 0) {
       return (
@@ -151,7 +237,8 @@ class Search2 extends Component {
               <Col sm="12" md={{size: 8, offset: 2}}><br />
                 <InputGroup>
                   <InputGroupAddon>Search</InputGroupAddon>
-                  <Input placeholder="Type in your desires" value={this.state.searchValue} onChange={this.handleChange}/>
+                  <Input placeholder="Type in your desires" value={this.state.searchValue}
+                         onChange={this.handleChange}/>
                 </InputGroup>
               </Col>
             </Row>
@@ -190,7 +277,8 @@ class Search2 extends Component {
               <Col sm="12" md={{size: 8, offset: 2}}><br />
                 <InputGroup>
                   <InputGroupAddon>Search</InputGroupAddon>
-                  <Input placeholder="Type in your desires" value={this.state.searchValue} onChange={this.handleChange}/>
+                  <Input placeholder="Type in your desires" value={this.state.searchValue}
+                         onChange={this.handleChange}/>
                 </InputGroup>
               </Col>
             </Row>
@@ -214,7 +302,7 @@ class Search2 extends Component {
 class SearchResult extends Component {
   render() {
     return (
-      <ChampionElement data={this.props.data}/>
+      <ChampionElement data={this.props.data[0]} match={this.props.data[1]}/>
     );
   }
 }
@@ -223,21 +311,20 @@ class ChampionElement extends Component {
   render() {
     let data = Object(this.props.data);
     return (
-        <Card className="text-center">
-          <CardBlock>
-            <CardTitle>{data.name}</CardTitle>
-          </CardBlock>
-          <a href={"/champion/" + data.name}>
-            <CardImg alt={data.name + "'s icon"}
-                     src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
-          </a>
-          <CardBlock>
-            <CardText>
-              {data.classes.join(", ")}
-              {/*{JSON.stringify(data, null, 2)}*/}
-            </CardText>
-          </CardBlock>
-        </Card>
+      <Card className="text-center">
+        <CardBlock>
+          <CardTitle>{data.name}</CardTitle>
+        </CardBlock>
+        <a href={"/champion/" + data.name}>
+          <CardImg alt={data.name + "'s icon"}
+                   src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
+        </a>
+        <CardBlock>
+          <CardText>
+            Matches in: {this.props.match.join(", ")}
+          </CardText>
+        </CardBlock>
+      </Card>
     )
   }
 }

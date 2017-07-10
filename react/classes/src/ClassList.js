@@ -34,6 +34,9 @@ class LeagueBar extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
+              <NavLink href="/search">Search</NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink href="/champions">Champions</NavLink>
             </NavItem>
             <NavItem>
