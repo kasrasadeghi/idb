@@ -21,8 +21,10 @@ class ChampionList extends Component {
       view: [],
       currentFilter: 'None',
       forwards: true,
-      pageNumber: 0
+      pageNumber: 0,
+      isOpen: false
     };
+    this.toggle = this.toggle.bind(this);
 
     fetch('http://leaguedb.me/api/champions', {
       method: 'GET',
@@ -45,6 +47,12 @@ class ChampionList extends Component {
     });
   }
 
+  toggle() {
+    this.setState({
+      isOpen: !(this.state.isOpen)
+    });
+  }
+
   flip() {
     this.setState({
       list: this.state.list.reverse()
@@ -54,7 +62,8 @@ class ChampionList extends Component {
 
   filterChampions(className) {
     this.setState({
-      currentFilter: className
+      currentFilter: className,
+      pageNumber: 0
     });
 
     if (className === 'None') {
@@ -75,7 +84,7 @@ class ChampionList extends Component {
   }
 
   next() {
-    if (this.state.pageNumber < (this.state.list.length / 6 - 1)) {
+    if (this.state.pageNumber < (this.state.view.length / 6 - 1)) {
       this.setState({
         pageNumber: this.state.pageNumber + 1
       });
@@ -94,7 +103,7 @@ class ChampionList extends Component {
     return (
       <div>
         <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle}/>
+          <NavbarToggler right onClick={this.toggle} />
           <NavbarBrand href="/">LeagueDB</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -133,7 +142,9 @@ class ChampionList extends Component {
         </ul>
 
         <ul>
-          <Button onClick={() => this.previous()}>Previous</Button><Button onClick={() => this.next()}>Next</Button>
+          <Button onClick={() => this.previous()}>Prev</Button>
+          <Button>{this.state.pageNumber + 1}</Button>
+          <Button onClick={() => this.next()}>Next</Button>
         </ul>
 
         <ListGroup>
