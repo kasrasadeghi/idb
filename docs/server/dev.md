@@ -1,3 +1,5 @@
+Follow instructions in this order to develop the react projects in top-level /react
+
 to develop with this repo:
 
 1. install [npm](https://github.com/kasrasadeghi/idb/blob/master/docs/server/npm.md)

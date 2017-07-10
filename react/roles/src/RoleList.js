@@ -3,6 +3,7 @@ import {
   ListGroup,
   ListGroupItem,
   Collapse,
+  Container,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -10,6 +11,50 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+
+class LeagueBar extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !(this.state.isOpen)
+    });
+  }
+
+  render() {
+    return (
+      <Navbar color="faded" light toggleable>
+        <NavbarToggler right onClick={() => this.toggle()}/>
+        <NavbarBrand href="/">LeagueDB</NavbarBrand>
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/champions">Champions</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/items">Items</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/classes">Classes</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/roles">Roles</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    )
+  }
+}
 
 class RoleList extends Component {
   constructor() {
@@ -42,42 +87,22 @@ class RoleList extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle}/>
-          <NavbarBrand href="/">LeagueDB</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/champions">Champions</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/items">Items</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/classes">Classes</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/roles">Roles</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+        <LeagueBar/>
 
-        <ListGroup>
-          {this.state.list.map((roles) => {
-            return <ListGroupItem>
-              <a href={"/roles/" + roles.name}>
-                <figure>
-                  <figcaption>{roles.name}</figcaption>
-                  <img alt={roles.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + roles.icon}/>
-                </figure>
-              </a>
-            </ListGroupItem>
-          })}
-        </ListGroup>
+        <Container>
+          <ListGroup>
+            {this.state.list.map((roles) => {
+              return <ListGroupItem>
+                <a href={"/roles/" + roles.name}>
+                  <figure>
+                    <figcaption>{roles.name}</figcaption>
+                    <img alt={roles.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + roles.icon}/>
+                  </figure>
+                </a>
+              </ListGroupItem>
+            })}
+          </ListGroup>
+        </Container>
       </div>
     );
   }

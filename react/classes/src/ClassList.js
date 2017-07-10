@@ -1,15 +1,59 @@
 import React, {Component} from 'react';
 import {
-  ListGroup,
-  ListGroupItem,
   Collapse,
+  Container,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Row, Col
 } from 'reactstrap';
+
+class LeagueBar extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !(this.state.isOpen)
+    });
+  }
+
+  render() {
+    return (
+      <Navbar color="faded" light toggleable>
+        <NavbarToggler right onClick={() => this.toggle()}/>
+        <NavbarBrand href="/">LeagueDB</NavbarBrand>
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/champions">Champions</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/items">Items</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/classes">Classes</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/roles">Roles</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    )
+  }
+}
 
 class ClassList extends Component {
   constructor() {
@@ -40,46 +84,39 @@ class ClassList extends Component {
   }
 
   render() {
+    let counter = 0;
+    let currentView = this.state.list;
     return (
       <div>
-        <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle}/>
-          <NavbarBrand href="/">LeagueDB</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/champions">Champions</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/items">Items</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/classes">Classes</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/roles">Roles</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-
-        <ListGroup>
-          {this.state.list.map((_class) => {
-            return <ListGroupItem>
-              <a href={"/classes/" + _class.name}>
-                <figure>
-                  <figcaption>{_class.name}</figcaption>
-                  <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.icon}/>
-                </figure>
-              </a>
-            </ListGroupItem>
-          })}
-        </ListGroup>
+        <LeagueBar/>
+        <Container>
+          <Row>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+          </Row>
+          <Row>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter])}/></Col>
+          </Row>
+        </Container>
       </div>
     );
+  }
+}
+
+class ClassElement extends Component {
+  render() {
+    let _class = this.props.data;
+    return (
+      <a href={"/classes/" + _class.name}>
+        <figure>
+          <figcaption>{_class.name}</figcaption>
+          <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.icon}/>
+        </figure>
+      </a>
+    )
   }
 }
 
