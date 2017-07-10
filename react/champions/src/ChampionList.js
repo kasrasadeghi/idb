@@ -185,7 +185,7 @@ class ChampionList extends Component {
 class ChampionElement extends Component {
   render() {
     let data = this.props.data;
-    if (data === undefined) return <div/>;
+    if (data.name === undefined) return <div/>;
     return (
       <div>
         <a href={"/champions/" + data.name}>

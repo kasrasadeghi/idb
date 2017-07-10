@@ -184,7 +184,7 @@ class ItemList extends Component {
 class ItemElement extends Component {
   render() {
     let data = this.props.data;
-    if (data === undefined) return <div/>;
+    if (data.name === undefined) return <div/>;
     return (
       <div>
         <a href={"/items/" + data.name}>
