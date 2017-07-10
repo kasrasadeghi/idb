@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {
-  ListGroup,
-  ListGroupItem,
   Collapse,
   Container,
   Navbar,
@@ -9,7 +7,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Row, Col
 } from 'reactstrap';
 
 class LeagueBar extends Component {
@@ -85,25 +84,39 @@ class ClassList extends Component {
   }
 
   render() {
+    let counter = 0;
+    let currentView = this.state.list;
     return (
       <div>
         <LeagueBar/>
         <Container>
-          <ListGroup>
-            {this.state.list.map((_class) => {
-              return <ListGroupItem>
-                <a href={"/classes/" + _class.name}>
-                  <figure>
-                    <figcaption>{_class.name}</figcaption>
-                    <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.icon}/>
-                  </figure>
-                </a>
-              </ListGroupItem>
-            })}
-          </ListGroup>
+          <Row>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+          </Row>
+          <Row>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
+            <Col><ClassElement data={Object(currentView[counter])}/></Col>
+          </Row>
         </Container>
       </div>
     );
+  }
+}
+
+class ClassElement extends Component {
+  render() {
+    let _class = this.props.data;
+    return (
+      <a href={"/classes/" + _class.name}>
+        <figure>
+          <figcaption>{_class.name}</figcaption>
+          <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.icon}/>
+        </figure>
+      </a>
+    )
   }
 }
 

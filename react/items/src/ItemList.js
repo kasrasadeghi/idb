@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {
   Button,
-  ListGroup,
-  ListGroupItem,
   Collapse,
   Container,
   Navbar,
@@ -10,7 +8,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Row, Col
 } from 'reactstrap';
 
 class LeagueBar extends Component {
@@ -137,6 +136,10 @@ class ItemList extends Component {
 
 
   render() {
+    let n = this.state.pageNumber * 6;
+    let currentView = this.state.view.slice(n, n + 6);
+    let counter = 0;
+
     return (
       <div>
         <LeagueBar/>
@@ -161,22 +164,37 @@ class ItemList extends Component {
             <Button onClick={() => this.previous()}>Previous</Button><Button onClick={() => this.next()}>Next</Button>
           </ul>
 
-          <ListGroup>
-            {this.state.view.slice(this.state.pageNumber * 6, this.state.pageNumber * 6 + 6).map((item) => {
-              return <ListGroupItem>
-                <a href={"/items/" + item.name}>
-                  <figure>
-                    <figcaption>{item.name}</figcaption>
-                    <img alt={item.name + "'s icon"}
-                         src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + item.icon}/>
-                  </figure>
-                </a>
-              </ListGroupItem>
-            })}
-          </ListGroup>
+          <Row>
+            <Col><ItemElement data={Object(currentView[counter++])}/></Col>
+            <Col><ItemElement data={Object(currentView[counter++])}/></Col>
+            <Col><ItemElement data={Object(currentView[counter++])}/></Col>
+          </Row>
+          <Row>
+            <Col><ItemElement data={Object(currentView[counter++])}/></Col>
+            <Col><ItemElement data={Object(currentView[counter++])}/></Col>
+            <Col><ItemElement data={Object(currentView[counter])}/></Col>
+          </Row>
         </Container>
       </div>
     );
+  }
+}
+
+class ItemElement extends Component {
+  render() {
+    let data = this.props.item;
+    if (data.name === undefined) return <div/>;
+    return (
+      <div>
+        <a href={"/items/" + data.name}>
+          <figure>
+            <figcaption>{data.name}</figcaption>
+            <img alt={data.name + "'s icon"}
+                 src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + data.icon}/>
+          </figure>
+        </a>
+      </div>
+    )
   }
 }
 

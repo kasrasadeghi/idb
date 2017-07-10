@@ -3,14 +3,13 @@ import {
   Button,
   Collapse,
   Container,
-  ListGroup,
-  ListGroupItem,
   Nav,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   NavItem,
-  NavLink
+  NavLink,
+  Row, Col
 } from 'reactstrap';
 
 class LeagueBar extends Component {
@@ -137,6 +136,10 @@ class ChampionList extends Component {
   }
 
   render() {
+    let n = this.state.pageNumber * 6;
+    let currentView = this.state.view.slice(n, n + 6);
+    let counter = 0;
+
     return (
       <div>
         <LeagueBar/>
@@ -163,22 +166,37 @@ class ChampionList extends Component {
             <Button onClick={() => this.next()}>Next</Button>
           </ul>
 
-        <ListGroup>
-          {this.state.view.slice(this.state.pageNumber * 6, this.state.pageNumber * 6 + 6).map((champion) => {
-            return <ListGroupItem>
-              <a href={"/champions/" + champion.name}>
-                <figure>
-                  <figcaption>{champion.name}</figcaption>
-                  <img alt={champion.name + "'s icon"}
-                       src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + champion.icon}/>
-                </figure>
-              </a>
-            </ListGroupItem>
-          })}
-        </ListGroup>
+          <Row>
+            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
+            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
+            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
+          </Row>
+          <Row>
+            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
+            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
+            <Col><ChampionElement data={Object(currentView[counter])}/></Col>
+          </Row>
         </Container>
       </div>
     );
+  }
+}
+
+class ChampionElement extends Component {
+  render() {
+    let data = this.props.champion;
+    if (data.name === undefined) return <div/>;
+    return (
+      <div>
+        <a href={"/champions/" + data.name}>
+          <figure>
+            <figcaption>{data.name}</figcaption>
+            <img alt={data.name + "'s icon"}
+                 src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
+          </figure>
+        </a>
+      </div>
+    )
   }
 }
 
