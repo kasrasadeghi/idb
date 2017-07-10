@@ -9,7 +9,13 @@ import {
   NavbarBrand,
   NavItem,
   NavLink,
-  Row, Col
+
+  Card,
+  CardBlock,
+  CardDeck,
+  CardImg,
+  CardTitle,
+  CardText
 } from 'reactstrap';
 
 class LeagueBar extends Component {
@@ -138,7 +144,17 @@ class ChampionList extends Component {
   render() {
     let n = this.state.pageNumber * 6;
     let currentView = this.state.view.slice(n, n + 6);
-    let counter = 0;
+
+    let topView = currentView.slice(0, 3);
+    let top = topView.map(c => {
+      return <ChampionElement data={c}/>
+    });
+
+    let botView = currentView.slice(3, 6);
+    let bot = botView.map(c => {
+      return <ChampionElement data={c}/>
+    });
+
 
     return (
       <div>
@@ -166,16 +182,13 @@ class ChampionList extends Component {
             <Button onClick={() => this.next()}>Next</Button>
           </ul>
 
-          <Row>
-            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
-            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
-            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
-          </Row>
-          <Row>
-            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
-            <Col><ChampionElement data={Object(currentView[counter++])}/></Col>
-            <Col><ChampionElement data={Object(currentView[counter])}/></Col>
-          </Row>
+          <CardDeck>
+            {top}
+          </CardDeck>
+          <br/>
+          <CardDeck>
+            {bot}
+          </CardDeck>
         </Container>
       </div>
     );
@@ -184,18 +197,22 @@ class ChampionList extends Component {
 
 class ChampionElement extends Component {
   render() {
-    let data = this.props.data;
-    if (data.name === undefined) return <div/>;
+    let data = Object(this.props.data);
     return (
-      <div>
-        <a href={"/champions/" + data.name}>
-          <figure>
-            <figcaption>{data.name}</figcaption>
-            <img alt={data.name + "'s icon"}
-                 src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
-          </figure>
+      <Card className="text-center">
+        <CardBlock>
+          <CardTitle>{data.name}</CardTitle>
+        </CardBlock>
+        <a href={"/champion/" + data.name}>
+          <CardImg alt={data.name + "'s icon"}
+                   src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
         </a>
-      </div>
+        <CardBlock>
+          <CardText>
+            {data.classes.join(", ")}
+          </CardText>
+        </CardBlock>
+      </Card>
     )
   }
 }
