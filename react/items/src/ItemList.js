@@ -4,6 +4,7 @@ import {
   ListGroup,
   ListGroupItem,
   Collapse,
+  Container,
   Navbar,
   NavbarToggler,
   NavbarBrand,
@@ -11,6 +12,50 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+
+class LeagueBar extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !(this.state.isOpen)
+    });
+  }
+
+  render() {
+    return (
+      <Navbar color="faded" light toggleable>
+        <NavbarToggler right onClick={() => this.toggle()}/>
+        <NavbarBrand href="/">LeagueDB</NavbarBrand>
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/champions">Champions</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/items">Items</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/classes">Classes</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/roles">Roles</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    )
+  }
+}
 
 class ItemList extends Component {
   constructor() {
@@ -94,62 +139,42 @@ class ItemList extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle}/>
-          <NavbarBrand href="/">LeagueDB</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/champions">Champions</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/items">Items</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/classes">Classes</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/roles">Roles</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+        <LeagueBar/>
+        <Container>
+          <h4>Filter by Classes:</h4>
+          <ul>
+            <Button onClick={() => this.filterChampions('None')}>Reset</Button>
+            <Button onClick={() => this.filterChampions('Assassin')}>Assassin</Button>
+            <Button onClick={() => this.filterChampions('Fighter')}>Fighter</Button>
+            <Button onClick={() => this.filterChampions('Mage')}>Mage</Button>
+            <Button onClick={() => this.filterChampions('Marksman')}>Marksman</Button>
+            <Button onClick={() => this.filterChampions('Support')}>Support</Button>
+            <Button onClick={() => this.filterChampions('Tank')}>Tank</Button>
+          </ul>
 
-        <h4>Filter by Classes:</h4>
-        <ul>
-          <Button onClick={() => this.filterChampions('None')}>Reset</Button>
-          <Button onClick={() => this.filterChampions('Assassin')}>Assassin</Button>
-          <Button onClick={() => this.filterChampions('Fighter')}>Fighter</Button>
-          <Button onClick={() => this.filterChampions('Mage')}>Mage</Button>
-          <Button onClick={() => this.filterChampions('Marksman')}>Marksman</Button>
-          <Button onClick={() => this.filterChampions('Support')}>Support</Button>
-          <Button onClick={() => this.filterChampions('Tank')}>Tank</Button>
-        </ul>
+          <ul>
+            <Button onClick={() => this.flip()}>Sort
+              Alphabetically {(this.state.forwards) ? "Backwards" : "Forwards"}</Button>
+          </ul>
 
-        <ul>
-          <Button onClick={() => this.flip()}>Sort Alphabetically {(this.state.forwards)? "Backwards" : "Forwards"}</Button>
-        </ul>
+          <ul>
+            <Button onClick={() => this.previous()}>Previous</Button><Button onClick={() => this.next()}>Next</Button>
+          </ul>
 
-        <ul>
-          <Button onClick={() => this.previous()}>Previous</Button><Button onClick={() => this.next()}>Next</Button>
-        </ul>
-
-        <ListGroup>
-          {this.state.view.slice(this.state.pageNumber * 6, this.state.pageNumber * 6 + 6).map((item) => {
-            return <ListGroupItem>
-              <a href={"/items/" + item.name}>
-                <figure>
-                  <figcaption>{item.name}</figcaption>
-                  <img alt={item.name + "'s icon"}
-                       src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + item.icon}/>
-                </figure>
-              </a>
-            </ListGroupItem>
-          })}
-        </ListGroup>
+          <ListGroup>
+            {this.state.view.slice(this.state.pageNumber * 6, this.state.pageNumber * 6 + 6).map((item) => {
+              return <ListGroupItem>
+                <a href={"/items/" + item.name}>
+                  <figure>
+                    <figcaption>{item.name}</figcaption>
+                    <img alt={item.name + "'s icon"}
+                         src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + item.icon}/>
+                  </figure>
+                </a>
+              </ListGroupItem>
+            })}
+          </ListGroup>
+        </Container>
       </div>
     );
   }

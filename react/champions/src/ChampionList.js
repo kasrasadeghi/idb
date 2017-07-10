@@ -1,16 +1,61 @@
 import React, {Component} from 'react';
 import {
   Button,
+  Collapse,
+  Container,
   ListGroup,
   ListGroupItem,
-  Collapse,
+  Nav,
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
   NavItem,
   NavLink
 } from 'reactstrap';
+
+class LeagueBar extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !(this.state.isOpen)
+    });
+  }
+
+  render() {
+    return (
+      <Navbar color="faded" light toggleable>
+        <NavbarToggler right onClick={() => this.toggle()}/>
+        <NavbarBrand href="/">LeagueDB</NavbarBrand>
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/champions">Champions</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/items">Items</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/classes">Classes</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/roles">Roles</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    )
+  }
+}
 
 class ChampionList extends Component {
   constructor() {
@@ -21,10 +66,8 @@ class ChampionList extends Component {
       view: [],
       currentFilter: 'None',
       forwards: true,
-      pageNumber: 0,
-      isOpen: false
+      pageNumber: 0
     };
-    this.toggle = this.toggle.bind(this);
 
     fetch('http://leaguedb.me/api/champions', {
       method: 'GET',
@@ -44,12 +87,6 @@ class ChampionList extends Component {
         list: j,
         view: j
       });
-    });
-  }
-
-  toggle() {
-    this.setState({
-      isOpen: !(this.state.isOpen)
     });
   }
 
@@ -102,50 +139,29 @@ class ChampionList extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light toggleable>
-          <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">LeagueDB</NavbarBrand>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/champions">Champions</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/items">Items</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/classes">Classes</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/roles">Roles</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+        <LeagueBar/>
+        <Container>
+          <h4>Filter by Classes:</h4>
+          <ul>
+            <Button onClick={() => this.filterChampions('None')}>Reset</Button>
+            <Button onClick={() => this.filterChampions('Assassin')}>Assassin</Button>
+            <Button onClick={() => this.filterChampions('Fighter')}>Fighter</Button>
+            <Button onClick={() => this.filterChampions('Mage')}>Mage</Button>
+            <Button onClick={() => this.filterChampions('Marksman')}>Marksman</Button>
+            <Button onClick={() => this.filterChampions('Support')}>Support</Button>
+            <Button onClick={() => this.filterChampions('Tank')}>Tank</Button>
+          </ul>
 
-        <h4>Filter by Classes:</h4>
-        <ul>
-          <Button onClick={() => this.filterChampions('None')}>Reset</Button>
-          <Button onClick={() => this.filterChampions('Assassin')}>Assassin</Button>
-          <Button onClick={() => this.filterChampions('Fighter')}>Fighter</Button>
-          <Button onClick={() => this.filterChampions('Mage')}>Mage</Button>
-          <Button onClick={() => this.filterChampions('Marksman')}>Marksman</Button>
-          <Button onClick={() => this.filterChampions('Support')}>Support</Button>
-          <Button onClick={() => this.filterChampions('Tank')}>Tank</Button>
-        </ul>
+          <ul>
+            <Button onClick={() => this.flip()}>Sort
+              Alphabetically {(this.state.forwards) ? "Backwards" : "Forwards"}</Button>
+          </ul>
 
-        <ul>
-          <Button onClick={() => this.flip()}>Sort Alphabetically {(this.state.forwards)? "Backwards" : "Forwards"}</Button>
-        </ul>
-
-        <ul>
-          <Button onClick={() => this.previous()}>Prev</Button>
-          <Button>{this.state.pageNumber + 1}</Button>
-          <Button onClick={() => this.next()}>Next</Button>
-        </ul>
+          <ul>
+            <Button onClick={() => this.previous()}>Prev</Button>
+            <Button>{this.state.pageNumber + 1}</Button>
+            <Button onClick={() => this.next()}>Next</Button>
+          </ul>
 
         <ListGroup>
           {this.state.view.slice(this.state.pageNumber * 6, this.state.pageNumber * 6 + 6).map((champion) => {
@@ -160,6 +176,7 @@ class ChampionList extends Component {
             </ListGroupItem>
           })}
         </ListGroup>
+        </Container>
       </div>
     );
   }
