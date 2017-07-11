@@ -119,7 +119,7 @@ class RoleElement extends Component {
   render() {
     let data = Object(this.props.data);
     return (
-      <Card >
+      <Card className="text-center">
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
