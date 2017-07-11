@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {
-  ListGroup,
-  ListGroupItem,
   Collapse,
   Container,
   Navbar,
@@ -9,7 +7,14 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+
+  Card,
+  CardBlock,
+  CardDeck,
+  CardImg,
+  CardTitle,
+  CardText
 } from 'reactstrap';
 
 class LeagueBar extends Component {
@@ -88,25 +93,40 @@ class RoleList extends Component {
   }
 
   render() {
+    let roles = this.state.list;
+    let counter = 0;
     return (
       <div>
         <LeagueBar/>
 
         <Container>
-          <ListGroup>
-            {this.state.list.map((roles) => {
-              return <ListGroupItem>
-                <a href={"/roles/" + roles.name}>
-                  <figure>
-                    <figcaption>{roles.name}</figcaption>
-                    <img alt={roles.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + roles.icon}/>
-                  </figure>
-                </a>
-              </ListGroupItem>
-            })}
-          </ListGroup>
+          <RoleElement data={roles[counter++]}/>
+          <br/>
+          <RoleElement data={roles[counter++]}/>
+          <br/>
+          <RoleElement data={roles[counter++]}/>
+          <br/>
+          <RoleElement data={roles[counter++]}/>
+          <br/>
+          <RoleElement data={roles[counter]}/>
         </Container>
       </div>
+    );
+  }
+}
+
+class RoleElement extends Component {
+  render() {
+    let data = Object(this.props.data);
+    return (
+      <Card >
+        <CardBlock>
+          <CardTitle>{data.name}</CardTitle>
+        </CardBlock>
+        <a href={"/roles/" + data.name}>
+            <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + data.icon}/>
+        </a>
+      </Card>
     );
   }
 }
