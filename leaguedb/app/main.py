@@ -71,12 +71,6 @@ def home() -> Response:
     css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
     return render_template("model_view.html", filename=filename, css_filename=css_filename)
 
-
-@app.route("/about")
-def route_about() -> Response:
-    return render_template("about.html")
-
-
 @app.route("/<react_route>")
 def route_models(react_route: str) -> Response:
     filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
