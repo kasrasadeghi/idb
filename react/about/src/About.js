@@ -19,7 +19,16 @@ class LeagueBar extends Component {
 
     this.state = {
       isOpen: false
-    }
+    };
+
+    fetch('https://api.github.com/repos/kasrasadeghi/idb/stats/contributors', {
+      method: 'GET',
+      dataType: 'json'
+    })
+    .then(r => r.json())
+    .then(j => {
+      console.log(j);
+    });
   }
 
   toggle() {
@@ -282,6 +291,9 @@ class About extends Component {
               </Table>
             </Col>
           </Row>
+          <br />
+          <h2> <a href="https://utexas.box.com/s/9oe95gfnj8n2p13y84tlbea6q1vl7mk8" >Technical Report</a> </h2>
+          <br />
         </Container>
       </div>
     )
