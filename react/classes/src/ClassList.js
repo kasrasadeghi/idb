@@ -8,7 +8,13 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Row, Col
+
+  Card,
+  CardBlock,
+  CardDeck,
+  CardImg,
+  CardTitle,
+  CardText
 } from 'reactstrap';
 
 class LeagueBar extends Component {
@@ -87,22 +93,29 @@ class ClassList extends Component {
   }
 
   render() {
-    let counter = 0;
     let currentView = this.state.list;
+
+    let topView = currentView.slice(0, 3);
+    let top = topView.map(c => {
+      return <ClassElement data={c}/>
+    });
+
+    let botView = currentView.slice(3, 6);
+    let bot = botView.map(c => {
+      return <ClassElement data={c}/>
+    });
+
     return (
       <div>
         <LeagueBar/>
         <Container>
-          <Row>
-            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
-            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
-            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
-          </Row>
-          <Row>
-            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
-            <Col><ClassElement data={Object(currentView[counter++])}/></Col>
-            <Col><ClassElement data={Object(currentView[counter])}/></Col>
-          </Row>
+          <CardDeck>
+            {top}
+          </CardDeck>
+          <br/>
+          <CardDeck>
+            {bot}
+          </CardDeck>
         </Container>
       </div>
     );
@@ -111,15 +124,17 @@ class ClassList extends Component {
 
 class ClassElement extends Component {
   render() {
-    let _class = this.props.data;
+    let data = Object(this.props.data);
     return (
-      <a href={"/classes/" + _class.name}>
-        <figure>
-          <figcaption>{_class.name}</figcaption>
-          <img alt={_class.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + _class.icon}/>
-        </figure>
-      </a>
-    )
+      <Card className="text-center">
+        <CardBlock>
+          <CardTitle>{data.name}</CardTitle>
+        </CardBlock>
+        <a href={"/classes/" + data.name}>
+          <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + data.icon}/>
+        </a>
+      </Card>
+    );
   }
 }
 
