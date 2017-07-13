@@ -19,7 +19,7 @@ class LeagueBar extends Component {
 
     this.state = {
       isOpen: false
-    }
+    };
   }
 
   toggle() {
@@ -63,6 +63,76 @@ class LeagueBar extends Component {
 class About extends Component {
   constructor() {
     super();
+    
+    this.state = {
+      commits: {
+        "SpicyKitten": 0,
+        "Tschriber": 0,
+        "flippedAben": 0,
+        "kasrasadeghi": 0,
+        "total": 0
+      },
+      avii: 0,
+      todi: 0,
+      beni: 0,
+      kasi: 0
+    };
+
+    fetch('https://api.github.com/repos/kasrasadeghi/idb/stats/contributors', {
+      method: 'GET',
+      dataType: 'json'
+    })
+    .then(r => r.json())
+    .then(j => {
+      var updatedCommits = {}
+      var sum = 0;
+      for (var i = 0; i < j.length; i++) {
+         updatedCommits[j[i].author.login] = j[i].total;
+         sum += j[i].total;
+      }
+      updatedCommits['total'] = sum;
+      this.setState({
+        commits: updatedCommits
+      });
+    });
+
+    
+    var members = ["avilashrath", "toddschriber", "benyangs", "kasrasadeghi1"];
+    for (var mem in members) {
+      (mem => {
+        fetch('https://api.trello.com/1/members/' + mem  + '/cards', {
+          method: 'GET',
+          dataType: 'json'
+        })
+        .then(r => r.json())
+        .then(j => {
+          switch (mem) {
+            case members[0]:
+              this.setState({
+                avii: j.length,
+              });
+              break;
+            case members[1]:
+              this.setState({
+                todi: j.length,
+              });
+              break;
+            case members[2]:
+              this.setState({
+                beni: j.length,
+              });
+              break;
+            case members[3]:
+              this.setState({
+                kasi: j.length,
+              });
+              break;
+            default:
+              break;
+          }
+        })
+      })(members[mem]);
+    }
   }
 
   render() {
@@ -94,13 +164,13 @@ class About extends Component {
               Not killing himself
               <br/>
               <br />
-              No. of Commits:
+              No. of Commits: {this.state.commits['kasrasadeghi']}
               <br/>
               <br />
-              No. of Issues:
+              No. of Issues: {this.state.kasi}
               <br/>
               <br />
-              No. of Unit Tests:
+              No. of Unit Tests: 0
               <br/>
               <br />
             </Col>
@@ -120,13 +190,13 @@ class About extends Component {
               Setting up the database, implementing the API, making the GUI.
               <br/>
               <br />
-              No. of Commits: 51
+              No. of Commits: {this.state.commits['flippedAben']}
               <br/>
               <br />
-              No. of Issues: 22
+              No. of Issues: {this.state.beni}
               <br/>
               <br />
-              No. of Unit Tests: 16
+              No. of Unit Tests: 19
               <br/>
               <br />
             </Col>
@@ -146,13 +216,13 @@ class About extends Component {
               Trying not to be useless
               <br/>
               <br/>
-              No. of Commits:
+              No. of Commits: {this.state.commits['Tschriber']}
               <br/>
               <br/>
-              No. of Issues:
+              No. of Issues: {this.state.todi}
               <br/>
               <br/>
-              No. of Unit Tests:
+              No. of Unit Tests: 0
               <br/>
               <br/>
             </Col>
@@ -170,10 +240,10 @@ class About extends Component {
               Actually not being useless
               <br/>
               <br />
-              No. of Commits: 1
+              No. of Commits: {this.state.commits['SpicyKitten']}
               <br/>
               <br />
-              No. of Issues: 0
+              No. of Issues: {this.state.avii}
               <br/>
               <br />
               No. of Unit Tests: 0
@@ -196,11 +266,12 @@ class About extends Component {
                 <tbody>
                   <tr>
                     <td>Commits</td>
-                    <td>330</td>
+                    <td> { this.state.commits['total'] }
+                    </td>
                   </tr>
                   <tr>
                     <td>Issues</td>
-                    <td>70</td>
+                    <td>{this.state.avii + this.state.todi + this.state.beni + this.state.kasi}</td>
                   </tr>
                   <tr>
                     <td>Unit Tests</td>
@@ -282,6 +353,9 @@ class About extends Component {
               </Table>
             </Col>
           </Row>
+          <br />
+          <h2> <a href="https://utexas.box.com/s/9oe95gfnj8n2p13y84tlbea6q1vl7mk8" >Technical Report</a> </h2>
+          <br />
         </Container>
       </div>
     )
