@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 import Home from './components/Home';
-import LeagueBar from "./components/LeagueBar";
+import LeagueBar from './components/LeagueBar';
+import Search from './components/Search';
+import ChampionList from './components/ChampionList';
+import ItemList from './components/ItemList';
+import ClassList from './components/ClassList';
+import RoleList from "./components/RoleList";
+import About from "./components/About";
 
 class App extends Component {
   constructor() {
@@ -12,31 +18,37 @@ class App extends Component {
     };
   }
 
-  route(e) {
-    console.log(e);
-    // const value = e.target.value;
-    // this.setState({current: value});
+  route(value) {
+    this.setState({
+      current: value
+    });
   }
 
   currentMain() {
     switch (this.state.current) {
+      default:
       case "home":
-        return <Home route={this.route.bind(this)}/>;
+        return <Home/>;
       case "search":
+        return <Search/>;
       case "champions":
+        return <ChampionList/>;
       case "items":
+        return <ItemList/>;
       case "classes":
+        return <ClassList/>;
       case "roles":
+        return <RoleList/>;
       case "about":
-        break;
+        return <About/>;
     }
   }
 
   render() {
     return (
       <div>
-        <LeagueBar/>
-        <h1>{this.state.current}</h1>
+        <LeagueBar route={(x) => this.route(x)}/>
+        <h1 style={{color: "red"}}>{this.state.current}</h1>
         {this.currentMain()}
       </div>
     );
