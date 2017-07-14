@@ -211,6 +211,33 @@ def add_champions_data():
     db.session.commit()
     print("Added champions data.")
 
+def get_items_json():
+    jsoni = []
+    res = Item.query.all()
+    for i in res:
+        item = {}
+        item['categories'] = i.categories[1:-1].split(',')
+        item['champions'] = [c.name for c in i.champions]
+        item['classes'] = [c.name for c in i.classes]
+        item['icon'] = i.icon
+        item['name'] = i.name
+        item['roles'] = [r.name for r in i.roles]
+        jsoni.append(item)
+    return json.dumps(jsoni, indent=4, separators=(',',': '))
+
+def get_roles_json():
+    jsonr = []
+    res = Role.query.all()
+    for r in res:
+        role = {}
+        role['champions'] = [c.name for c in r.champions]
+        role['classes'] = r.classes.split(',')
+        role['icon'] = r.icon
+        role['items'] = [i.name for i in r.items]
+        role['name'] = r.name
+        jsonr.append(role)
+    return json.dumps(jsonr, indent=4, separators=(',',': '))
+
 if __name__ == "__main__":
     print("Populating database.")
     create_tables()

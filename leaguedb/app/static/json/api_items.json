@@ -1,19 +1,5 @@
 [
     {
-        "name": "Warmog's Armor",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "CooldownReduction"
-        ],
-        "icon": "3083.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -21,47 +7,106 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Chain Vest",
-        "categories": [
-            "Armor"
         ],
-        "icon": "1031.png",
         "roles": [
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank"
-        ]
-    },
-    {
-        "name": "Kircheis Shard",
-        "categories": [
-            "AttackSpeed",
-            "OnHit"
-        ],
-        "icon": "2015.png",
-        "roles": [
+            "Bot",
             "Mid",
             "Sup",
             "Top",
             "Jg"
         ],
+        "champions": [
+            "Jax",
+            "Garen",
+            "Dr. Mundo",
+            "Yorick",
+            "Malphite",
+            "Shyvana",
+            "Darius",
+            "Shen",
+            "Sejuani",
+            "Cho'Gath",
+            "Blitzcrank"
+        ],
+        "name": "Warmog's Armor",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "CooldownReduction"
+        ],
+        "icon": "3083.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Thresh",
+            "Skarner",
+            "Leona",
+            "Sejuani"
+        ],
+        "name": "Chain Vest",
+        "categories": [
+            "Armor"
+        ],
+        "icon": "1031.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Yasuo",
+            "Shaco"
+        ],
+        "name": "Kircheis Shard",
+        "categories": [
+            "AttackSpeed",
+            "OnHit"
+        ],
+        "icon": "2015.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ],
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Poppy",
+            "Tahm Kench",
+            "Sion",
+            "Galio",
+            "Braum",
+            "Taric",
+            "Sejuani",
+            "Blitzcrank"
+        ],
         "name": "Iceborn Gauntlet",
         "categories": [
             "Armor",
@@ -69,34 +114,9 @@
             "CooldownReduction",
             "Slow"
         ],
-        "icon": "3025.png",
-        "roles": [
-            "Sup",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank"
-        ]
+        "icon": "3025.png"
     },
     {
-        "name": "Phantom Dancer",
-        "categories": [
-            "AttackSpeed",
-            "CriticalStrike",
-            "NonbootsMovement"
-        ],
-        "icon": "3046.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -104,9 +124,45 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kindred",
+            "Ashe"
+        ],
+        "name": "Phantom Dancer",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement"
+        ],
+        "icon": "3046.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Amumu"
+        ],
         "name": "Righteous Glory",
         "categories": [
             "Health",
@@ -118,24 +174,25 @@
             "Slow",
             "NonbootsMovement"
         ],
-        "icon": "3800.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3800.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Assassin",
+            "Fighter"
+        ],
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Fizz",
+            "Ekko",
+            "Akali",
+            "Kassadin"
+        ],
         "name": "Lich Bane",
         "categories": [
             "SpellDamage",
@@ -143,68 +200,54 @@
             "CooldownReduction",
             "NonbootsMovement"
         ],
-        "icon": "3100.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Assassin",
-            "Fighter"
-        ]
+        "icon": "3100.png"
     },
     {
-        "name": "Last Whisper",
-        "categories": [
-            "ArmorPenetration",
-            "Damage"
+        "classes": [
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Assassin"
         ],
-        "icon": "3035.png",
         "roles": [
             "Bot",
             "Top",
             "Jg",
             "Mid"
         ],
-        "classes": [
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Assassin"
-        ]
+        "champions": [
+            "Tryndamere",
+            "Ashe",
+            "Pantheon",
+            "Zed"
+        ],
+        "name": "Last Whisper",
+        "categories": [
+            "ArmorPenetration",
+            "Damage"
+        ],
+        "icon": "3035.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Sup"
+        ],
+        "champions": [
+            "Bard"
+        ],
         "name": "Ruby Sightstone",
         "categories": [
             "Active",
             "Health",
             "Vision"
         ],
-        "icon": "2045.png",
-        "roles": [
-            "Sup"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "2045.png"
     },
     {
-        "name": "Berserker's Greaves",
-        "categories": [
-            "AttackSpeed",
-            "Boots"
-        ],
-        "icon": "3006.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -212,25 +255,82 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Ezreal",
+            "Kindred",
+            "Kog'Maw",
+            "Quinn",
+            "Kalista",
+            "Miss Fortune",
+            "Tryndamere",
+            "Jinx",
+            "Master Yi",
+            "Xayah",
+            "Ashe",
+            "Twitch",
+            "Shaco",
+            "Caitlyn",
+            "Vayne",
+            "Varus",
+            "Graves",
+            "Tristana",
+            "Lucian"
+        ],
+        "name": "Berserker's Greaves",
+        "categories": [
+            "AttackSpeed",
+            "Boots"
+        ],
+        "icon": "3006.png"
     },
     {
+        "classes": [
+            "Assassin",
+            "Fighter"
+        ],
+        "roles": [
+            "Jg"
+        ],
+        "champions": [
+            "Nidalee"
+        ],
         "name": "Chalice of Harmony",
         "categories": [
             "SpellBlock",
             "HealthRegen",
             "ManaRegen"
         ],
-        "icon": "3028.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Assassin",
-            "Fighter"
-        ]
+        "icon": "3028.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Jax",
+            "Kayle"
+        ],
         "name": "Guinsoo's Rageblade",
         "categories": [
             "Damage",
@@ -238,24 +338,22 @@
             "SpellDamage",
             "OnHit"
         ],
-        "icon": "3124.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3124.png"
     },
     {
+        "classes": [
+            "Marksman",
+            "Assassin",
+            "Support"
+        ],
+        "roles": [
+            "Bot"
+        ],
+        "champions": [
+            "Xayah",
+            "Ashe",
+            "Jhin"
+        ],
         "name": "Mercurial Scimitar",
         "categories": [
             "SpellBlock",
@@ -264,29 +362,9 @@
             "Active",
             "NonbootsMovement"
         ],
-        "icon": "3139.png",
-        "roles": [
-            "Bot"
-        ],
-        "classes": [
-            "Marksman",
-            "Assassin",
-            "Support"
-        ]
+        "icon": "3139.png"
     },
     {
-        "name": "Boots of Speed",
-        "categories": [
-            "Boots"
-        ],
-        "icon": "1001.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -294,23 +372,166 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Draven",
+            "Hecarim",
+            "Jax",
+            "Zilean",
+            "Swain",
+            "Ezreal",
+            "Urgot",
+            "Garen",
+            "Twisted Fate",
+            "Kog'Maw",
+            "Thresh",
+            "Volibear",
+            "Poppy",
+            "Elise",
+            "Sivir",
+            "Tahm Kench",
+            "Quinn",
+            "Udyr",
+            "Kalista",
+            "Teemo",
+            "Miss Fortune",
+            "Diana",
+            "Irelia",
+            "Xerath",
+            "Yasuo",
+            "Nasus",
+            "Vladimir",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Talon",
+            "Karma",
+            "Singed",
+            "Tryndamere",
+            "Nami",
+            "Zyra",
+            "Kha'Zix",
+            "Nunu",
+            "Jinx",
+            "Master Yi",
+            "Kayle",
+            "Katarina",
+            "Renekton",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Ashe",
+            "Twitch",
+            "Shaco",
+            "Fizz",
+            "Lissandra",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Galio",
+            "Maokai",
+            "Viktor",
+            "LeBlanc",
+            "Lee Sin",
+            "Rek'Sai",
+            "Braum",
+            "Gragas",
+            "Leona",
+            "Camille",
+            "Caitlyn",
+            "Kennen",
+            "Soraka",
+            "Riven",
+            "Janna",
+            "Nocturne",
+            "Syndra",
+            "Mordekaiser",
+            "Malphite",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Vayne",
+            "Taliyah",
+            "Varus",
+            "Vi",
+            "Darius",
+            "Olaf",
+            "Vel'Koz",
+            "Brand",
+            "Shen",
+            "Lulu",
+            "Jayce",
+            "Sejuani",
+            "Graves",
+            "Zac",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Tristana",
+            "Veigar",
+            "Warwick",
+            "Ivern",
+            "Aurelion Sol",
+            "Rengar",
+            "Lucian",
+            "Gnar",
+            "Rumble",
+            "Blitzcrank",
+            "Sona",
+            "Zed",
+            "Morgana",
+            "Fiora",
+            "Ryze",
+            "Trundle",
+            "Nidalee"
+        ],
+        "name": "Boots of Speed",
+        "categories": [
+            "Boots"
+        ],
+        "icon": "1001.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Ryze"
+        ],
         "name": "Archangel's Staff",
         "categories": [
             "Mana",
             "ManaRegen",
             "SpellDamage"
         ],
-        "icon": "3003.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3003.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -318,9 +539,27 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Alistar",
+            "Dr. Mundo",
+            "Illaoi",
+            "Sion",
+            "Rek'Sai",
+            "Amumu",
+            "Taric",
+            "Aatrox",
+            "Gnar",
+            "Bard"
+        ],
         "name": "Randuin's Omen",
         "categories": [
             "Active",
@@ -328,24 +567,41 @@
             "Health",
             "Slow"
         ],
-        "icon": "3143.png",
+        "icon": "3143.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Assassin",
+            "Fighter",
+            "Support"
+        ],
         "roles": [
-            "Bot",
             "Mid",
             "Sup",
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
+        "champions": [
+            "Twisted Fate",
+            "Diana",
+            "Karthus",
+            "Karma",
+            "Nami",
+            "Zyra",
+            "Lux",
+            "Viktor",
+            "Gragas",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Taliyah",
+            "Brand",
+            "Lulu",
+            "Sona",
+            "Morgana",
+            "Nidalee"
+        ],
         "name": "Athene's Unholy Grail",
         "categories": [
             "SpellBlock",
@@ -354,34 +610,9 @@
             "ManaRegen",
             "CooldownReduction"
         ],
-        "icon": "3174.png",
-        "roles": [
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Assassin",
-            "Fighter",
-            "Support"
-        ]
+        "icon": "3174.png"
     },
     {
-        "name": "Sunfire Cape",
-        "categories": [
-            "Armor",
-            "Health"
-        ],
-        "icon": "3068.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -389,39 +620,212 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Rammus",
+            "Garen",
+            "Thresh",
+            "Poppy",
+            "Tahm Kench",
+            "Nasus",
+            "Nautilus",
+            "Dr. Mundo",
+            "Nunu",
+            "Renekton",
+            "Sion",
+            "Jarvan IV",
+            "Maokai",
+            "Braum",
+            "Leona",
+            "Amumu",
+            "Malphite",
+            "Xin Zhao",
+            "Shyvana",
+            "Olaf",
+            "Shen",
+            "Sejuani",
+            "Zac",
+            "Warwick",
+            "Rengar"
+        ],
+        "name": "Sunfire Cape",
+        "categories": [
+            "Armor",
+            "Health"
+        ],
+        "icon": "3068.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Fighter"
+        ],
+        "roles": [
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Malphite",
+            "Olaf"
+        ],
         "name": "Warden's Mail",
         "categories": [
             "Armor",
             "Slow"
         ],
-        "icon": "3082.png",
+        "icon": "3082.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
         "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Tank",
-            "Fighter"
-        ]
-    },
-    {
+        "champions": [
+            "Kled",
+            "Draven",
+            "Hecarim",
+            "Jax",
+            "Zilean",
+            "Swain",
+            "Ezreal",
+            "Urgot",
+            "Garen",
+            "Twisted Fate",
+            "Kog'Maw",
+            "Thresh",
+            "Volibear",
+            "Poppy",
+            "Elise",
+            "Sivir",
+            "Tahm Kench",
+            "Quinn",
+            "Udyr",
+            "Kalista",
+            "Teemo",
+            "Miss Fortune",
+            "Diana",
+            "Irelia",
+            "Xerath",
+            "Yasuo",
+            "Nasus",
+            "Vladimir",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Talon",
+            "Karma",
+            "Singed",
+            "Tryndamere",
+            "Nami",
+            "Zyra",
+            "Kha'Zix",
+            "Nunu",
+            "Jinx",
+            "Master Yi",
+            "Kayle",
+            "Katarina",
+            "Renekton",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Ashe",
+            "Twitch",
+            "Shaco",
+            "Fizz",
+            "Lissandra",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Galio",
+            "Maokai",
+            "Viktor",
+            "LeBlanc",
+            "Lee Sin",
+            "Rek'Sai",
+            "Braum",
+            "Gragas",
+            "Leona",
+            "Camille",
+            "Caitlyn",
+            "Kennen",
+            "Soraka",
+            "Riven",
+            "Janna",
+            "Nocturne",
+            "Syndra",
+            "Mordekaiser",
+            "Malphite",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Vayne",
+            "Taliyah",
+            "Varus",
+            "Vi",
+            "Darius",
+            "Olaf",
+            "Vel'Koz",
+            "Brand",
+            "Shen",
+            "Lulu",
+            "Jayce",
+            "Sejuani",
+            "Graves",
+            "Zac",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Tristana",
+            "Veigar",
+            "Warwick",
+            "Aurelion Sol",
+            "Rengar",
+            "Lucian",
+            "Gnar",
+            "Rumble",
+            "Blitzcrank",
+            "Sona",
+            "Zed",
+            "Morgana",
+            "Fiora",
+            "Ryze",
+            "Trundle",
+            "Nidalee"
+        ],
         "name": "Health Potion",
         "categories": [
             "Consumable",
             "Jungle",
             "Lane"
         ],
-        "icon": "2003.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "2003.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -429,9 +833,30 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kog'Maw",
+            "Volibear",
+            "Irelia",
+            "Nasus",
+            "Master Yi",
+            "Kayle",
+            "Katarina",
+            "Renekton",
+            "Orianna",
+            "Heimerdinger",
+            "Camille",
+            "Nocturne",
+            "Jayce",
+            "Zac",
+            "Trundle"
+        ],
         "name": "Warding Totem (Trinket)",
         "categories": [
             "Active",
@@ -440,23 +865,21 @@
             "Trinket",
             "Vision"
         ],
-        "icon": "3340.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3340.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Rakan",
+            "Ivern"
+        ],
         "name": "Talisman of Ascension",
         "categories": [
             "HealthRegen",
@@ -467,49 +890,105 @@
             "CooldownReduction",
             "NonbootsMovement"
         ],
-        "icon": "3069.png",
-        "roles": [
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "3069.png"
     },
     {
-        "name": "Kindlegem",
-        "categories": [
-            "CooldownReduction",
-            "Health"
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
         ],
-        "icon": "3067.png",
         "roles": [
             "Sup",
             "Top",
             "Jg",
             "Mid"
         ],
+        "champions": [
+            "Tahm Kench",
+            "Maokai",
+            "Braum",
+            "Darius",
+            "Zac",
+            "Warwick",
+            "Gnar"
+        ],
+        "name": "Kindlegem",
+        "categories": [
+            "CooldownReduction",
+            "Health"
+        ],
+        "icon": "3067.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
-            "Tank"
-        ]
-    },
-    {
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Poppy",
+            "Elise",
+            "Diana",
+            "Xerath",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Karma",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Nunu",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Fizz",
+            "Lissandra",
+            "Galio",
+            "Viktor",
+            "Gragas",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Malphite",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Veigar",
+            "Aurelion Sol",
+            "Blitzcrank",
+            "Sona",
+            "Morgana",
+            "Ryze",
+            "Nidalee"
+        ],
         "name": "Sapphire Crystal",
         "categories": [
             "Mana"
         ],
-        "icon": "1027.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "1027.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -517,47 +996,100 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Azir",
+            "Elise",
+            "Teemo",
+            "Diana",
+            "Xerath",
+            "Annie",
+            "Vladimir",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Karma",
+            "Nami",
+            "Zyra",
+            "Kayle",
+            "Katarina",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Fizz",
+            "Lissandra",
+            "Viktor",
+            "LeBlanc",
+            "Ahri",
+            "Gragas",
+            "Ekko",
+            "Kennen",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Mordekaiser",
+            "Anivia",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Akali",
+            "Kassadin",
+            "Fiddlesticks",
+            "Veigar",
+            "Malzahar",
+            "Aurelion Sol",
+            "Rumble",
+            "Sona",
+            "Morgana"
+        ],
         "name": "Rabadon's Deathcap",
         "categories": [
             "SpellDamage"
         ],
-        "icon": "3089.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3089.png"
     },
     {
-        "name": "Brawler's Gloves",
-        "categories": [
-            "CriticalStrike"
-        ],
-        "icon": "1051.png",
-        "roles": [
-            "Top",
-            "Mid"
-        ],
         "classes": [
             "Marksman",
             "Assassin",
             "Fighter"
-        ]
+        ],
+        "roles": [
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Quinn",
+            "Yasuo"
+        ],
+        "name": "Brawler's Gloves",
+        "categories": [
+            "CriticalStrike"
+        ],
+        "icon": "1051.png"
     },
     {
+        "classes": [
+            "Marksman",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot"
+        ],
+        "champions": [
+            "Jhin"
+        ],
         "name": "Youmuu's Ghostblade",
         "categories": [
             "Damage",
@@ -566,31 +1098,9 @@
             "NonbootsMovement",
             "ArmorPenetration"
         ],
-        "icon": "3142.png",
-        "roles": [
-            "Bot"
-        ],
-        "classes": [
-            "Marksman",
-            "Assassin"
-        ]
+        "icon": "3142.png"
     },
     {
-        "name": "Frozen Heart",
-        "categories": [
-            "Armor",
-            "Aura",
-            "CooldownReduction",
-            "Mana"
-        ],
-        "icon": "3110.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -598,9 +1108,62 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Urgot",
+            "Thresh",
+            "Alistar",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Nautilus",
+            "Nunu",
+            "Sion",
+            "Leona",
+            "Camille",
+            "Amumu",
+            "Taric",
+            "Malphite",
+            "Vi",
+            "Olaf",
+            "Cho'Gath",
+            "Trundle",
+            "Bard"
+        ],
+        "name": "Frozen Heart",
+        "categories": [
+            "Armor",
+            "Aura",
+            "CooldownReduction",
+            "Mana"
+        ],
+        "icon": "3110.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Alistar",
+            "Bard"
+        ],
         "name": "Mikael's Crucible",
         "categories": [
             "SpellBlock",
@@ -609,63 +1172,72 @@
             "Active",
             "CooldownReduction"
         ],
-        "icon": "3222.png",
+        "icon": "3222.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ],
         "roles": [
             "Sup",
             "Top",
             "Jg",
             "Mid"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
+        "champions": [
+            "Poppy",
+            "Taric",
+            "Malphite",
+            "Olaf",
+            "Blitzcrank"
+        ],
         "name": "Glacial Shroud",
         "categories": [
             "Armor",
             "CooldownReduction",
             "Mana"
         ],
-        "icon": "3024.png",
-        "roles": [
-            "Sup",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank"
-        ]
+        "icon": "3024.png"
     },
     {
-        "name": "Boots of Mobility",
-        "categories": [
-            "Boots"
-        ],
-        "icon": "3117.png",
-        "roles": [
-            "Sup",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
         "classes": [
             "Mage",
             "Fighter",
             "Support",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Alistar",
+            "Talon",
+            "Bard"
+        ],
+        "name": "Boots of Mobility",
+        "categories": [
+            "Boots"
+        ],
+        "icon": "3117.png"
     },
     {
+        "classes": [
+            "Assassin",
+            "Fighter"
+        ],
+        "roles": [
+            "Jg"
+        ],
+        "champions": [
+            "Kha'Zix"
+        ],
         "name": "Manamune",
         "categories": [
             "Damage",
@@ -673,16 +1245,19 @@
             "ManaRegen",
             "OnHit"
         ],
-        "icon": "3004.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Assassin",
-            "Fighter"
-        ]
+        "icon": "3004.png"
     },
     {
+        "classes": [
+            "Assassin"
+        ],
+        "roles": [
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Akali"
+        ],
         "name": "Hextech Gunblade",
         "categories": [
             "Active",
@@ -692,16 +1267,28 @@
             "SpellDamage",
             "SpellVamp"
         ],
-        "icon": "3146.png",
-        "roles": [
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Assassin"
-        ]
+        "icon": "3146.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top"
+        ],
+        "champions": [
+            "Azir",
+            "Teemo",
+            "Kayle"
+        ],
         "name": "Nashor's Tooth",
         "categories": [
             "AttackSpeed",
@@ -709,13 +1296,9 @@
             "OnHit",
             "SpellDamage"
         ],
-        "icon": "3115.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top"
-        ],
+        "icon": "3115.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -723,16 +1306,7 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Zeal",
-        "categories": [
-            "AttackSpeed",
-            "CriticalStrike",
-            "NonbootsMovement"
         ],
-        "icon": "3086.png",
         "roles": [
             "Bot",
             "Mid",
@@ -740,16 +1314,53 @@
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Jax",
+            "Ezreal",
+            "Urgot",
+            "Volibear",
+            "Quinn",
+            "Udyr",
+            "Irelia",
+            "Yasuo",
+            "Nasus",
+            "Kha'Zix",
+            "Shaco",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Gangplank",
+            "Camille",
+            "Vi",
+            "Shen",
+            "Jayce",
+            "Rengar",
+            "Trundle"
+        ],
+        "name": "Zeal",
+        "categories": [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement"
+        ],
+        "icon": "3086.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Fighter",
+            "Mage"
+        ],
+        "roles": [
+            "Jg"
+        ],
+        "champions": [
+            "Amumu",
+            "Warwick"
+        ],
         "name": "Titanic Hydra",
         "categories": [
             "Health",
@@ -758,29 +1369,9 @@
             "Active",
             "OnHit"
         ],
-        "icon": "3748.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Tank",
-            "Fighter",
-            "Mage"
-        ]
+        "icon": "3748.png"
     },
     {
-        "name": "Cloth Armor",
-        "categories": [
-            "Armor"
-        ],
-        "icon": "1029.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -788,9 +1379,108 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Jax",
+            "Urgot",
+            "Garen",
+            "Thresh",
+            "Volibear",
+            "Poppy",
+            "Tahm Kench",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Nautilus",
+            "Singed",
+            "Kha'Zix",
+            "Nunu",
+            "Renekton",
+            "Pantheon",
+            "Skarner",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Maokai",
+            "Lee Sin",
+            "Leona",
+            "Camille",
+            "Riven",
+            "Nocturne",
+            "Malphite",
+            "Xin Zhao",
+            "Shyvana",
+            "Vi",
+            "Olaf",
+            "Shen",
+            "Sejuani",
+            "Zac",
+            "Cho'Gath",
+            "Warwick",
+            "Rengar",
+            "Blitzcrank",
+            "Zed",
+            "Trundle"
+        ],
+        "name": "Cloth Armor",
+        "categories": [
+            "Armor"
+        ],
+        "icon": "1029.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Jax",
+            "Ezreal",
+            "Urgot",
+            "Kog'Maw",
+            "Volibear",
+            "Quinn",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Illaoi",
+            "Kha'Zix",
+            "Shaco",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Camille",
+            "Wukong",
+            "Vi",
+            "Shen",
+            "Jayce",
+            "Aatrox",
+            "Rengar",
+            "Trundle"
+        ],
         "name": "Trinity Force",
         "categories": [
             "Health",
@@ -801,24 +1491,21 @@
             "OnHit",
             "NonbootsMovement"
         ],
-        "icon": "3078.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3078.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Sup",
+            "Mid"
+        ],
+        "champions": [
+            "Annie",
+            "Anivia"
+        ],
         "name": "Rod of Ages (Quick Charge)",
         "categories": [
             "Health",
@@ -827,17 +1514,53 @@
             "ManaRegen",
             "SpellDamage"
         ],
-        "icon": "3029.png",
-        "roles": [
-            "Sup",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "3029.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Swain",
+            "Azir",
+            "Tahm Kench",
+            "Annie",
+            "Vladimir",
+            "Evelynn",
+            "Nautilus",
+            "Nunu",
+            "Katarina",
+            "Galio",
+            "Maokai",
+            "LeBlanc",
+            "Ahri",
+            "Ekko",
+            "Kennen",
+            "Mordekaiser",
+            "Malphite",
+            "Sejuani",
+            "Zac",
+            "Akali",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Malzahar",
+            "Ivern",
+            "Rumble",
+            "Blitzcrank"
+        ],
         "name": "Abyssal Mask",
         "categories": [
             "Health",
@@ -847,14 +1570,9 @@
             "CooldownReduction",
             "MagicPenetration"
         ],
-        "icon": "3001.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3001.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -862,9 +1580,42 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Urgot",
+            "Garen",
+            "Kindred",
+            "Miss Fortune",
+            "Talon",
+            "Illaoi",
+            "Kha'Zix",
+            "Renekton",
+            "Pantheon",
+            "Jarvan IV",
+            "Lee Sin",
+            "Rek'Sai",
+            "Riven",
+            "Nocturne",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Vi",
+            "Darius",
+            "Aatrox",
+            "Rengar",
+            "Gnar",
+            "Zed",
+            "Fiora"
+        ],
         "name": "The Black Cleaver",
         "categories": [
             "ArmorPenetration",
@@ -874,40 +1625,40 @@
             "NonbootsMovement",
             "OnHit"
         ],
-        "icon": "3071.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3071.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Fighter"
+        ],
+        "roles": [
+            "Top"
+        ],
+        "champions": [
+            "Dr. Mundo",
+            "Shen"
+        ],
         "name": "Wit's End",
         "categories": [
             "AttackSpeed",
             "OnHit",
             "SpellBlock"
         ],
-        "icon": "3091.png",
-        "roles": [
-            "Top"
-        ],
+        "icon": "3091.png"
+    },
+    {
         "classes": [
             "Tank",
             "Fighter"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Sup",
+            "Top"
+        ],
+        "champions": [
+            "Nautilus"
+        ],
         "name": "Relic Shield",
         "categories": [
             "Aura",
@@ -915,23 +1666,66 @@
             "Health",
             "Lane"
         ],
-        "icon": "3302.png",
-        "roles": [
-            "Sup",
-            "Top"
-        ],
-        "classes": [
-            "Tank",
-            "Fighter"
-        ]
+        "icon": "3302.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Kog'Maw",
+            "Sivir",
+            "Quinn",
+            "Kalista",
+            "Miss Fortune",
+            "Yasuo",
+            "Talon",
+            "Tryndamere",
+            "Jinx",
+            "Master Yi",
+            "Xayah",
+            "Ashe",
+            "Shaco",
+            "Corki",
+            "Gangplank",
+            "Caitlyn",
+            "Jhin",
+            "Vayne",
+            "Varus",
+            "Jayce",
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Zed"
+        ],
         "name": "Infinity Edge",
         "categories": [
             "CriticalStrike",
             "Damage"
         ],
-        "icon": "3031.png",
+        "icon": "3031.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
         "roles": [
             "Bot",
             "Mid",
@@ -939,22 +1733,30 @@
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
+        "champions": [
+            "Sivir",
+            "Vladimir",
+            "Vel'Koz",
+            "Jayce",
+            "Malzahar",
+            "Blitzcrank"
+        ],
         "name": "Ionian Boots of Lucidity",
         "categories": [
             "Boots",
             "CooldownReduction"
         ],
-        "icon": "3158.png",
+        "icon": "3158.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
         "roles": [
             "Bot",
             "Mid",
@@ -962,28 +1764,61 @@
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
+        "champions": [
+            "Zilean",
+            "Azir",
+            "Teemo",
+            "Annie",
+            "Kayle",
+            "Katarina",
+            "LeBlanc",
+            "Ahri",
+            "Ekko",
+            "Kennen",
+            "Mordekaiser",
+            "Anivia",
+            "Akali",
+            "Malzahar",
+            "Rumble"
+        ],
         "name": "Void Staff",
         "categories": [
             "MagicPenetration",
             "SpellDamage"
         ],
-        "icon": "3135.png",
+        "icon": "3135.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ],
         "roles": [
-            "Bot",
             "Mid",
             "Sup",
             "Top",
             "Jg"
         ],
+        "champions": [
+            "Yasuo",
+            "Galio",
+            "Rek'Sai",
+            "Braum",
+            "Wukong",
+            "Darius",
+            "Gnar",
+            "Fiora"
+        ],
+        "name": "Null-Magic Mantle",
+        "categories": [
+            "SpellBlock"
+        ],
+        "icon": "1033.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -991,52 +1826,44 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Null-Magic Mantle",
-        "categories": [
-            "SpellBlock"
         ],
-        "icon": "1033.png",
         "roles": [
+            "Bot",
             "Mid",
             "Sup",
-            "Top",
-            "Jg"
+            "Top"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
+        "champions": [
+            "Azir",
+            "Annie",
+            "Cassiopeia",
+            "Katarina",
+            "Orianna",
+            "LeBlanc",
+            "Ahri",
+            "Anivia",
+            "Vel'Koz",
+            "Veigar"
+        ],
         "name": "Luden's Echo",
         "categories": [
             "NonbootsMovement",
             "OnHit",
             "SpellDamage"
         ],
-        "icon": "3285.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3285.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Sup"
+        ],
+        "champions": [
+            "Bard"
+        ],
         "name": "Frost Queen's Claim",
         "categories": [
             "Active",
@@ -1046,45 +1873,28 @@
             "Slow",
             "SpellDamage"
         ],
-        "icon": "3092.png",
-        "roles": [
-            "Sup"
-        ],
+        "icon": "3092.png"
+    },
+    {
         "classes": [
             "Mage",
             "Support"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Mid"
+        ],
+        "champions": [
+            "Anivia"
+        ],
         "name": "Archangel's Staff (Quick Charge)",
         "categories": [
             "Mana",
             "ManaRegen",
             "SpellDamage"
         ],
-        "icon": "3007.png",
-        "roles": [
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "3007.png"
     },
     {
-        "name": "Ninja Tabi",
-        "categories": [
-            "Armor",
-            "Boots"
-        ],
-        "icon": "3047.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -1092,82 +1902,151 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Jax",
+            "Urgot",
+            "Garen",
+            "Thresh",
+            "Volibear",
+            "Poppy",
+            "Tahm Kench",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Nautilus",
+            "Singed",
+            "Kha'Zix",
+            "Nunu",
+            "Renekton",
+            "Pantheon",
+            "Skarner",
+            "Sion",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Maokai",
+            "Lee Sin",
+            "Leona",
+            "Camille",
+            "Riven",
+            "Nocturne",
+            "Malphite",
+            "Xin Zhao",
+            "Shyvana",
+            "Vi",
+            "Olaf",
+            "Shen",
+            "Sejuani",
+            "Zac",
+            "Aatrox",
+            "Cho'Gath",
+            "Warwick",
+            "Rengar",
+            "Zed",
+            "Trundle"
+        ],
+        "name": "Ninja Tabi",
+        "categories": [
+            "Armor",
+            "Boots"
+        ],
+        "icon": "3047.png"
     },
     {
-        "name": "Spectre's Cowl",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "SpellBlock"
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
         ],
-        "icon": "3211.png",
         "roles": [
             "Sup",
             "Top",
             "Jg",
             "Mid"
         ],
+        "champions": [
+            "Tahm Kench",
+            "Vladimir",
+            "Maokai",
+            "Braum",
+            "Zac"
+        ],
+        "name": "Spectre's Cowl",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "icon": "3211.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
-            "Tank"
-        ]
-    },
-    {
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kindred",
+            "Azir",
+            "Sivir",
+            "Yasuo",
+            "Ashe",
+            "Shaco",
+            "Ekko",
+            "Riven",
+            "Akali",
+            "Tristana"
+        ],
         "name": "Guardian Angel",
         "categories": [
             "Armor",
             "Damage"
         ],
-        "icon": "3026.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3026.png"
     },
     {
-        "name": "Giant's Belt",
-        "categories": [
-            "Health"
-        ],
-        "icon": "1011.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Marksman",
             "Tank",
             "Fighter",
             "Mage"
-        ]
-    },
-    {
-        "name": "Lord Dominik's Regards",
-        "categories": [
-            "Damage",
-            "ArmorPenetration"
         ],
-        "icon": "3036.png",
         "roles": [
             "Bot",
-            "Mid",
             "Top",
             "Jg"
         ],
+        "champions": [
+            "Skarner",
+            "Kennen",
+            "Mordekaiser"
+        ],
+        "name": "Giant's Belt",
+        "categories": [
+            "Health"
+        ],
+        "icon": "1011.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1175,46 +2054,136 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kog'Maw",
+            "Talon",
+            "Kha'Zix",
+            "Master Yi",
+            "Jhin",
+            "Lucian"
+        ],
+        "name": "Lord Dominik's Regards",
+        "categories": [
+            "Damage",
+            "ArmorPenetration"
+        ],
+        "icon": "3036.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Teemo",
+            "Katarina",
+            "Rumble"
+        ],
         "name": "Haunting Guise",
         "categories": [
             "Health",
             "MagicPenetration",
             "SpellDamage"
         ],
-        "icon": "3136.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Assassin"
-        ]
+        "icon": "3136.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Fighter"
+        ],
+        "roles": [
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Volibear",
+            "Illaoi",
+            "Yorick",
+            "Wukong"
+        ],
         "name": "Sterak's Gage",
         "categories": [
             "Health",
             "Damage"
         ],
-        "icon": "3053.png",
+        "icon": "3053.png"
+    },
+    {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
         "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Tank",
-            "Fighter"
-        ]
-    },
-    {
+        "champions": [
+            "Draven",
+            "Jax",
+            "Ezreal",
+            "Kog'Maw",
+            "Volibear",
+            "Sivir",
+            "Quinn",
+            "Kalista",
+            "Miss Fortune",
+            "Irelia",
+            "Nasus",
+            "Talon",
+            "Tryndamere",
+            "Kha'Zix",
+            "Jinx",
+            "Master Yi",
+            "Renekton",
+            "Ashe",
+            "Twitch",
+            "Pantheon",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Camille",
+            "Caitlyn",
+            "Riven",
+            "Nocturne",
+            "Xin Zhao",
+            "Wukong",
+            "Vayne",
+            "Varus",
+            "Vi",
+            "Olaf",
+            "Jayce",
+            "Graves",
+            "Tristana",
+            "Warwick",
+            "Rengar",
+            "Lucian",
+            "Zed",
+            "Fiora",
+            "Trundle"
+        ],
         "name": "Doran's Blade",
         "categories": [
             "Damage",
@@ -1222,14 +2191,29 @@
             "Lane",
             "LifeSteal"
         ],
-        "icon": "1055.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
+        "icon": "1055.png"
+    },
+    {
+        "classes": [
+            "Tank",
+            "Fighter",
+            "Support"
         ],
+        "roles": [
+            "Top"
+        ],
+        "champions": [
+            "Kayle",
+            "Yorick"
+        ],
+        "name": "Stinger",
+        "categories": [
+            "AttackSpeed",
+            "CooldownReduction"
+        ],
+        "icon": "3101.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1237,25 +2221,18 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Stinger",
-        "categories": [
-            "AttackSpeed",
-            "CooldownReduction"
         ],
-        "icon": "3101.png",
         "roles": [
-            "Top"
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
         ],
-        "classes": [
-            "Tank",
-            "Fighter",
-            "Support"
-        ]
-    },
-    {
+        "champions": [
+            "Kog'Maw",
+            "Twitch",
+            "Aatrox"
+        ],
         "name": "Blade of the Ruined King",
         "categories": [
             "Active",
@@ -1265,13 +2242,9 @@
             "NonbootsMovement",
             "OnHit"
         ],
-        "icon": "3153.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3153.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1279,16 +2252,7 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Doran's Shield",
-        "categories": [
-            "Health",
-            "HealthRegen",
-            "Lane"
         ],
-        "icon": "1054.png",
         "roles": [
             "Bot",
             "Mid",
@@ -1296,6 +2260,49 @@
             "Top",
             "Jg"
         ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Urgot",
+            "Garen",
+            "Thresh",
+            "Poppy",
+            "Tahm Kench",
+            "Udyr",
+            "Yasuo",
+            "Vladimir",
+            "Nautilus",
+            "Tryndamere",
+            "Katarina",
+            "Shaco",
+            "Skarner",
+            "Gangplank",
+            "Galio",
+            "Maokai",
+            "Lee Sin",
+            "Rek'Sai",
+            "Braum",
+            "Leona",
+            "Kennen",
+            "Mordekaiser",
+            "Malphite",
+            "Shyvana",
+            "Darius",
+            "Shen",
+            "Sejuani",
+            "Zac",
+            "Gnar",
+            "Rumble"
+        ],
+        "name": "Doran's Shield",
+        "categories": [
+            "Health",
+            "HealthRegen",
+            "Lane"
+        ],
+        "icon": "1054.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1303,9 +2310,17 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kog'Maw",
+            "Twitch"
+        ],
         "name": "Bilgewater Cutlass",
         "categories": [
             "Active",
@@ -1313,59 +2328,44 @@
             "LifeSteal",
             "Slow"
         ],
-        "icon": "3144.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3144.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
-            "Support",
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Sivir",
+            "Udyr",
+            "Illaoi",
+            "Master Yi",
+            "Renekton",
+            "Lee Sin",
+            "Riven",
+            "Wukong",
+            "Aatrox",
+            "Fiora"
+        ],
         "name": "Death's Dance",
         "categories": [
             "Damage",
             "LifeSteal",
             "CooldownReduction"
         ],
-        "icon": "3812.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3812.png"
     },
     {
-        "name": "Sheen",
-        "categories": [
-            "Mana",
-            "CooldownReduction"
-        ],
-        "icon": "3057.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -1373,9 +2373,87 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Jax",
+            "Ezreal",
+            "Urgot",
+            "Volibear",
+            "Poppy",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Kha'Zix",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Camille",
+            "Vi",
+            "Shen",
+            "Jayce",
+            "Rengar",
+            "Blitzcrank",
+            "Trundle"
+        ],
+        "name": "Sheen",
+        "categories": [
+            "Mana",
+            "CooldownReduction"
+        ],
+        "icon": "3057.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Jax",
+            "Garen",
+            "Kindred",
+            "Kalista",
+            "Yasuo",
+            "Kha'Zix",
+            "Jinx",
+            "Pantheon",
+            "Gangplank",
+            "Braum",
+            "Caitlyn",
+            "Xin Zhao",
+            "Shyvana",
+            "Vayne",
+            "Varus",
+            "Vi",
+            "Olaf",
+            "Graves",
+            "Tristana",
+            "Warwick",
+            "Zed"
+        ],
         "name": "Frozen Mallet",
         "categories": [
             "Damage",
@@ -1383,58 +2461,44 @@
             "OnHit",
             "Slow"
         ],
-        "icon": "3022.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3022.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
-            "Support",
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Ezreal",
+            "Garen",
+            "Sivir",
+            "Talon",
+            "Lee Sin",
+            "Rek'Sai",
+            "Riven",
+            "Nocturne",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Fiora"
+        ],
         "name": "Caulfield's Warhammer",
         "categories": [
             "Damage",
             "CooldownReduction"
         ],
-        "icon": "3133.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3133.png"
     },
     {
-        "name": "Vampiric Scepter",
-        "categories": [
-            "Damage",
-            "LifeSteal"
-        ],
-        "icon": "1053.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -1442,9 +2506,74 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Kog'Maw",
+            "Kalista",
+            "Miss Fortune",
+            "Tryndamere",
+            "Jinx",
+            "Master Yi",
+            "Twitch",
+            "Caitlyn",
+            "Riven",
+            "Vayne",
+            "Varus",
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Zed"
+        ],
+        "name": "Vampiric Scepter",
+        "categories": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "icon": "1053.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Volibear",
+            "Poppy",
+            "Irelia",
+            "Nasus",
+            "Dr. Mundo",
+            "Illaoi",
+            "Skarner",
+            "Lee Sin",
+            "Rek'Sai",
+            "Camille",
+            "Nocturne",
+            "Wukong",
+            "Darius",
+            "Zac",
+            "Gnar",
+            "Trundle"
+        ],
         "name": "Dead Man's Plate",
         "categories": [
             "Health",
@@ -1453,24 +2582,19 @@
             "NonbootsMovement",
             "Bilgewater"
         ],
-        "icon": "3742.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3742.png"
     },
     {
+        "classes": [
+            "Fighter",
+            "Support"
+        ],
+        "roles": [
+            "Sup"
+        ],
+        "champions": [
+            "Taric"
+        ],
         "name": "Sweeping Lens (Trinket)",
         "categories": [
             "Active",
@@ -1478,31 +2602,9 @@
             "Trinket",
             "Vision"
         ],
-        "icon": "3341.png",
-        "roles": [
-            "Sup"
-        ],
-        "classes": [
-            "Fighter",
-            "Support"
-        ]
+        "icon": "3341.png"
     },
     {
-        "name": "Spirit Visage",
-        "categories": [
-            "CooldownReduction",
-            "Health",
-            "HealthRegen",
-            "SpellBlock"
-        ],
-        "icon": "3065.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -1510,9 +2612,72 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Urgot",
+            "Volibear",
+            "Tahm Kench",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Vladimir",
+            "Dr. Mundo",
+            "Illaoi",
+            "Singed",
+            "Tryndamere",
+            "Nunu",
+            "Renekton",
+            "Sion",
+            "Yorick",
+            "Gangplank",
+            "Galio",
+            "Maokai",
+            "Rek'Sai",
+            "Braum",
+            "Camille",
+            "Taric",
+            "Shyvana",
+            "Darius",
+            "Olaf",
+            "Shen",
+            "Zac",
+            "Aatrox",
+            "Warwick",
+            "Gnar",
+            "Trundle"
+        ],
+        "name": "Spirit Visage",
+        "categories": [
+            "CooldownReduction",
+            "Health",
+            "HealthRegen",
+            "SpellBlock"
+        ],
+        "icon": "3065.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Assassin",
+            "Fighter"
+        ],
+        "roles": [
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Aatrox",
+            "Rengar"
+        ],
         "name": "Ravenous Hydra",
         "categories": [
             "Active",
@@ -1521,18 +2686,19 @@
             "LifeSteal",
             "OnHit"
         ],
-        "icon": "3074.png",
-        "roles": [
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Tank",
-            "Assassin",
-            "Fighter"
-        ]
+        "icon": "3074.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Mage"
+        ],
+        "roles": [
+            "Top"
+        ],
+        "champions": [
+            "Maokai"
+        ],
         "name": "Adaptive Helm",
         "categories": [
             "Health",
@@ -1540,68 +2706,62 @@
             "HealthRegen",
             "CooldownReduction"
         ],
-        "icon": "3194.png",
-        "roles": [
-            "Top"
-        ],
-        "classes": [
-            "Tank",
-            "Mage"
-        ]
+        "icon": "3194.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank"
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Thresh",
+            "Alistar",
+            "Amumu",
+            "Taric",
+            "Ivern",
+            "Bard"
+        ],
         "name": "Locket of the Iron Solari",
         "categories": [
             "SpellBlock",
             "Armor",
             "Active"
         ],
-        "icon": "3190.png",
-        "roles": [
-            "Sup",
-            "Jg"
-        ],
+        "icon": "3190.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
-            "Support",
-            "Tank"
-        ]
-    },
-    {
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Sivir",
+            "Quinn",
+            "Riven"
+        ],
         "name": "Pickaxe",
         "categories": [
             "Damage"
         ],
-        "icon": "1037.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "1037.png"
     },
     {
-        "name": "Boots of Swiftness",
-        "categories": [
-            "Boots"
-        ],
-        "icon": "3009.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -1609,9 +2769,46 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Dr. Mundo",
+            "Taric",
+            "Jhin",
+            "Aurelion Sol"
+        ],
+        "name": "Boots of Swiftness",
+        "categories": [
+            "Boots"
+        ],
+        "icon": "3009.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Alistar",
+            "Sion"
+        ],
         "name": "Zz'Rot Portal",
         "categories": [
             "SpellBlock",
@@ -1620,41 +2817,95 @@
             "Active",
             "NonbootsMovement"
         ],
-        "icon": "3512.png",
-        "roles": [
-            "Sup",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3512.png"
     },
     {
-        "name": "Amplifying Tome",
-        "categories": [
-            "SpellDamage"
-        ],
-        "icon": "1052.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Mid"
-        ],
         "classes": [
             "Mage",
             "Fighter",
             "Support",
             "Marksman",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Teemo",
+            "Katarina",
+            "Orianna",
+            "Heimerdinger",
+            "Kennen",
+            "Mordekaiser",
+            "Rumble"
+        ],
+        "name": "Amplifying Tome",
+        "categories": [
+            "SpellDamage"
+        ],
+        "icon": "1052.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Elise",
+            "Teemo",
+            "Diana",
+            "Xerath",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Karma",
+            "Nami",
+            "Zyra",
+            "Nunu",
+            "Kayle",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Fizz",
+            "Lissandra",
+            "Viktor",
+            "LeBlanc",
+            "Gragas",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Veigar",
+            "Aurelion Sol",
+            "Blitzcrank",
+            "Sona",
+            "Morgana",
+            "Ryze",
+            "Nidalee"
+        ],
         "name": "Doran's Ring",
         "categories": [
             "Health",
@@ -1662,24 +2913,27 @@
             "ManaRegen",
             "SpellDamage"
         ],
-        "icon": "1056.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "1056.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
-            "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Vladimir",
+            "Ekko",
+            "Ivern"
+        ],
         "name": "Hextech Protobelt-01",
         "categories": [
             "Health",
@@ -1687,34 +2941,9 @@
             "Active",
             "CooldownReduction"
         ],
-        "icon": "3152.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3152.png"
     },
     {
-        "name": "Dagger",
-        "categories": [
-            "AttackSpeed"
-        ],
-        "icon": "1042.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -1722,9 +2951,73 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Kog'Maw",
+            "Quinn",
+            "Kalista",
+            "Miss Fortune",
+            "Yasuo",
+            "Tryndamere",
+            "Jinx",
+            "Master Yi",
+            "Kayle",
+            "Twitch",
+            "Shaco",
+            "Caitlyn",
+            "Vayne",
+            "Varus",
+            "Graves",
+            "Tristana",
+            "Lucian"
+        ],
+        "name": "Dagger",
+        "categories": [
+            "AttackSpeed"
+        ],
+        "icon": "1042.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Kalista",
+            "Miss Fortune",
+            "Yasuo",
+            "Tryndamere",
+            "Master Yi",
+            "Ashe",
+            "Shaco",
+            "Caitlyn",
+            "Nocturne",
+            "Vayne",
+            "Varus",
+            "Graves",
+            "Tristana",
+            "Lucian"
+        ],
         "name": "Statikk Shiv",
         "categories": [
             "AttackSpeed",
@@ -1732,14 +3025,9 @@
             "NonbootsMovement",
             "OnHit"
         ],
-        "icon": "3087.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3087.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1747,33 +3035,69 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Rammus",
+            "Urgot",
+            "Alistar",
+            "Poppy",
+            "Udyr",
+            "Kalista",
+            "Rakan",
+            "Dr. Mundo",
+            "Jinx",
+            "Ashe",
+            "Sion",
+            "Jarvan IV",
+            "Galio",
+            "Leona",
+            "Caitlyn",
+            "Jhin",
+            "Vayne",
+            "Varus",
+            "Graves",
+            "Malzahar",
+            "Aurelion Sol",
+            "Blitzcrank",
+            "Bard"
+        ],
         "name": "Banshee's Veil",
         "categories": [
             "SpellBlock",
             "SpellDamage",
             "CooldownReduction"
         ],
-        "icon": "3102.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3102.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
-            "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Alistar",
+            "Rakan",
+            "Taric",
+            "Ivern",
+            "Bard"
+        ],
         "name": "Knight's Vow",
         "categories": [
             "Health",
@@ -1782,22 +3106,35 @@
             "CooldownReduction",
             "NonbootsMovement"
         ],
-        "icon": "3109.png",
-        "roles": [
-            "Sup",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
+        "icon": "3109.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
+            "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top"
+        ],
+        "champions": [
+            "Azir",
+            "Annie",
+            "Vladimir",
+            "Rakan",
+            "LeBlanc",
+            "Ahri",
+            "Ekko",
+            "Anivia",
+            "Akali",
+            "Malzahar"
+        ],
         "name": "Zhonya's Hourglass",
         "categories": [
             "Armor",
@@ -1805,13 +3142,9 @@
             "Active",
             "CooldownReduction"
         ],
-        "icon": "3157.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top"
-        ],
+        "icon": "3157.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1819,22 +3152,76 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Draven",
+            "Hecarim",
+            "Jax",
+            "Ezreal",
+            "Urgot",
+            "Garen",
+            "Kog'Maw",
+            "Volibear",
+            "Udyr",
+            "Kalista",
+            "Miss Fortune",
+            "Irelia",
+            "Nasus",
+            "Talon",
+            "Tryndamere",
+            "Kha'Zix",
+            "Jinx",
+            "Master Yi",
+            "Renekton",
+            "Twitch",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Lee Sin",
+            "Rek'Sai",
+            "Camille",
+            "Caitlyn",
+            "Riven",
+            "Nocturne",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Vayne",
+            "Varus",
+            "Vi",
+            "Darius",
+            "Olaf",
+            "Shen",
+            "Jayce",
+            "Graves",
+            "Tristana",
+            "Warwick",
+            "Rengar",
+            "Lucian",
+            "Gnar",
+            "Zed",
+            "Fiora",
+            "Trundle"
+        ],
         "name": "Long Sword",
         "categories": [
             "Damage",
             "Lane"
         ],
-        "icon": "1036.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "1036.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1842,31 +3229,128 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Jax",
+            "Zilean",
+            "Swain",
+            "Ezreal",
+            "Urgot",
+            "Garen",
+            "Twisted Fate",
+            "Thresh",
+            "Volibear",
+            "Elise",
+            "Tahm Kench",
+            "Udyr",
+            "Teemo",
+            "Diana",
+            "Irelia",
+            "Xerath",
+            "Nasus",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Karma",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Kha'Zix",
+            "Nunu",
+            "Katarina",
+            "Renekton",
+            "Lux",
+            "Fizz",
+            "Lissandra",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Galio",
+            "Maokai",
+            "Viktor",
+            "Lee Sin",
+            "Rek'Sai",
+            "Braum",
+            "Gragas",
+            "Leona",
+            "Camille",
+            "Soraka",
+            "Janna",
+            "Nocturne",
+            "Syndra",
+            "Mordekaiser",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Taliyah",
+            "Vi",
+            "Darius",
+            "Olaf",
+            "Vel'Koz",
+            "Brand",
+            "Shen",
+            "Lulu",
+            "Jayce",
+            "Sejuani",
+            "Zac",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Veigar",
+            "Warwick",
+            "Aurelion Sol",
+            "Rengar",
+            "Gnar",
+            "Rumble",
+            "Sona",
+            "Morgana",
+            "Fiora",
+            "Trundle",
+            "Nidalee"
+        ],
         "name": "Ruby Crystal",
         "categories": [
             "Health"
         ],
-        "icon": "1028.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "1028.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
-            "Support",
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Ezreal",
+            "Sivir",
+            "Xayah",
+            "Corki",
+            "Jhin",
+            "Jayce",
+            "Lucian"
+        ],
         "name": "Essence Reaver",
         "categories": [
             "Damage",
@@ -1874,51 +3358,98 @@
             "ManaRegen",
             "CooldownReduction"
         ],
-        "icon": "3508.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3508.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter"
+        ],
+        "roles": [
+            "Mid"
+        ],
+        "champions": [
+            "Ryze"
+        ],
         "name": "Tear of the Goddess",
         "categories": [
             "Mana",
             "ManaRegen"
         ],
-        "icon": "3070.png",
-        "roles": [
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter"
-        ]
+        "icon": "3070.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Swain",
+            "Twisted Fate",
+            "Azir",
+            "Elise",
+            "Teemo",
+            "Diana",
+            "Xerath",
+            "Annie",
+            "Vladimir",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Katarina",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Fizz",
+            "Lissandra",
+            "Viktor",
+            "LeBlanc",
+            "Ahri",
+            "Gragas",
+            "Kennen",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Mordekaiser",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Akali",
+            "Fiddlesticks",
+            "Veigar",
+            "Malzahar",
+            "Ivern",
+            "Aurelion Sol",
+            "Rumble",
+            "Sona",
+            "Morgana"
+        ],
         "name": "Rylai's Crystal Scepter",
         "categories": [
             "Health",
             "SpellDamage",
             "Slow"
         ],
-        "icon": "3116.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3116.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1926,21 +3457,39 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Draven",
+            "Sivir",
+            "Quinn",
+            "Kalista",
+            "Miss Fortune",
+            "Tryndamere",
+            "Jinx",
+            "Master Yi",
+            "Twitch",
+            "Caitlyn",
+            "Vayne",
+            "Varus",
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Zed"
+        ],
         "name": "B. F. Sword",
         "categories": [
             "Damage"
         ],
-        "icon": "1038.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "1038.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1948,21 +3497,63 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Elise",
+            "Teemo",
+            "Diana",
+            "Xerath",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Karma",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Nunu",
+            "Lux",
+            "Fizz",
+            "Lissandra",
+            "Galio",
+            "Viktor",
+            "Gragas",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Veigar",
+            "Aurelion Sol",
+            "Rumble",
+            "Sona",
+            "Morgana",
+            "Ryze",
+            "Nidalee"
+        ],
         "name": "Blasting Wand",
         "categories": [
             "SpellDamage"
         ],
-        "icon": "1026.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "1026.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -1970,9 +3561,54 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Elise",
+            "Diana",
+            "Xerath",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Karma",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Nunu",
+            "Lux",
+            "Fizz",
+            "Lissandra",
+            "Galio",
+            "Viktor",
+            "Gragas",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Veigar",
+            "Aurelion Sol",
+            "Sona",
+            "Morgana",
+            "Ryze",
+            "Nidalee"
+        ],
         "name": "Catalyst of Aeons",
         "categories": [
             "Health",
@@ -1980,24 +3616,25 @@
             "Mana",
             "ManaRegen"
         ],
-        "icon": "3010.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3010.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
-            "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Sup",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Alistar"
+        ],
         "name": "Banner of Command",
         "categories": [
             "SpellBlock",
@@ -2007,68 +3644,69 @@
             "CooldownReduction",
             "NonbootsMovement"
         ],
-        "icon": "3060.png",
-        "roles": [
-            "Sup",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
+        "icon": "3060.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Top",
+            "Jg",
+            "Mid"
+        ],
+        "champions": [
+            "Vladimir",
+            "Kayle",
+            "Orianna",
+            "Heimerdinger",
+            "LeBlanc",
+            "Nidalee"
+        ],
         "name": "Fiendish Codex",
         "categories": [
             "CooldownReduction",
             "SpellDamage"
         ],
-        "icon": "3108.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Jg",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3108.png"
     },
     {
-        "name": "Aether Wisp",
-        "categories": [
-            "NonbootsMovement",
-            "SpellDamage"
-        ],
-        "icon": "3113.png",
-        "roles": [
-            "Bot",
-            "Top",
-            "Mid"
-        ],
         "classes": [
             "Mage",
             "Fighter",
             "Marksman",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Katarina",
+            "LeBlanc"
+        ],
+        "name": "Aether Wisp",
+        "categories": [
+            "NonbootsMovement",
+            "SpellDamage"
+        ],
+        "icon": "3113.png"
     },
     {
-        "name": "The Bloodthirster",
-        "categories": [
-            "Damage",
-            "LifeSteal"
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
         ],
-        "icon": "3072.png",
         "roles": [
             "Bot",
             "Mid",
@@ -2076,6 +3714,43 @@
             "Top",
             "Jg"
         ],
+        "champions": [
+            "Draven",
+            "Jax",
+            "Kalista",
+            "Miss Fortune",
+            "Yasuo",
+            "Talon",
+            "Tryndamere",
+            "Jinx",
+            "Master Yi",
+            "Xayah",
+            "Ashe",
+            "Twitch",
+            "Pantheon",
+            "Corki",
+            "Lee Sin",
+            "Caitlyn",
+            "Riven",
+            "Jhin",
+            "Nocturne",
+            "Vayne",
+            "Varus",
+            "Jayce",
+            "Graves",
+            "Tristana",
+            "Lucian",
+            "Zed",
+            "Fiora"
+        ],
+        "name": "The Bloodthirster",
+        "categories": [
+            "Damage",
+            "LifeSteal"
+        ],
+        "icon": "3072.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -2083,32 +3758,73 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Swain",
+            "Twisted Fate",
+            "Elise",
+            "Teemo",
+            "Diana",
+            "Xerath",
+            "Vladimir",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Karma",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Lux",
+            "Fizz",
+            "Lissandra",
+            "Viktor",
+            "Ahri",
+            "Gragas",
+            "Amumu",
+            "Janna",
+            "Syndra",
+            "Anivia",
+            "Taliyah",
+            "Brand",
+            "Lulu",
+            "Malzahar",
+            "Aurelion Sol",
+            "Rumble",
+            "Sona",
+            "Morgana"
+        ],
         "name": "Liandry's Torment",
         "categories": [
             "Health",
             "MagicPenetration",
             "SpellDamage"
         ],
-        "icon": "3151.png",
-        "roles": [
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3151.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
             "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
-    },
-    {
+            "Tank"
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Thresh",
+            "Rakan",
+            "Ivern"
+        ],
         "name": "Zeke's Convergence",
         "categories": [
             "SpellBlock",
@@ -2118,53 +3834,44 @@
             "Active",
             "CooldownReduction"
         ],
-        "icon": "3050.png",
-        "roles": [
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Tank"
-        ]
+        "icon": "3050.png"
     },
     {
-        "name": "Mercury's Treads",
-        "categories": [
-            "Boots",
-            "SpellBlock",
-            "Tenacity"
-        ],
-        "icon": "3111.png",
-        "roles": [
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
             "Support",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Thornmail",
-        "categories": [
-            "Armor"
         ],
-        "icon": "3075.png",
         "roles": [
-            "Bot",
             "Mid",
             "Sup",
             "Top",
             "Jg"
         ],
+        "champions": [
+            "Yasuo",
+            "Rakan",
+            "Illaoi",
+            "Galio",
+            "Rek'Sai",
+            "Braum",
+            "Amumu",
+            "Wukong",
+            "Darius",
+            "Gnar",
+            "Fiora"
+        ],
+        "name": "Mercury's Treads",
+        "categories": [
+            "Boots",
+            "SpellBlock",
+            "Tenacity"
+        ],
+        "icon": "3111.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -2172,9 +3879,47 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Rammus",
+            "Dr. Mundo",
+            "Sion",
+            "Amumu"
+        ],
+        "name": "Thornmail",
+        "categories": [
+            "Armor"
+        ],
+        "icon": "3075.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kindred",
+            "Jinx",
+            "Xayah",
+            "Jhin"
+        ],
         "name": "Rapid Firecannon",
         "categories": [
             "AttackSpeed",
@@ -2182,13 +3927,9 @@
             "NonbootsMovement",
             "OnHit"
         ],
-        "icon": "3094.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3094.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -2196,9 +3937,22 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kindred",
+            "Talon",
+            "Riven",
+            "Jhin",
+            "Xin Zhao",
+            "Aatrox",
+            "Fiora"
+        ],
         "name": "Maw of Malmortius",
         "categories": [
             "SpellBlock",
@@ -2207,13 +3961,9 @@
             "CooldownReduction",
             "SpellVamp"
         ],
-        "icon": "3156.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3156.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -2221,9 +3971,55 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Elise",
+            "Diana",
+            "Xerath",
+            "Cassiopeia",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Nautilus",
+            "Karma",
+            "Singed",
+            "Nami",
+            "Zyra",
+            "Nunu",
+            "Lux",
+            "Heimerdinger",
+            "Fizz",
+            "Lissandra",
+            "Galio",
+            "Viktor",
+            "Gragas",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Taliyah",
+            "Vel'Koz",
+            "Brand",
+            "Lulu",
+            "Kassadin",
+            "Fiddlesticks",
+            "Cho'Gath",
+            "Veigar",
+            "Aurelion Sol",
+            "Sona",
+            "Morgana",
+            "Ryze",
+            "Nidalee"
+        ],
         "name": "Rod of Ages",
         "categories": [
             "Health",
@@ -2232,24 +4028,20 @@
             "ManaRegen",
             "SpellDamage"
         ],
-        "icon": "3027.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "3027.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Rakan"
+        ],
         "name": "Redemption",
         "categories": [
             "Health",
@@ -2257,17 +4049,39 @@
             "ManaRegen",
             "CooldownReduction"
         ],
-        "icon": "3107.png",
-        "roles": [
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "3107.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Annie",
+            "Orianna",
+            "Heimerdinger",
+            "Lissandra",
+            "LeBlanc",
+            "Ahri",
+            "Ekko",
+            "Vel'Koz",
+            "Kassadin",
+            "Fiddlesticks",
+            "Veigar",
+            "Malzahar"
+        ],
         "name": "Morellonomicon",
         "categories": [
             "SpellDamage",
@@ -2275,14 +4089,9 @@
             "ManaRegen",
             "CooldownReduction"
         ],
-        "icon": "3165.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3165.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -2290,101 +4099,104 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kog'Maw",
+            "Twitch"
+        ],
         "name": "Recurve Bow",
         "categories": [
             "AttackSpeed",
             "OnHit"
         ],
-        "icon": "1043.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "icon": "1043.png"
     },
     {
+        "classes": [
+            "Tank",
+            "Fighter"
+        ],
+        "roles": [
+            "Jg"
+        ],
+        "champions": [
+            "Warwick"
+        ],
         "name": "Tiamat",
         "categories": [
             "HealthRegen",
             "Damage",
             "Active"
         ],
-        "icon": "3077.png",
-        "roles": [
-            "Jg"
-        ],
-        "classes": [
-            "Tank",
-            "Fighter"
-        ]
+        "icon": "3077.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Garen",
+            "Tahm Kench",
+            "Jarvan IV",
+            "Leona",
+            "Malphite",
+            "Vi",
+            "Cho'Gath",
+            "Ivern",
+            "Blitzcrank"
+        ],
         "name": "Aegis of the Legion",
         "categories": [
             "SpellBlock",
             "Armor"
         ],
-        "icon": "3105.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3105.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
-            "Support",
             "Marksman",
-            "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Needlessly Large Rod",
-        "categories": [
-            "SpellDamage"
         ],
-        "icon": "1058.png",
         "roles": [
             "Bot",
             "Top",
             "Mid"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Marksman",
-            "Assassin"
-        ]
+        "champions": [
+            "Katarina",
+            "Kennen",
+            "Mordekaiser",
+            "Ryze"
+        ],
+        "name": "Needlessly Large Rod",
+        "categories": [
+            "SpellDamage"
+        ],
+        "icon": "1058.png"
     },
     {
-        "name": "Sorcerer's Shoes",
-        "categories": [
-            "Boots",
-            "MagicPenetration"
-        ],
-        "icon": "3020.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Sup",
-            "Top",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
@@ -2392,9 +4204,83 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Sup",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Zilean",
+            "Swain",
+            "Twisted Fate",
+            "Azir",
+            "Elise",
+            "Teemo",
+            "Diana",
+            "Xerath",
+            "Annie",
+            "Ziggs",
+            "Karthus",
+            "Evelynn",
+            "Karma",
+            "Nami",
+            "Zyra",
+            "Kayle",
+            "Katarina",
+            "Orianna",
+            "Lux",
+            "Heimerdinger",
+            "Fizz",
+            "Lissandra",
+            "Corki",
+            "Viktor",
+            "LeBlanc",
+            "Ahri",
+            "Gragas",
+            "Ekko",
+            "Kennen",
+            "Soraka",
+            "Janna",
+            "Syndra",
+            "Mordekaiser",
+            "Anivia",
+            "Taliyah",
+            "Brand",
+            "Lulu",
+            "Akali",
+            "Kassadin",
+            "Fiddlesticks",
+            "Veigar",
+            "Rumble",
+            "Sona",
+            "Morgana",
+            "Ryze",
+            "Nidalee"
+        ],
+        "name": "Sorcerer's Shoes",
+        "categories": [
+            "Boots",
+            "MagicPenetration"
+        ],
+        "icon": "3020.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Rakan",
+            "Soraka",
+            "Ivern"
+        ],
         "name": "Ardent Censer",
         "categories": [
             "CooldownReduction",
@@ -2402,34 +4288,41 @@
             "NonbootsMovement",
             "SpellDamage"
         ],
-        "icon": "3504.png",
-        "roles": [
-            "Sup",
-            "Jg"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "3504.png"
     },
     {
-        "name": "Bami's Cinder",
-        "categories": [
-            "Health"
-        ],
-        "icon": "3751.png",
-        "roles": [
-            "Sup",
-            "Jg"
-        ],
         "classes": [
             "Mage",
             "Fighter",
             "Support",
             "Tank"
-        ]
+        ],
+        "roles": [
+            "Sup",
+            "Jg"
+        ],
+        "champions": [
+            "Thresh",
+            "Leona",
+            "Sejuani"
+        ],
+        "name": "Bami's Cinder",
+        "categories": [
+            "Health"
+        ],
+        "icon": "3751.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Support"
+        ],
+        "roles": [
+            "Mid"
+        ],
+        "champions": [
+            "Anivia"
+        ],
         "name": "Hextech GLP-800",
         "categories": [
             "Health",
@@ -2439,33 +4332,49 @@
             "ManaRegen",
             "Active"
         ],
-        "icon": "3030.png",
-        "roles": [
-            "Mid"
-        ],
+        "icon": "3030.png"
+    },
+    {
         "classes": [
             "Mage",
             "Support"
-        ]
-    },
-    {
+        ],
+        "roles": [
+            "Top",
+            "Mid"
+        ],
+        "champions": [
+            "Orianna",
+            "Heimerdinger"
+        ],
         "name": "Lost Chapter",
         "categories": [
             "SpellDamage",
             "Mana",
             "ManaRegen"
         ],
-        "icon": "3802.png",
-        "roles": [
-            "Top",
-            "Mid"
-        ],
-        "classes": [
-            "Mage",
-            "Support"
-        ]
+        "icon": "3802.png"
     },
     {
+        "classes": [
+            "Mage",
+            "Fighter",
+            "Support",
+            "Marksman",
+            "Tank",
+            "Assassin"
+        ],
+        "roles": [
+            "Bot",
+            "Mid",
+            "Top",
+            "Jg"
+        ],
+        "champions": [
+            "Kindred",
+            "Kog'Maw",
+            "Sivir"
+        ],
         "name": "Runaan's Hurricane",
         "categories": [
             "CriticalStrike",
@@ -2473,13 +4382,9 @@
             "OnHit",
             "NonbootsMovement"
         ],
-        "icon": "3085.png",
-        "roles": [
-            "Bot",
-            "Mid",
-            "Top",
-            "Jg"
-        ],
+        "icon": "3085.png"
+    },
+    {
         "classes": [
             "Mage",
             "Fighter",
@@ -2487,17 +4392,7 @@
             "Marksman",
             "Tank",
             "Assassin"
-        ]
-    },
-    {
-        "name": "Phage",
-        "categories": [
-            "Damage",
-            "Health",
-            "NonbootsMovement",
-            "OnHit"
         ],
-        "icon": "3044.png",
         "roles": [
             "Bot",
             "Mid",
@@ -2505,13 +4400,50 @@
             "Top",
             "Jg"
         ],
-        "classes": [
-            "Mage",
-            "Fighter",
-            "Support",
-            "Marksman",
-            "Tank",
-            "Assassin"
-        ]
+        "champions": [
+            "Kled",
+            "Hecarim",
+            "Jax",
+            "Ezreal",
+            "Urgot",
+            "Garen",
+            "Volibear",
+            "Quinn",
+            "Udyr",
+            "Irelia",
+            "Nasus",
+            "Kha'Zix",
+            "Renekton",
+            "Pantheon",
+            "Skarner",
+            "Corki",
+            "Jarvan IV",
+            "Yorick",
+            "Gangplank",
+            "Lee Sin",
+            "Rek'Sai",
+            "Camille",
+            "Nocturne",
+            "Xin Zhao",
+            "Wukong",
+            "Shyvana",
+            "Vi",
+            "Darius",
+            "Olaf",
+            "Shen",
+            "Jayce",
+            "Rengar",
+            "Gnar",
+            "Fiora",
+            "Trundle"
+        ],
+        "name": "Phage",
+        "categories": [
+            "Damage",
+            "Health",
+            "NonbootsMovement",
+            "OnHit"
+        ],
+        "icon": "3044.png"
     }
 ]
