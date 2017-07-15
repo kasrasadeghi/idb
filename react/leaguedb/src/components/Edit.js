@@ -1,4 +1,4 @@
-import React, {Component, ReactDOM} from 'react';
+import React, {Component} from 'react';
 import {
   Container,
   Col,
@@ -49,6 +49,14 @@ class Edit extends Component {
 
   submitEdit() {
     console.log(this.state);
+    var data = new FormData();
+    data.append("json", JSON.stringify(this.state));
+    // var url = 'https://leaguedb.com/edit';
+    var url = 'http://localhost:5000/edit';
+    fetch(url, {
+      method: 'POST',
+      body: data
+    })
   }
 
   properCaps(str) {
@@ -89,8 +97,8 @@ class Edit extends Component {
         break;
       case "role":
         result.push(this.textEntry("champions"));
-        result.push(this.textentry("classes"));
-        result.push(this.textentry("items"));
+        result.push(this.textEntry("classes"));
+        result.push(this.textEntry("items"));
         break;
     }
     return result;

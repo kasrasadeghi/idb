@@ -1,4 +1,4 @@
-from flask import render_template, send_from_directory, jsonify, Response, url_for
+from flask import render_template, send_from_directory, jsonify, Response, url_for, request
 from models import app, Champion, Item, Class, Role
 import json
 import os
@@ -87,6 +87,12 @@ def route_react(filename: str) -> Response:
 def image(image_name) -> Response:
     return send_from_directory("static/images", image_name)
 
+
+@app.route("/edit", methods=["POST"])
+def edit_data():
+    form = request.form['json']
+    print(json.loads(form))
+    return jsonify({'res': 'recieved'})
 
 #
 # particle routing
@@ -334,6 +340,7 @@ def api_role(name: str) -> Response:
 
 # endregion
 #
+
 
 
 if __name__ == "__main__":
