@@ -1,9 +1,38 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
-from models import db, Champion, Item, Class, Role
-import requests
+from main import app, Champion, Item, Class, Role
+from models import db
+import json
 
 class TestModels (TestCase):
+
+    def setUp(self):
+        self.app = app.test_client()
+        self.app.testing = True
+
+    ############################
+    # Basic Site Functionality #
+    ############################
+
+    def test_site_home(self):
+        r = self.app.get('/')
+        self.assertEqual(r.status_code, 200)
+
+    def test_site_champions(self):
+        r = self.app.get('/champions')
+        self.assertEqual(r.status_code, 200)
+
+    def test_site_items(self):
+        r = self.app.get('/items')
+        self.assertEqual(r.status_code, 200)
+
+    def test_site_classes(self):
+        r = self.app.get('/classes')
+        self.assertEqual(r.status_code, 200)
+
+    def test_site_roles(self):
+        r = self.app.get('/roles')
+        self.assertEqual(r.status_code, 200)
     
     ############
     # Champion #
@@ -35,17 +64,30 @@ class TestModels (TestCase):
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.lore, lore)
 
-    def test_champion_names(self):
-        r = requests.get('http://leaguedb.me/api/champion_names')
-        data = r.json()
+    def test_champion_api_names(self):
+        r = self.app.get('/api/champion_names')
+        str_data = r.data.decode('utf-8')
+        data = json.loads(str_data)
+        self.assertEqual(r.status_code, 200)
         self.assertIn('Thresh', data)
         self.assertIn('Draven', data)
         self.assertIn('Vayne', data)
         self.assertNotIn('vayne', data)
 
-    def test_champion_champions(self):
-        r = requests.get('http://leaguedb.me/api/champions')
-        data = r.json()
+    def test_champion_api_exists(self):
+        r = self.app.get('/api/champions')
+        str_data = r.data.decode('utf-8')
+        data = json.loads(str_data)
+        self.assertEqual(r.status_code, 200)
+        self.assertNotEqual(len(data), 0)
+
+    def test_champion_api_one(self):
+        r = self.app.get('/api/champion/Draven')
+        str_data = r.data.decode('utf-8')
+        data = json.loads(str_data)
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(data['name'], 'Draven')
+        self.assertEqual(data['classes'][0], 'Marksman')
         self.assertNotEqual(len(data), 0)
 
 
@@ -77,6 +119,20 @@ class TestModels (TestCase):
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.categories, categories)
 
+    def test_item_api_exists(self):
+        r = self.app.get('/api/items')
+        data = json.loads(r.data.decode('utf-8'))
+        self.assertEqual(r.status_code, 200)
+
+        self.assertNotEqual(len(data), 0)
+
+    def test_item_api_one(self):
+        r = self.app.get('/api/item/Statikk Shiv')
+        data = json.loads(r.data.decode('utf-8'))
+        self.assertEqual(r.status_code, 200)
+
+        self.assertEqual(data['name'], 'Statikk Shiv')
+
     #########
     # Class #
     #########
@@ -105,6 +161,21 @@ class TestModels (TestCase):
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.description, desc)
 
+    def test_class_api_exists(self):
+        r = self.app.get('/api/classes')
+        data = json.loads(r.data.decode('utf-8'))
+        self.assertEqual(r.status_code, 200)
+
+        self.assertNotEqual(len(data), 0)
+
+    def test_class_api_one(self):
+        r = self.app.get('/api/class/Marksman')
+        data = json.loads(r.data.decode('utf-8'))
+        self.assertEqual(r.status_code, 200)
+
+        self.assertEqual(data['name'], 'Marksman')
+        self.assertNotEqual(len(data['description']), 0)
+
     ########
     # Role #
     ########
@@ -132,6 +203,21 @@ class TestModels (TestCase):
         self.assertEqual(result.name, name)
         self.assertEqual(result.icon, icon)
         self.assertEqual(result.classes, classes)
+
+    def test_role_api_exists(self):
+        r = self.app.get('/api/roles')
+        data = json.loads(r.data.decode('utf-8'))
+        self.assertEqual(r.status_code, 200)
+
+        self.assertNotEqual(len(data), 0)
+
+    def test_role_api_one(self):
+        r = self.app.get('/api/role/Bot')
+        data = json.loads(r.data.decode('utf-8'))
+        self.assertEqual(r.status_code, 200)
+
+        self.assertEqual(data['name'], 'Bot')
+        self.assertNotEqual(len(data['classes']), 0)
 
 if __name__ == '__main__':
     main()

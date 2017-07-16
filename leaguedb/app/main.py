@@ -124,8 +124,8 @@ def role_route(name: str) -> Response:
 
 
 def json_response(filename: str) -> Response:
-    f = open("static/json/" + filename, "r")
-    contents = json.load(f)
+    with open("static/json/" + filename, "r") as f:
+        contents = json.load(f)
     response = jsonify(contents)
     return response
 
