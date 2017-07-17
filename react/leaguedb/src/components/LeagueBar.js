@@ -62,7 +62,6 @@ class LeagueBar extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <h2 style={{color: "white"}}>{JSON.stringify(this.props, null, 2)}</h2>
       </div>
     )
   }

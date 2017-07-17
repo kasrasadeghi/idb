@@ -48,7 +48,6 @@ class App extends Component {
     return (
       <div>
         <LeagueBar route={(x) => this.route(x)}/>
-        <h1 style={{color: "red"}}>{this.state.current}</h1>
         {this.currentMain()}
       </div>
     );

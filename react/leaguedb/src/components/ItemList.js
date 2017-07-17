@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
 import {
   Button,
-  Collapse,
   Container,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
 
   Card,
   CardBlock,
