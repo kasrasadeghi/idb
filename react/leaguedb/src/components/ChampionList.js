@@ -12,8 +12,8 @@ import {
 } from 'reactstrap';
 
 class ChampionList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       list: [],
@@ -96,12 +96,12 @@ class ChampionList extends Component {
 
     let topView = currentView.slice(0, 3);
     let top = topView.map(c => {
-      return <ChampionElement data={c}/>
+      return <ChampionElement data={c} route={this.props.route}/>
     });
 
     let botView = currentView.slice(3, 6);
     let bot = botView.map(c => {
-      return <ChampionElement data={c}/>
+      return <ChampionElement data={c} route={this.props.route}/>
     });
 
 
@@ -154,7 +154,8 @@ export class ChampionElement extends Component {
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
-        <a href={"/champions/" + data.name}>
+        <a href={"/champions/" + data.name}
+           onClick={this.props.route("champions", data.name)}>
           <CardImg alt={data.name + "'s icon"}
                    src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
         </a>
@@ -167,4 +168,5 @@ export class ChampionElement extends Component {
     )
   }
 }
+
 export default ChampionList;
