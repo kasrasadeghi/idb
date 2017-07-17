@@ -10,9 +10,6 @@ import {
   CardTitle,
   CardText
 } from 'reactstrap';
-import Rodal from 'rodal';
-
-import 'rodal/lib/rodal.css';
 
 class ChampionList extends Component {
   constructor() {
@@ -23,8 +20,7 @@ class ChampionList extends Component {
       view: [],
       currentFilter: 'None',
       forwards: true,
-      pageNumber: 0,
-      currentChampion: null
+      pageNumber: 0
     };
 
     fetch('http://leaguedb.me/api/champions', {
@@ -171,30 +167,4 @@ export class ChampionElement extends Component {
     )
   }
 }
-
-class ChampionView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {visible: false};
-  }
-
-  show() {
-    this.setState({
-      visible: !this.state.visible
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <button onClick={() => this.show()}>show</button>
-
-        <Rodal visible={this.state.visible} onClose={() => this.show()}>
-          <div>{JSON.stringify(this.state.visible)}</div>
-        </Rodal>
-      </div>
-    );
-  }
-}
-
 export default ChampionList;

@@ -9,8 +9,7 @@
     "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10",
-    "reactstrap": "^4.8.0",
-    "rodal": "^1.5.4"
+    "reactstrap": "^4.8.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -10,6 +10,7 @@ def run(command: str) -> None:
 def main():
     call("rm -rf output".split())
     react_scripts = [name for name in os.listdir(".") if os.path.isdir(os.path.join(".", name))]
+    # react_scripts = ["leaguedb"]
     call("mkdir output".split())
 
     print(react_scripts)
