@@ -19,7 +19,7 @@ def get_champion(name):
     contents = {}
     contents['classes'] = [x.name for x in row.classes]
     contents['icon']    = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" \
-                          + row.icon[:-4]
+                          + row.icon[:-4] + "_0.jpg"
     contents['items']   = [x.name for x in row.items]
     contents['lore']    = row.lore
     contents['name']    = row.name
