@@ -3,6 +3,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import json
+import os
 
 from password import secret_database_password
 """
@@ -211,7 +212,7 @@ def add_champions_data():
     db.session.commit()
     print("Added champions data.")
 
-def get_items_json():
+def make_items_json():
     jsoni = []
     res = Item.query.all()
     for i in res:
@@ -223,9 +224,10 @@ def get_items_json():
         item['name'] = i.name
         item['roles'] = [r.name for r in i.roles]
         jsoni.append(item)
-    return json.dumps(jsoni, indent=4, separators=(',',': '))
+    with open('static/json/api_items.json', 'w') as f:
+        f.write(json.dumps(jsoni, indent=4, separators=(',',': ')))
 
-def get_roles_json():
+def make_roles_json():
     jsonr = []
     res = Role.query.all()
     for r in res:
@@ -236,12 +238,25 @@ def get_roles_json():
         role['items'] = [i.name for i in r.items]
         role['name'] = r.name
         jsonr.append(role)
-    return json.dumps(jsonr, indent=4, separators=(',',': '))
+    with open('static/json/api_roles.json', 'w') as f:
+        f.write(json.dumps(jsonr, indent=4, separators=(',',': ')))
+
+def get_champion(name):
+    row = Champion.query.get(name)
+    contents = {}
+    contents['classes'] = [x.name for x in row.classes]
+    contents['icon']    = row.icon
+    contents['items']   = [x.name for x in row.items]
+    contents['lore']    = row.lore
+    contents['name']    = row.name
+    contents['roles']   = [x.name for x in row.roles]
+    return contents
 
 if __name__ == "__main__":
-    print("Populating database.")
-    create_tables()
-    add_roles_data()
-    add_classes_data()
-    add_items_data()
-    add_champions_data()
+    # print("Populating database.")
+    # create_tables()
+    # add_roles_data()
+    # add_classes_data()
+    # add_items_data()
+    # add_champions_data()
+    pass

@@ -1,5 +1,5 @@
-from flask import render_template, send_from_directory, jsonify, Response, url_for, request
-from models import app, Champion, Item, Class, Role
+from flask import render_template, send_from_directory, jsonify, Response, url_for, request, abort
+from models import app, Champion, Item, Class, Role, db
 import json
 import os
 
@@ -87,12 +87,67 @@ def route_react(filename: str) -> Response:
 def image(image_name) -> Response:
     return send_from_directory("static/images", image_name)
 
+# edit
+def add_one_champion(name):
+    # remove last character (should be ']')
+    with open('static/json/api_champions.json', 'r+') as f:
+        f.seek(0, os.SEEK_END)
+        pos = f.tell()
+        while pos > 0 and f.read(1) != ']':
+            pos -= 1
+            f.seek(pos, os.SEEK_SET)
+            # don't remove the print
+            print(f.read(1))
+        if pos > 0:
+            f.seek(pos+1, os.SEEK_SET)
+            f.truncate()
+    # add champion data
+    with open('static/json/api_champions.json', 'a') as f:
+        f.write(',') 
+        json.dump(get_champion(name), f)
+        f.write(']')
+
 
 @app.route("/edit", methods=["POST"])
 def edit_data():
     form = request.form['json']
-    print(json.loads(form))
-    return jsonify({'res': 'recieved'})
+    data = json.loads(form)
+    if data['key'] == 'lemmeaddsomethingtoyourwebsite':
+        if data['model'] == "champion":
+            champ = Champion(data['name'], data['icon'], data['lore'])
+            arr = [x.strip() for x in data['roles'].split(',')]
+            for s in arr:
+                t = Role.query.get(s)
+                champ.roles.append(t)
+            arr = [x.strip() for x in data['classes'].split(',')]
+            for s in arr:
+                t = Class.query.get(s)
+                champ.classes.append(t)
+            arr = [x.strip() for x in data['items'].split(',')]
+            for s in arr:
+                t = Item.query.get(s)
+                champ.items.append(t)
+            # update database
+            db.session.add(champ)
+            db.session.commit()
+            print(champ)
+            # update cached static/jsons
+            add_one_champion(data['name'])
+        elif data['model'] == "class":
+            pass
+        elif data['model'] == "item":
+            pass
+        elif data['model'] == "role":
+            pass
+        return jsonify({'result': 'Edit made'})
+    else:
+        # 499 = key is wrong
+        return bad_input(499)
+
+def bad_input(code):
+    response = jsonify({'message': 'bad input'})
+    response.status_code = code
+    return response
 
 #
 # particle routing
