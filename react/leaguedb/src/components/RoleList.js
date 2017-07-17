@@ -16,53 +16,6 @@ import {
   CardText
 } from 'reactstrap';
 
-class LeagueBar extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isOpen: false
-    }
-  }
-
-  toggle() {
-    this.setState({
-      isOpen: !(this.state.isOpen)
-    });
-  }
-
-  render() {
-    return (
-      <Navbar color="faded" light toggleable>
-        <NavbarToggler right onClick={() => this.toggle()}/>
-        <NavbarBrand href="/">LeagueDB</NavbarBrand>
-        <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/search">Search</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/champions">Champions</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/items">Items</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/classes">Classes</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/roles">Roles</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/about">About</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
-    )
-  }
-}
-
 class RoleList extends Component {
   constructor() {
     super();
@@ -95,21 +48,17 @@ class RoleList extends Component {
     let roles = this.state.list;
     let counter = 0;
     return (
-      <div>
-        <LeagueBar/>
-
-        <Container>
-          <RoleElement data={roles[counter++]}/>
-          <br/>
-          <RoleElement data={roles[counter++]}/>
-          <br/>
-          <RoleElement data={roles[counter++]}/>
-          <br/>
-          <RoleElement data={roles[counter++]}/>
-          <br/>
-          <RoleElement data={roles[counter]}/>
-        </Container>
-      </div>
+      <Container>
+        <RoleElement data={roles[counter++]}/>
+        <br/>
+        <RoleElement data={roles[counter++]}/>
+        <br/>
+        <RoleElement data={roles[counter++]}/>
+        <br/>
+        <RoleElement data={roles[counter++]}/>
+        <br/>
+        <RoleElement data={roles[counter]}/>
+      </Container>
     );
   }
 }
@@ -121,8 +70,8 @@ export class RoleElement extends Component {
     let text =
       // JSON.stringify(data, null, 2);
       (this.props.match === undefined)
-      ? data.items
-      : "Matches in:" + this.props.match.join(", ");
+        ? data.items
+        : "Matches in:" + this.props.match.join(", ");
 
     return (
       <Card classname="text-center">
