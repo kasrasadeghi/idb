@@ -18,7 +18,8 @@ def get_champion(name):
     row = Champion.query.get(name)
     contents = {}
     contents['classes'] = [x.name for x in row.classes]
-    contents['icon']    = row.icon
+    contents['icon']    = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" \
+                          + row.icon[:-4]
     contents['items']   = [x.name for x in row.items]
     contents['lore']    = row.lore
     contents['name']    = row.name
@@ -32,7 +33,7 @@ def get_item(name):
     contents['categories'] = row.categories[1:-1].split(",")
     contents['champions']  = [x.name for x in row.champions]
     contents['classes']    = [x.name for x in row.classes]
-    contents['icon']       = row.icon
+    contents['icon']       = "http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + row.icon
     contents['name']       = row.name
     contents['roles']      = [x.name for x in row.roles]
     return contents
@@ -43,7 +44,7 @@ def get_class(name):
     contents = {}
     contents['champions']   = [x.name for x in row.champions]
     contents['description'] = row.description
-    contents['icon']        = row.icon
+    contents['icon']        = "http://leaguedb.me/images/classes/" + row.icon
     contents['items']       = [x.name for x in row.items]
     contents['name']        = row.name
     return contents
@@ -54,7 +55,7 @@ def get_role(name):
     contents = {}
     contents['champions'] = [x.name for x in row.champions]
     contents['classes']   = row.classes.split(",")
-    contents['icon']      = row.icon
+    contents['icon']      = "http://leaguedb.me/images/roles/" + row.icon
     contents['items']     = [x.name for x in row.items]
     contents['name']      = row.name
     return contents
@@ -70,6 +71,7 @@ def home() -> Response:
     filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".js")][0]
     css_filename = [file for file in os.listdir("react") if file.startswith(react_route) and file.endswith(".css")][0]
     return render_template("model_view.html", filename=filename, css_filename=css_filename)
+
 
 @app.route("/<react_route>")
 def route_models(react_route: str) -> Response:
@@ -87,7 +89,11 @@ def route_react(filename: str) -> Response:
 def image(image_name) -> Response:
     return send_from_directory("static/images", image_name)
 
+#
 # edit
+#
+
+
 def add_one_champion(name):
     # remove last character (should be ']')
     with open('static/json/api_champions.json', 'r+') as f:

@@ -4,8 +4,7 @@
     <h1>{{ champion.name }}</h1>
     <div class="modal-body row">
       <div class="col-md-6">
-        <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{
-        champion.icon[:-4] }}_0.jpg" >
+        <img src={{ champion.icon }} >
       </div>
       <div class="col-md-6">
         {{ champion.lore|safe }}
