@@ -154,8 +154,8 @@ export class ChampionElement extends Component {
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
-        <a href={"/champions/" + data.name}
-           onClick={this.props.route("champions", data.name)}>
+        <a href="javascript:void(0)"
+           onClick={() => this.props.route("champions", data.name)}>
           <CardImg alt={data.name + "'s icon"}
                    src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
         </a>

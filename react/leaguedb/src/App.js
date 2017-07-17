@@ -27,6 +27,7 @@ class App extends Component {
   }
 
   route(value, particle) {
+    alert(value + ": " + particle);
     this.setState({
       current: value,
       particle: particle
