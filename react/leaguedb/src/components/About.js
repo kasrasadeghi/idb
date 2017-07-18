@@ -12,13 +12,12 @@ class About extends Component {
 
     this.state = {
       commits: {
-        "SpicyKitten": 0,
         "Tschriber": 0,
         "flippedAben": 0,
         "kasrasadeghi": 0,
+        "SpicyKitten": 0,
         "total": 0
       },
-      avii: 0,
       todi: 0,
       beni: 0,
       kasi: 0
@@ -43,7 +42,7 @@ class About extends Component {
     });
 
 
-    var members = ["avilashrath", "toddschriber", "benyangs", "kasrasadeghi1"];
+    var members = ["toddschriber", "benyangs", "kasrasadeghi1"];
     for (var mem in members) {
       (mem => {
         fetch('https://api.trello.com/1/members/' + mem + '/cards', {
@@ -55,20 +54,15 @@ class About extends Component {
           switch (mem) {
             case members[0]:
               this.setState({
-                avii: j.length,
+                todi: j.length,
               });
               break;
             case members[1]:
               this.setState({
-                todi: j.length,
-              });
-              break;
-            case members[2]:
-              this.setState({
                 beni: j.length,
               });
               break;
-            case members[3]:
+            case members[2]:
               this.setState({
                 kasi: j.length,
               });
@@ -157,18 +151,20 @@ class About extends Component {
             </Col>
           </Row>
           <Row>
-            <Col xs="6">
+            <Col>
               <br />
               <img src="static/images/profile/Todd.png"/>
               <br />
               <h3> Todd </h3>
-              Todd tell us a bit about yourself
+              I'm a senior Computer Science Major at UT Austin. 
+              I enjoy reading, Ultimate Frisbee, and running. 
+              I'm also a decent League of Legends player.
               <br/>
               <br/>
               Responsibilities:
               <br/>
               <br/>
-              Trying not to be useless
+              Basic templates, About page, Misc. Scripts, General Formatting and Design
               <br/>
               <br/>
               No. of Commits: {this.state.commits['Tschriber']}
@@ -177,30 +173,6 @@ class About extends Component {
               No. of Issues: {this.state.todi}
               <br/>
               <br/>
-              No. of Unit Tests: 0
-              <br/>
-              <br/>
-            </Col>
-            <Col xs="6">
-              <br />
-              <img src="static/images/profile/Avilash.jpg"/>
-              <br />
-              <h3> Avilash </h3>
-              Salty af yet doesn't play League of Legends. Runs on NeverLuckyOS.
-              <br/>
-              <br />
-              Responsibilities:
-              <br/>
-              <br />
-              Actually not being useless
-              <br/>
-              <br />
-              No. of Commits: {this.state.commits['SpicyKitten']}
-              <br/>
-              <br />
-              No. of Issues: {this.state.avii}
-              <br/>
-              <br />
               No. of Unit Tests: 0
               <br/>
               <br/>
@@ -221,12 +193,12 @@ class About extends Component {
                 <tbody>
                 <tr>
                   <td>Commits</td>
-                  <td> { this.state.commits['total'] }
+                  <td> { this.state.commits['total']-this.state.commits['SpicyKitten'] }
                   </td>
                 </tr>
                 <tr>
                   <td>Issues</td>
-                  <td>{this.state.avii + this.state.todi + this.state.beni + this.state.kasi}</td>
+                  <td>{this.state.todi + this.state.beni + this.state.kasi}</td>
                 </tr>
                 <tr>
                   <td>Unit Tests</td>
