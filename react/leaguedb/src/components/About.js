@@ -282,7 +282,7 @@ class About extends Component {
             </Col>
           </Row>
           <br />
-          <h2><a href="https://utexas.box.com/s/9oe95gfnj8n2p13y84tlbea6q1vl7mk8">Technical
+          <h2><a href="https://utexas.box.com/s/2lryl4g9f1y9tj3ml1soi4uh19mrhsok">Technical
             Report</a></h2>
           <br />
         </Container>
