@@ -1,0 +1,66 @@
+1. Consolidation
+ - consolidate the project into one react project for easier hosting
+
+ estimate: 10
+ actual: 5
+
+
+2. Particle Reactification
+ - implement particle representation in react
+
+ estimate: 2
+ actual: 1
+
+
+3. Routing
+ - navbar routing
+
+ estimate: 3
+ actual: 8
+
+
+4. Edit
+ - add a champions to the output
+
+ estimate: 5
+ actual: 4
+
+
+5. Search Upgrade
+ - highlight search terms
+
+ estimate: 2
+ actual: 1
+
+
+6. General Aesthetic Improvement
+ - Make the website look better
+
+ estimate: 5
+ actual: 4
+
+
+7. API Upgrade for particles
+ - Make the particle queries return fully-qualified splash art URL
+
+ estimate: 1
+ actual: 3
+
+
+8. Search Routing
+ - Make search results route
+
+ estimate: 1
+ actual: 1
+
+
+9. Automate About
+ - trello and github API for about page
+
+ estimate: 1
+ actual: 1
+
+10. Project Workflow Analysis
+
+ estimate: 1
+ actual: 1
