@@ -40,15 +40,15 @@ class RoleList extends Component {
     let counter = 0;
     return (
       <Container>
-        <RoleElement data={roles[counter++]}/>
+        <RoleElement data={roles[counter++]} route={this.props.route}/>
         <br/>
-        <RoleElement data={roles[counter++]}/>
+        <RoleElement data={roles[counter++]} route={this.props.route}/>
         <br/>
-        <RoleElement data={roles[counter++]}/>
+        <RoleElement data={roles[counter++]} route={this.props.route}/>
         <br/>
-        <RoleElement data={roles[counter++]}/>
+        <RoleElement data={roles[counter++]} route={this.props.route}/>
         <br/>
-        <RoleElement data={roles[counter]}/>
+        <RoleElement data={roles[counter]} route={this.props.route}/>
       </Container>
     );
   }
