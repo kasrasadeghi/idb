@@ -10,8 +10,8 @@ import {
 } from 'reactstrap';
 
 class ClassList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       list: []
@@ -42,12 +42,12 @@ class ClassList extends Component {
 
     let topView = currentView.slice(0, 3);
     let top = topView.map(c => {
-      return <ClassElement data={c}/>
+      return <ClassElement data={c} route={this.props.route}/>
     });
 
     let botView = currentView.slice(3, 6);
     let bot = botView.map(c => {
-      return <ClassElement data={c}/>
+      return <ClassElement data={c} route={this.props.route}/>
     });
 
     return (
@@ -77,7 +77,8 @@ export class ClassElement extends Component {
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
-        <a href={"/classes/" + data.name}>
+        <a href="javascript:void(0)"
+           onClick={() => this.props.route("classes", data.name)}>
           <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + data.icon}/>
         </a>
         <CardBlock>

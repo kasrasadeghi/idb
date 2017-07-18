@@ -38,7 +38,10 @@ class ClassView extends Component {
           <ul>
             {data.champions.map(champion =>
               <li>
-                <a href={"/champions/" + champion}>{ champion }</a>
+                <a href="javascript:void(0)"
+                   onClick={() => this.props.route("champions", champion)}>
+                  { champion }
+                </a>
               </li>
             )}
           </ul>
@@ -48,7 +51,10 @@ class ClassView extends Component {
           <ul>
             {data.items.map(item =>
               <li>
-                <a href={"/items/" + item }>{ item }</a>
+                <a href="javascript:void(0)"
+                   onClick={() => this.props.route("items", item)}>
+                  { item }
+                </a>
               </li>
             )}
           </ul>

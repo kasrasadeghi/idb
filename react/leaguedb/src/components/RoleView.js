@@ -39,7 +39,10 @@ class RoleView extends Component {
           <ul>
             {data.champions.map(champion =>
               <li>
-                <a href={"/champions/" + champion}>{ champion }</a>
+                <a href="javascript:void(0)"
+                   onClick={() => this.props.route("champions", champion)}>
+                  { champion }
+                </a>
               </li>
             )}
           </ul>
@@ -48,7 +51,12 @@ class RoleView extends Component {
           <h3>Items</h3>
           <ul>
             {data.items.map(thing =>
-              <li><a href={"/items/" + thing}>{thing}</a></li>
+              <li>
+                <a href="javascript:void(0)"
+                   onClick={() => this.props.route("items", thing)}>
+                  {thing}
+                </a>
+              </li>
             )}
           </ul>
         </div>
@@ -57,7 +65,10 @@ class RoleView extends Component {
           <ul>
             {data.classes.map(_class =>
               <li>
-                <a href={"/classes/" + _class}>{_class}</a>
+                <a href="javascript:void(0)"
+                   onClick={() => this.props.route("classes", _class)}>
+                  {_class}
+                </a>
               </li>
             )}
           </ul>

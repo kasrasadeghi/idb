@@ -33,7 +33,7 @@ class ItemView extends Component {
         <h4>Categories:</h4>
         <ul>
           {data.categories.map(category =>
-            category
+            <li>{category}</li>
           )}
         </ul>
 
@@ -41,7 +41,10 @@ class ItemView extends Component {
         <ul>
           {data.champions.map(champion =>
             <li>
-              <a href={"/champions/" + champion }> - { champion }</a>
+              <a href="javascript:void(0)"
+                 onClick={() => this.props.route("champions", champion)}>
+                { champion }
+              </a>
             </li>
           )}
         </ul>
@@ -50,7 +53,10 @@ class ItemView extends Component {
         <ul>
           {data.roles.map(role =>
             <li>
-              <a href={"/roles/" + role}>{ role }</a>
+              <a href="javascript:void(0)"
+                 onClick={() => this.props.route("roles", role)}>
+                { role }
+              </a>
             </li>
           )}
         </ul>
@@ -59,7 +65,10 @@ class ItemView extends Component {
         <ul>
           {data.classes.map(_class =>
             <li>
-              <a href={"/classes/" + _class}>{_class}</a>
+              <a href="javascript:void(0)"
+                 onClick={() => this.props.route("classes", _class)}>
+                {_class}
+              </a>
             </li>
           )}
         </ul>

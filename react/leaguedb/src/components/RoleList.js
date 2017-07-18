@@ -60,7 +60,6 @@ export class RoleElement extends Component {
     let data = Object(this.props.data);
 
     let text =
-      // JSON.stringify(data, null, 2);
       (this.props.match === undefined)
         ? data.items
         : "Matches in:" + this.props.match.join(", ");
@@ -70,7 +69,8 @@ export class RoleElement extends Component {
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
-        <a href={"/roles/" + data.name}>
+        <a href="javascript:void(0)"
+           onClick={() => this.props.route("roles", data.name)}>
           <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + data.icon}/>
         </a>
         <CardBlock>

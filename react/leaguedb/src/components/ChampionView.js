@@ -42,7 +42,12 @@ class ChampionView extends Component {
             <h3>Items</h3>
             <ul>
               {data.items.map(thing =>
-                <li><a href={"/items/" + thing}>{thing}</a></li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onClick={() => this.props.route("items", thing)}>
+                    {thing}
+                  </a>
+                </li>
               )}
             </ul>
           </div>
@@ -50,13 +55,23 @@ class ChampionView extends Component {
             <h3>Classes</h3>
             <ul>
               {data.classes.map(thing =>
-                <li><a href={"/classes/" + thing}>{thing}</a></li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onClick={() => this.props.route("classes", thing)}>
+                    {thing}
+                  </a>
+                </li>
               )}
             </ul>
             <h3>Roles</h3>
             <ul>
               {data.roles.map(thing =>
-                <li><a href={"/roles/" + thing}>{thing}</a></li>
+                <li>
+                  <a href="javascript:void(0)"
+                     onClick={() => this.props.route("roles", thing)}>
+                    {thing}
+                  </a>
+                </li>
               )}
             </ul>
           </div>
