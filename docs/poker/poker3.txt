@@ -1,66 +1,73 @@
-1. Consolidation
- - consolidate the project into one react project for easier hosting
+1. (Travis.CI) Testing and Integration
+-Travis CI
+-Unit Test
+estimate: 1
+actual: 1
 
- estimate: 10
- actual: 5
+2. (React JS) Search
+-allows searching from any page to any relevant subject
+-provides previews of pages when searching
 
+estimate: 6
+actual: 10
 
-2. Particle Reactification
- - implement particle representation in react
+3. Changing bounds on list to view
+- added to avoid both overflow and seeing already filtered objects
 
- estimate: 2
- actual: 1
+estimate: 1
+actual: 1
 
+4. (React) Improve front end modularization
+-divied up into small components from a large master file
+- easily accessible from component rather than long iteration
 
-3. Routing
- - navbar routing
+estimate: 2
+actual: 2
 
- estimate: 3
- actual: 8
+5. (GUI) Improve particle instances
+-enable react within each particle instead of entire blobs
+-improve front end graphics for each particle
 
+estimate: 2
+actual: 1
 
-4. Edit
- - add a champions to the output
+6. (GUI) Carousel Homepage
+-scroll of all champions
+-links to each page
 
- estimate: 5
- actual: 4
+estimate: 3
+actual: 1
 
+7. (GUI) General Website Improvements
+-Synchronized Nav bars
+-General Aestetic
 
-5. Search Upgrade
- - highlight search terms
+estimate: 3
+actual: 2
 
- estimate: 2
- actual: 1
+8. Embeded Media
+-champion spotlights
+	-implementation
+	-scraping
 
+estimate: 10
+actual: 1
 
-6. General Aesthetic Improvement
- - Make the website look better
+9. (About)
+-Github API for commits
+-Trello API for Issues
+-Fill out missing information
 
- estimate: 5
- actual: 4
+estimate: 1
+actual: 1
 
+10. Technical Report 3
+ - motivation
+ - use cases
+ - RESTful API
+ - models
+ - tools (update)
+ - database
 
-7. API Upgrade for particles
- - Make the particle queries return fully-qualified splash art URL
-
- estimate: 1
- actual: 3
-
-
-8. Search Routing
- - Make search results route
-
- estimate: 1
- actual: 1
-
-
-9. Automate About
- - trello and github API for about page
-
- estimate: 1
- actual: 1
-
-10. Project Workflow Analysis
-
- estimate: 1
- actual: 1
+estimate: 1
+actual: 1
