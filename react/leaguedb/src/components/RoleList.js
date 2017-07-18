@@ -93,7 +93,8 @@ export class RoleElement extends Component {
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
-        <a href={"/roles/" + data.name}>
+        <a href="javascript:void(0)"
+           onClick={() => this.props.route("roles", data.name)}>
           <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + data.icon}/>
         </a>
         <CardBlock>

@@ -11,8 +11,8 @@ import {
 } from 'reactstrap';
 
 class ItemList extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       list: [],
@@ -96,12 +96,12 @@ class ItemList extends Component {
 
     let topView = currentView.slice(0, 3);
     let top = topView.map(c => {
-      return <ItemElement data={c}/>
+      return <ItemElement data={c} route={this.props.route}/>
     });
 
     let botView = currentView.slice(3, 6);
     let bot = botView.map(c => {
-      return <ItemElement data={c}/>
+      return <ItemElement data={c} route={this.props.route}/>
     });
 
     return (
@@ -177,7 +177,8 @@ export class ItemElement extends Component {
         <CardBlock>
           <CardTitle>{data.name}</CardTitle>
         </CardBlock>
-        <a href={"/items/" + data.name}>
+        <a href="javascript:void(0)"
+           onClick={() => this.props.route("items", data.name)}>
           <CardImg alt={data.name + "'s icon"}
                    src={"http://ddragon.leagueoflegends.com/cdn/7.12.1/img/item/" + data.icon}/>
         </a>
