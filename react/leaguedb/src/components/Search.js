@@ -283,17 +283,29 @@ class Search extends Component {
     } else {
       let topView = currentView.slice(0, 3);
       let top = topView.map(c => {
-        return <SearchResult data={c} currentModel={this.state.currentModel} term={this.state.searchValue} mode={this.state.mode}/>
+        return <SearchResult data={c}
+                             currentModel={this.state.currentModel}
+                             term={this.state.searchValue}
+                             mode={this.state.mode}
+                             route={this.props.route}/>
       });
 
       let midView = currentView.slice(3, 6);
       let mid = midView.map(c => {
-        return <SearchResult data={c} currentModel={this.state.currentModel} term={this.state.searchValue} mode={this.state.mode}/>
+        return <SearchResult data={c}
+                             currentModel={this.state.currentModel}
+                             term={this.state.searchValue}
+                             mode={this.state.mode}
+                             route={this.props.route}/>
       });
 
       let botView = currentView.slice(6, 9);
       let bot = botView.map(c => {
-        return <SearchResult data={c} currentModel={this.state.currentModel} term={this.state.searchValue} mode={this.state.mode}/>
+        return <SearchResult data={c}
+                             currentModel={this.state.currentModel}
+                             term={this.state.searchValue}
+                             mode={this.state.mode}
+                             route={this.props.route}/>
       });
 
       return (
@@ -327,13 +339,33 @@ class SearchResult extends Component {
     let match = this.props.data[1];
     switch (this.props.currentModel) {
       case "Champions":
-        return <ChampionElement data={data} match={match} term={this.props.term} mode={this.props.mode}/>;
+        return <ChampionElement
+          data={data}
+          match={match}
+          term={this.props.term}
+          mode={this.props.mode}
+          route={this.props.route}/>;
       case "Items":
-        return <ItemElement data={data} match={match} term={this.props.term} mode={this.props.mode}/>;
+        return <ItemElement
+          data={data}
+          match={match}
+          term={this.props.term}
+          mode={this.props.mode}
+          route={this.props.route}/>;
       case "Classes":
-        return <ClassElement data={data} match={match} term={this.props.term} mode={this.props.mode}/>;
+        return <ClassElement
+          data={data}
+          match={match}
+          term={this.props.term}
+          mode={this.props.mode}
+          route={this.props.route}/>;
       case "Roles":
-        return <RoleElement data={data} match={match} term={this.props.term} mode={this.props.mode}/>;
+        return <RoleElement
+          data={data}
+          match={match}
+          term={this.props.term}
+          mode={this.props.mode}
+          route={this.props.route}/>;
       default:
         return <strong>error</strong>
     }

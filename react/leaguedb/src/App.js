@@ -42,7 +42,7 @@ class App extends Component {
         case "home":
           return <Home/>;
         case "search":
-          return <Search/>;
+          return <Search route={(model, particle) => this.route(model, particle)}/>;
         case "edit":
           return <Edit/>;
         case "champions":
