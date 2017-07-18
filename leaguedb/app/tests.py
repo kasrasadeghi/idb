@@ -18,21 +18,21 @@ class TestModels (TestCase):
         r = self.app.get('/')
         self.assertEqual(r.status_code, 200)
 
-    def test_site_champions(self):
-        r = self.app.get('/champions')
-        self.assertEqual(r.status_code, 200)
-
-    def test_site_items(self):
-        r = self.app.get('/items')
-        self.assertEqual(r.status_code, 200)
-
-    def test_site_classes(self):
-        r = self.app.get('/classes')
-        self.assertEqual(r.status_code, 200)
-
-    def test_site_roles(self):
-        r = self.app.get('/roles')
-        self.assertEqual(r.status_code, 200)
+    # def test_site_champions(self):
+    #     r = self.app.get('/champions')
+    #     self.assertEqual(r.status_code, 200)
+    #
+    # def test_site_items(self):
+    #     r = self.app.get('/items')
+    #     self.assertEqual(r.status_code, 200)
+    #
+    # def test_site_classes(self):
+    #     r = self.app.get('/classes')
+    #     self.assertEqual(r.status_code, 200)
+    #
+    # def test_site_roles(self):
+    #     r = self.app.get('/roles')
+    #     self.assertEqual(r.status_code, 200)
     
     ############
     # Champion #
