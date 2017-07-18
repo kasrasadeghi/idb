@@ -57,6 +57,10 @@ class LeagueBar extends Component {
             </NavItem>
             <NavItem>
               <NavLink href="javascript:void(0)"
+                       onClick={() => this.props.route("edit")}>Edit</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="javascript:void(0)"
                        onClick={() => this.props.route("about")}>About</NavLink>
             </NavItem>
           </Nav>

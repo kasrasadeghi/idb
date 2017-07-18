@@ -14,7 +14,9 @@ import ItemList from "./components/ItemList";
 import ClassList from "./components/ClassList";
 import RoleList from "./components/RoleList";
 
+import Edit from "./components/Edit"
 import About from "./components/About";
+
 
 class App extends Component {
   constructor() {
@@ -27,7 +29,6 @@ class App extends Component {
   }
 
   route(value, particle) {
-    alert(value + ": " + particle);
     this.setState({
       current: value,
       particle: particle
@@ -42,6 +43,8 @@ class App extends Component {
           return <Home/>;
         case "search":
           return <Search/>;
+        case "edit":
+          return <Edit/>;
         case "champions":
           return <ChampionList
             route={(model, particle) => this.route(model, particle)}/>;

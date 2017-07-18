@@ -18,7 +18,7 @@ class Edit extends Component {
       model: "champion",
       key: "",
       stat: -1
-    }
+    };
 
     this.changeKey = this.changeKey.bind(this);
     this.changeModel = this.changeModel.bind(this);
@@ -32,7 +32,7 @@ class Edit extends Component {
   }
 
   changeModel(event) {
-    var new_model = event.target.value;
+    let new_model = event.target.value;
     // clear form
     document.getElementById("form").reset();
     // Reset state
@@ -51,10 +51,9 @@ class Edit extends Component {
   }
 
   submitEdit() {
-    var data = new FormData();
+    let data = new FormData();
     data.append("json", JSON.stringify(this.state));
-    // var url = 'https://leaguedb.com/edit';
-    var url = 'http://localhost:5000/edit';
+    let url = 'https://leaguedb.com/edit';
     fetch(url, {
       method: 'POST',
       body: data
@@ -82,7 +81,7 @@ class Edit extends Component {
   }
 
   renderAttrs() {
-    var result = [];
+    let result = [];
     result.push(this.textEntry("name"));
     result.push(this.textEntry("icon"));
     switch (this.state.model) {
