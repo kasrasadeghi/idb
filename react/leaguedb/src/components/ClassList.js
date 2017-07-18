@@ -5,8 +5,7 @@ import {
   CardBlock,
   CardDeck,
   CardImg,
-  CardTitle,
-  CardText
+  CardTitle
 } from 'reactstrap';
 
 class ClassList extends Component {
@@ -67,10 +66,36 @@ class ClassList extends Component {
 export class ClassElement extends Component {
   render() {
     let data = Object(this.props.data);
+    let match = this.props.match;
+    let term = this.props.term;
 
-    let text = (this.props.match === undefined)
-      ? data.champions.join(", ")
-      : "Matches in:" + this.props.match.join(", ");
+    let rows = [];
+    if (match !== undefined) {
+      let terms = term.split(" ").filter(ele => {return ele !== ""});
+      let res = [];
+      for (let i in terms) {
+        res.push(new RegExp('(.{0,20})(' + terms[i]  + ')(.{0,20})', 'i'))
+      }
+
+      for (let re in res) {
+        let matchings = [];
+        for (let m in match) {
+          let string = data[match[m]];
+          if (string.constructor === Array) {
+            string = string.join(", ")
+          }
+
+          let re_match = string.match(res[re]);
+          if (re_match !== null) {
+            matchings.push(re_match);
+          }
+        }
+
+        for (let i in matchings ) {
+          rows.push(<div><strong>{match[i]}</strong>: ... {matchings[i][1]}<span style={{backgroundColor: 'yellow'}}>{matchings[i][2]}</span>{matchings[i][3]} ...</div>)
+        }
+      }
+    }
 
     return (
       <Card className="text-center">
@@ -81,9 +106,7 @@ export class ClassElement extends Component {
           <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/classes/" + data.icon}/>
         </a>
         <CardBlock>
-          <CardText>
-            {text}
-          </CardText>
+          {this.props.match === undefined ? "" : rows}
         </CardBlock>
       </Card>
     );

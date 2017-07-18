@@ -7,8 +7,7 @@ import {
   CardBlock,
   CardDeck,
   CardImg,
-  CardTitle,
-  CardText
+  CardTitle
 } from 'reactstrap';
 
 class ChampionList extends Component {
@@ -144,10 +143,36 @@ class ChampionList extends Component {
 export class ChampionElement extends Component {
   render() {
     let data = Object(this.props.data);
+    let match = this.props.match;
+    let term = this.props.term;
 
-    let text = (this.props.match === undefined)
-      ? data.classes.join(", ")
-      : "Matches in:" + this.props.match.join(", ");
+    let rows = [];
+    if (match !== undefined) {
+      let terms = term.split(" ").filter(ele => {return ele !== ""});
+      let res = [];
+      for (let i in terms) {
+        res.push(new RegExp('(.{0,20})(' + terms[i]  + ')(.{0,20})', 'i'))
+      }
+
+      for (let re in res) {
+        let matchings = [];
+        for (let m in match) {
+          let string = data[match[m]];
+          if (string.constructor === Array) {
+            string = string.join(", ")
+          }
+
+          let re_match = string.match(res[re]);
+          if (re_match !== null) {
+            matchings.push(re_match);
+          }
+        }
+
+        for (let i in matchings ) {
+          rows.push(<div><strong>{match[i]}</strong>: ... {matchings[i][1]}<span style={{backgroundColor: 'yellow'}}>{matchings[i][2]}</span>{matchings[i][3]} ...</div>)
+        }
+      }
+    }
 
     return (
       <Card className="text-center">
@@ -159,9 +184,7 @@ export class ChampionElement extends Component {
                    src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon}/>
         </a>
         <CardBlock>
-          <CardText>
-            {text}
-          </CardText>
+          {this.props.match === undefined ? data.classes.join(", ") : rows}
         </CardBlock>
       </Card>
     )

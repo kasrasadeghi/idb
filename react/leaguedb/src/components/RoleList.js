@@ -4,8 +4,7 @@ import {
   Card,
   CardBlock,
   CardImg,
-  CardTitle,
-  CardText
+  CardTitle
 } from 'reactstrap';
 
 class RoleList extends Component {
@@ -58,12 +57,36 @@ class RoleList extends Component {
 export class RoleElement extends Component {
   render() {
     let data = Object(this.props.data);
+    let match = this.props.match;
+    let term = this.props.term;
 
-    let text =
-      // JSON.stringify(data, null, 2);
-      (this.props.match === undefined)
-        ? data.items
-        : "Matches in:" + this.props.match.join(", ");
+    let rows = [];
+    if (match !== undefined) {
+      let terms = term.split(" ").filter(ele => {return ele !== ""});
+      let res = [];
+      for (let i in terms) {
+        res.push(new RegExp('(.{0,20})(' + terms[i]  + ')(.{0,20})', 'i'))
+      }
+
+      for (let re in res) {
+        let matchings = [];
+        for (let m in match) {
+          let string = data[match[m]];
+          if (string.constructor === Array) {
+            string = string.join(", ")
+          }
+
+          let re_match = string.match(res[re]);
+          if (re_match !== null) {
+            matchings.push(re_match);
+          }
+        }
+
+        for (let i in matchings ) {
+          rows.push(<div><strong>{match[i]}</strong>: ... {matchings[i][1]}<span style={{backgroundColor: 'yellow'}}>{matchings[i][2]}</span>{matchings[i][3]} ...</div>)
+        }
+      }
+    }
 
     return (
       <Card classname="text-center">
@@ -74,9 +97,7 @@ export class RoleElement extends Component {
           <CardImg alt={data.name + "'s icon"} src={"http://leaguedb.me/images/roles/" + data.icon}/>
         </a>
         <CardBlock>
-          <CardText>
-            {text}
-          </CardText>
+          {this.props.match === undefined ? "" : rows}
         </CardBlock>
       </Card>
     );
