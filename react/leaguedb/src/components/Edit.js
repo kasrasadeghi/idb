@@ -53,7 +53,7 @@ class Edit extends Component {
   submitEdit() {
     let data = new FormData();
     data.append("json", JSON.stringify(this.state));
-    let url = 'https://leaguedb.com/edit';
+    let url = 'http://leaguedb.me/edit';
     fetch(url, {
       method: 'POST',
       body: data
@@ -62,6 +62,7 @@ class Edit extends Component {
       this.setState({
         stat: r.status,
       });
+      console.log(r.status);
     });
   }
 
