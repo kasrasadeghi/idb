@@ -36,7 +36,7 @@ Your source for quick and easy League of Legends Info
 +++
 
 ## AWS
--Made a streamlined version using only Docker and basic configurations.
+- Made a streamlined version using only Docker and basic configurations.
 
 +++
 
@@ -77,8 +77,8 @@ Your source for quick and easy League of Legends Info
 +++
 
 ## Database
--SQL
--Postgres
+- SQL
+- Postgres
 
 +++
 
@@ -112,7 +112,7 @@ Your source for quick and easy League of Legends Info
 
 ## Aesthetic
 - Pagination
-- <BR> in lore
+- BR in lore
 - Color
 - Highlighting Filters
 
