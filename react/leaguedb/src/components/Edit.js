@@ -53,7 +53,8 @@ class Edit extends Component {
   submitEdit() {
     let data = new FormData();
     data.append("json", JSON.stringify(this.state));
-    let url = 'http://leaguedb.me/edit';
+    // let url = 'http://leaguedb.me/edit';
+    let url = 'http://localhost:5000/edit';
     fetch(url, {
       method: 'POST',
       body: data
@@ -145,6 +146,13 @@ class Edit extends Component {
               this.state.stat === 200 ?
                 <Col sm={{ size: 4, offset: 2 }}>
                   <Alert color="success">Model instance added.</Alert>
+                </Col>
+              : null
+            }
+            {
+              this.state.stat === 500 ?
+                <Col sm={{ size: 4, offset: 2 }}>
+                  <Alert color="danger">Failed to add model instance. Item, Role or Class nonexistent. One of the fields may not be filled out.</Alert>
                 </Col>
               : null
             }

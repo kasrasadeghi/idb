@@ -87,7 +87,7 @@ def image(image_name) -> Response:
 #
 
 
-def add_one_champion(name):
+def add_one_champion(name, icon):
     # remove last character (should be ']')
     with open('static/json/api_champions.json', 'r+') as f:
         f.seek(0, os.SEEK_END)
@@ -103,7 +103,15 @@ def add_one_champion(name):
     # add champion data
     with open('static/json/api_champions.json', 'a') as f:
         f.write(',') 
-        json.dump(get_champion(name), f)
+        row = Champion.query.get(name)
+        contents = {}
+        contents['classes'] = [x.name for x in row.classes]
+        contents['icon']    = icon
+        contents['items']   = [x.name for x in row.items]
+        contents['lore']    = row.lore
+        contents['name']    = row.name
+        contents['roles']   = [x.name for x in row.roles]
+        json.dump(contents, f)
         f.write(']')
 
 
@@ -129,9 +137,8 @@ def edit_data():
             # update database
             db.session.add(champ)
             db.session.commit()
-            print(champ)
             # update cached static/jsons
-            add_one_champion(data['name'])
+            add_one_champion(data['name'], data['icon'])
         elif data['model'] == "class":
             pass
         elif data['model'] == "item":
