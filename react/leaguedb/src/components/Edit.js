@@ -53,8 +53,7 @@ class Edit extends Component {
   submitEdit() {
     let data = new FormData();
     data.append("json", JSON.stringify(this.state));
-    // let url = 'http://leaguedb.me/edit';
-    let url = 'http://localhost:5000/edit';
+    let url = 'http://leaguedb.me/edit';
     fetch(url, {
       method: 'POST',
       body: data
