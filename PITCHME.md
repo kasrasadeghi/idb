@@ -54,6 +54,7 @@ Your source for quick and easy League of Legends Info
 ## React
 - Using Components as Functions
 - Properties as Keywords
+- Pagination
 
 +++
 

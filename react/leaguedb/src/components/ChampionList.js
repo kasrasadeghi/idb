@@ -182,7 +182,7 @@ export class ChampionElement extends Component {
         <a href="javascript:void(0)"
            onClick={() => this.props.route("champions", data.name)}>
           <CardImg alt={data.name + "'s icon"}
-                   src={"https://ddragon.leagueoflegends.com/cdn/7.12.1/img/champion/" + data.icon.slice(data.icon.lastIndexOf("/")+1,data.icon.length-6) + ".png"}/>
+                   src={"https://ddragon.leagueoflegends.com/cdn/7.14.1/img/champion/" + data.icon}/>
         </a>
         <CardBlock>
           {this.props.match === undefined ? data.classes.join(", ") : rows}

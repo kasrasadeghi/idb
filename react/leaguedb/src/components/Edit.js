@@ -148,6 +148,13 @@ class Edit extends Component {
                 </Col>
               : null
             }
+            {
+              this.state.stat === 500 ?
+                <Col sm={{ size: 4, offset: 2 }}>
+                  <Alert color="danger">Failed to add model instance. Item, Role or Class nonexistent. One of the fields may not be filled out.</Alert>
+                </Col>
+              : null
+            }
           </FormGroup>
         </Form>
       </Container>
