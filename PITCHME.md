@@ -31,6 +31,10 @@ Your source for quick and easy League of Legends Info
 
 ---
 
+# Our Project
+
+---
+
 # What did we do well?
 
 +++
@@ -128,3 +132,82 @@ Your source for quick and easy League of Legends Info
 - Database: Giant Hassle
 - Docker: Server Interactions
 - Post-req: No Messages only Error Codes
+
+---
+
+# Critiquing OverwatchDB
+
+---
+
+# What could they have done better?
+
++++
+
+## Players
+- List of Players
+- Model Issues
+- Poor Scaling
+- Searching
+
++++
+
+## Aesthetic
+- Buttons
+- No Resets
+- Poor Image Scaling
+- Scrollbars
+- Searching
+
++++
+
+## Design
+- High latency
+- Too many pages
+- Free Stuff
+- Loading
+
++++
+
+## React
+- Lack thereof
+- Inlined
+- Not Dynamic
+
++++
+
+## Documentation
+- Formatting
+- Apiary
+
++++
+
+## Misc.
+- Edit Page
+- Search Page
+
+---
+
+# What did they do well?
+
++++
+
+- Carousel
+- Twitter
+- Search in Navbar
+- Cool loading animation
+- About
+- Grid
+
+---
+
+## What Puzzled us about their site?
+
+- Lack of Javascript
+- How to make an API request
+
+---
+
+## What did we learn from their site?
+
+- Commanality of recurring problems
+- How to implement a good color scheme
