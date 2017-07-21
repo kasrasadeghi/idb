@@ -197,14 +197,16 @@
     "total_pages": 94
   };
 
-  let svg = d3.select("#viz").append('div');
+  let viz = d3.select("#viz");
 
-  svg
+  viz
   .selectAll("img")
   .data(data.objects)
     .enter()
-    .append("p")
-    .text(o => o.name)
+    .append("img")
+    .attr("src", o => o.image_url)
+    .attr("width", 200)
+    .attr("height", 200)
 
   //$(".test").text(JSON.stringify(data.objects, null, 2));
 
